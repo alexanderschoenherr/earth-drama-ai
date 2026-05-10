@@ -57,7 +57,7 @@
     .note {
       font-size: 0.95rem;
       opacity: 0.75;
-      margin-top: 32px;
+      margin-top: 28px;
     }
 
     #essayText {
@@ -70,19 +70,18 @@
   <h1>You Don’t Have Sex. You Are Sex.</h1>
 
   <p>
-    This page lets you copy the full essay into an AI tool so you can understand it more clearly,
-    explore the argument, and turn the piece into a conversation.
+    Copy the essay in one tap, with or without an AI reading guide.
   </p>
 
   <div class="button-row">
-    <button onclick="copyEssayWithPrompt()">Copy Essay + Simple AI Guide</button>
+    <button onclick="copyEssayWithGuide()">Copy Essay + AI Reading Guide</button>
     <button class="secondary" onclick="copyEssayOnly()">Copy Essay Only</button>
   </div>
 
   <div id="status"></div>
 
   <p class="note">
-    After copying, paste it into ChatGPT, Claude, Gemini, or whatever AI tool you use.
+    Paste it into ChatGPT, Claude, Gemini, or any AI tool to summarize, explain, reflect on, or discuss it.
   </p>
 
   <div id="essayText">
@@ -433,28 +432,33 @@ A culture that can finally speak honestly about sex may be a culture finally lea
       }
     }
 
-    function copyEssayWithPrompt() {
+    function copyEssayWithGuide() {
       const essay = getEssayText();
 
-      const prompt =
-`I’m going to paste an essay titled "${essayTitle}."
+      const guide =
+`I’m going to paste an essay titled "${essayTitle}"
 
-Help me understand it clearly without flattening its meaning.
+Help me understand it clearly without flattening its meaning or changing the author’s voice.
 
-Please:
-1. Summarize the main idea in plain English.
-2. Explain what the essay means by “sex” beyond the physical act.
-3. Break down the argument connecting sexual vitality, health, embodiment, pleasure, and aliveness.
-4. Explain what the essay is saying about American culture’s relationship to sex.
-5. Clarify the strongest insights in the piece.
-6. Give me a shorter version I can read quickly.
-7. Give me a few thoughtful questions to help me reflect on it.
+Start with a short plain-English summary for someone who does not have time to read the full piece.
+
+Then explain:
+1. What the essay is arguing.
+2. What the essay means when it says sex is not just an act, but a wider field of aliveness.
+3. How the essay connects sexual vitality, health, nervous-system safety, pleasure, circulation, and embodiment.
+4. Why the essay uses foreplay as proof that sex cannot be reduced to a mechanical act.
+5. What the essay is saying about America’s split relationship to sex: obsessed with sexual imagery, but estranged from erotic integration.
+6. What the essay means by “what a culture cannot integrate, it intensifies.”
+7. What the essay argues is the physical, emotional, sexual, and spiritual cost of splitting sex off from life.
+8. What the reader should take away from the piece in practical, cultural, and human terms.
+
+Do not rewrite the essay, argue with it, fact-check it, or make it sound more generic. Preserve the author’s embodied, philosophical, and cultural framing. Help me enter the piece on its own terms.
 
 Here is the essay:
 
 ${essay}`;
 
-      copyToClipboard(prompt, "Copied: essay + simple AI guide.");
+      copyToClipboard(guide, "Copied: essay + AI reading guide.");
     }
 
     function copyEssayOnly() {
