@@ -360,28 +360,23 @@ And now that we have looked, we do not have to look away.
       const essay = getEssayText();
 
       const guide =
-`I’m going to paste an essay titled "${essayTitle}"
+`I’m going to paste an essay titled "${essayTitle}."
 
-Help me understand it clearly without flattening its meaning or changing the author’s voice.
+Give me a concise guide to the piece so I can understand it without reading the whole thing.
 
-Start with a short plain-English summary for someone who does not have time to read the full piece.
+Include:
+1. A short plain-English summary.
+2. The core argument.
+3. The main examples: Hunter Biden, Jared Kushner, foreign money, crypto, private clubs, and the Trump family business model.
+4. The main takeaway about corruption, hypocrisy, and double standards.
 
-Then explain:
-1. What the essay is arguing.
-2. Why the author says Trump’s “Biden Crime Family” routine is misdirection.
-3. How the essay distinguishes real anti-corruption principles from team-based hypocrisy.
-4. What the essay says about Hunter Biden, Jared Kushner, foreign money, Trump family business interests, crypto, private clubs, and access culture.
-5. What the essay means by “the Trump family cash register.”
-6. Why the author argues that “everyone does it” is a trap, not an excuse.
-7. How the essay uses humor, satire, and blunt language to make the corruption argument more forceful.
-8. What the reader should take away from the piece in political, moral, and civic terms.
+Keep the whole response brief — around 300–400 words. Do not produce a long section-by-section analysis unless I ask for one.
 
-Do not rewrite the essay, argue with it, fact-check it, or make it sound more generic. Preserve the author’s satirical, morally serious, sharp, and conversational framing. Help me enter the piece on its own terms.
+Preserve the author’s funny, sharp, morally serious voice. Do not rewrite the essay, fact-check it, argue with it, or make it generic.
 
 Here is the essay:
 
 ${essay}`;
-
       copyToClipboard(guide, "Copied: essay + AI reading guide.");
     }
 
