@@ -4,85 +4,27 @@
   <meta charset="utf-8">
   <title>He Doesn’t Love You Back — AI Companion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 48px 20px;
-      line-height: 1.55;
-      color: #111;
-      background: #faf7f1;
-    }
-
-    h1 {
-      font-size: 2rem;
-      line-height: 1.1;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1.05rem;
-    }
-
-    .button-row {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 28px 0;
-    }
-
-    button {
-      font-size: 1rem;
-      font-weight: 650;
-      padding: 14px 18px;
-      border-radius: 999px;
-      border: 1px solid #111;
-      background: #111;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    button.secondary {
-      background: transparent;
-      color: #111;
-    }
-
-    #status {
-      margin-top: 16px;
-      font-weight: 650;
-    }
-
-    .note {
-      font-size: 0.95rem;
-      opacity: 0.75;
-      margin-top: 28px;
-    }
-
-    #essayText {
-      display: none;
-    }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 0 auto; padding: 48px 20px; line-height: 1.55; color: #111; background: #faf7f1; }
+    h1 { font-size: 2rem; line-height: 1.1; margin-bottom: 0.5rem; }
+    p { font-size: 1.05rem; }
+    .button-row { display: flex; flex-direction: column; gap: 12px; margin: 28px 0; }
+    button { font-size: 1rem; font-weight: 650; padding: 14px 18px; border-radius: 999px; border: 1px solid #111; background: #111; color: #fff; cursor: pointer; }
+    button.secondary { background: transparent; color: #111; }
+    #status { margin-top: 16px; font-weight: 650; }
+    .note { font-size: 0.95rem; opacity: 0.75; margin-top: 28px; }
+    #essayText { display: none; }
   </style>
 </head>
-
 <body>
   <h1>He Doesn’t Love You Back</h1>
-
-  <p>
-    Copy the essay in one tap, with or without an AI reading guide.
-  </p>
-
+  <p>Copy the essay in one tap, with or without an AI reading guide.</p>
   <div class="button-row">
     <button onclick="copyEssayWithGuide()">Copy Essay + AI Reading Guide</button>
     <button class="secondary" onclick="copyEssayOnly()">Copy Essay Only</button>
   </div>
-
   <div id="status"></div>
-
-  <p class="note">
-    Paste it into ChatGPT, Claude, Gemini, or any AI tool to summarize, explain, question, or discuss it.
-  </p>
+  <p class="note">Paste it into ChatGPT, Claude, Gemini, or any AI tool to summarize, explain, reflect on, or discuss it.</p>
 
   <div id="essayText">
 There are millions of Americans who followed Donald Trump because they were tired of being lied to.
@@ -648,53 +590,35 @@ He does not love you back.
 
   <script>
     const essayTitle = "He Doesn’t Love You Back";
-
-    function getEssayText() {
-      return document.getElementById("essayText").innerText.trim();
-    }
-
+    function getEssayText() { return document.getElementById("essayText").innerText.trim(); }
     async function copyToClipboard(text, successMessage) {
-      try {
-        await navigator.clipboard.writeText(text);
-        document.getElementById("status").innerText = successMessage;
-      } catch (err) {
-        document.getElementById("status").innerText =
-          "Copy failed. Try opening this page in your browser and tapping the button again.";
-      }
+      try { await navigator.clipboard.writeText(text); document.getElementById("status").innerText = successMessage; }
+      catch (err) { document.getElementById("status").innerText = "Copy failed. Try opening this page in your browser and tapping the button again."; }
     }
-
     function copyEssayWithGuide() {
       const essay = getEssayText();
-
       const guide =
 `I’m going to paste an essay titled "${essayTitle}."
 
-Help me understand it clearly without flattening its meaning or changing the author’s voice.
+Give me a concise guide to the piece so I can understand it without reading the whole thing.
 
-Start with a short plain-English summary for someone who does not have time to read the full piece.
+Include:
+1. A short plain-English summary.
+2. The core argument.
+3. The main ideas: Trump learning the shape of his supporters’ pain, feeling seen versus being loved, recognition versus exploitation, supporters being kept activated instead of healed, being targeted rather than stupid, and the way back to the human being beneath the slogan.
+4. The political, human, and moral takeaway.
+5. 3–5 simple follow-up questions I could ask if I want to explore the piece more deeply.
 
-Then explain:
-1. What the essay is arguing.
-2. What the essay means when it says Trump learned the shape of his supporters’ pain.
-3. Why the author says Trump made people feel seen without actually loving or serving them.
-4. How the essay distinguishes real recognition from political exploitation.
-5. What the essay means by saying Trump needs his supporters activated, not healed.
-6. Why the essay says the first step out of a con is not admitting you were stupid, but admitting you were targeted.
-7. What emotional door the essay is trying to open for Trump supporters.
-8. What the reader should take away from the piece in political, human, and moral terms.
+Keep the whole response concise — around 400–600 words. Do not produce a long section-by-section analysis unless I ask for one.
 
-Do not rewrite the essay, argue with it, fact-check it, or make it sound more generic. Preserve the author’s framing and help me enter the piece on its own terms.
+Preserve the author’s compassionate, direct, morally serious voice. Do not rewrite the essay, argue with it, fact-check it, or make it generic.
 
 Here is the essay:
 
 ${essay}`;
-
       copyToClipboard(guide, "Copied: essay + AI reading guide.");
     }
-
-    function copyEssayOnly() {
-      copyToClipboard(getEssayText(), "Copied: essay only.");
-    }
+    function copyEssayOnly() { copyToClipboard(getEssayText(), "Copied: essay only."); }
   </script>
 </body>
 </html>
