@@ -11,6 +11,7 @@
     .button-row { display: flex; flex-direction: column; gap: 12px; margin: 28px 0; }
     button { font-size: 1rem; font-weight: 650; padding: 14px 18px; border-radius: 999px; border: 1px solid #111; background: #111; color: #fff; cursor: pointer; }
     button.secondary { background: transparent; color: #111; }
+    button:disabled { opacity: 0.45; cursor: wait; }
     #status { margin-top: 16px; font-weight: 650; }
     .note { font-size: 0.95rem; opacity: 0.75; margin-top: 28px; }
     #essayText { display: none; }
@@ -20,39 +21,61 @@
   <h1>The Label Is Not the Thing</h1>
   <p>Copy the essay in one tap, with or without an AI reading guide.</p>
   <div class="button-row">
-    <button onclick="copyEssayWithGuide()">Copy Essay + AI Reading Guide</button>
-    <button class="secondary" onclick="copyEssayOnly()">Copy Essay Only</button>
+    <button id="guideButton" onclick="copyEssayWithGuide()" disabled>Loading essay…</button>
+    <button id="essayButton" class="secondary" onclick="copyEssayOnly()" disabled>Loading essay…</button>
   </div>
-  <div id="status"></div>
+  <div id="status">Loading copy-ready essay…</div>
   <p class="note">Paste it into ChatGPT, Claude, Gemini, or any AI tool to summarize, explain, reflect on, or discuss it.</p>
   <div id="essayText"></div>
 
   <script>
     const essayTitle = "The Label Is Not the Thing";
     const essayDescription = "how political, religious, and moral labels can become costumes unless they are made real through behavior, conscience, truth, and responsibility.";
-    const sourceUrl = "https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/73888c90ec27fd582a13b463e01e09b7cf5c2b60/the-label-is-not-the-thing-ai.html";
+    const sourceBlobApi = "https://api.github.com/repos/alexanderschoenherr/earth-drama-ai/git/blobs/73888c90ec27fd582a13b463e01e09b7cf5c2b60";
 
-    async function getEssayText() {
-      const cached = document.getElementById("essayText").innerText.trim();
-      if (cached) return cached;
-      const response = await fetch(sourceUrl);
-      const html = await response.text();
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      const essay = doc.getElementById("essayText").innerText.trim();
-      document.getElementById("essayText").innerText = essay;
-      return essay;
+    let essayReady = false;
+
+    function decodeBase64Utf8(base64) {
+      const binary = atob(base64.replace(/\n/g, ""));
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      return new TextDecoder("utf-8").decode(bytes);
     }
+
+    async function loadEssay() {
+      try {
+        const response = await fetch(sourceBlobApi);
+        if (!response.ok) throw new Error("Could not load source essay.");
+        const data = await response.json();
+        const html = decodeBase64Utf8(data.content);
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        const essayNode = doc.getElementById("essayText");
+        if (!essayNode) throw new Error("Essay text not found.");
+        document.getElementById("essayText").innerText = essayNode.innerText.trim();
+        essayReady = true;
+        document.getElementById("guideButton").disabled = false;
+        document.getElementById("essayButton").disabled = false;
+        document.getElementById("guideButton").innerText = "Copy Essay + AI Reading Guide";
+        document.getElementById("essayButton").innerText = "Copy Essay Only";
+        document.getElementById("status").innerText = "Ready to copy.";
+      } catch (err) {
+        document.getElementById("status").innerText = "Essay failed to load. Refresh the page and try again.";
+      }
+    }
+
+    function getEssayText() { return document.getElementById("essayText").innerText.trim(); }
 
     async function copyToClipboard(text, successMessage) {
-      try { await navigator.clipboard.writeText(text); document.getElementById("status").innerText = successMessage; }
-      catch (err) { document.getElementById("status").innerText = "Copy failed. Try opening this page in your browser and tapping the button again."; }
+      try {
+        await navigator.clipboard.writeText(text);
+        document.getElementById("status").innerText = successMessage;
+      } catch (err) {
+        document.getElementById("status").innerText = "Copy failed. On iPhone, open this page in Safari/Chrome, then tap and hold to select/copy if needed.";
+      }
     }
 
-    async function copyEssayWithGuide() {
-      try {
-        const essay = await getEssayText();
-        const guide =
-`I’m going to paste an essay titled "${essayTitle}."
+    function buildGuide(essay) {
+      return `I’m going to paste an essay titled "${essayTitle}."
 
 This piece is about ${essayDescription}
 
@@ -81,14 +104,19 @@ The goal is to help the reader understand the piece and decide how they want to 
 Here is the essay:
 
 ${essay}`;
-        copyToClipboard(guide, "Copied: essay + AI reading guide.");
-      } catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
     }
 
-    async function copyEssayOnly() {
-      try { copyToClipboard(await getEssayText(), "Copied: essay only."); }
-      catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
+    function copyEssayWithGuide() {
+      if (!essayReady) { document.getElementById("status").innerText = "Still loading. Try again in a second."; return; }
+      copyToClipboard(buildGuide(getEssayText()), "Copied: essay + AI reading guide.");
     }
+
+    function copyEssayOnly() {
+      if (!essayReady) { document.getElementById("status").innerText = "Still loading. Try again in a second."; return; }
+      copyToClipboard(getEssayText(), "Copied: essay only.");
+    }
+
+    loadEssay();
   </script>
 </body>
 </html>
