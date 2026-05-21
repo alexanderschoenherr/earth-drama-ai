@@ -13,7 +13,7 @@
     button.secondary { background: transparent; color: #111; }
     #status { margin-top: 16px; font-weight: 650; }
     .note { font-size: 0.95rem; opacity: 0.75; margin-top: 28px; }
-    textarea { position: absolute; left: -9999px; top: 0; width: 1px; height: 1px; opacity: 0; }
+    textarea { position: fixed; left: 0; top: 0; width: 1px; height: 1px; opacity: 0; font-size: 16px; transform: translateX(-9999px); }
     #essayText { display: none; }
   </style>
 </head>
@@ -919,17 +919,19 @@ ${essay}`;
     }
 
     async function copyText(text, successMessage) {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          document.getElementById("status").innerText = successMessage;
+          return;
+        } catch (err) {}
+      }
+
       const box = document.getElementById("copyBox");
       box.value = text;
-      box.focus();
+      box.focus({ preventScroll: true });
       box.select();
       box.setSelectionRange(0, box.value.length);
-
-      try {
-        await navigator.clipboard.writeText(text);
-        document.getElementById("status").innerText = successMessage;
-        return;
-      } catch (err) {}
 
       try {
         const copied = document.execCommand("copy");
