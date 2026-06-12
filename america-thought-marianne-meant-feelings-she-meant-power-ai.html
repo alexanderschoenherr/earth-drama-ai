@@ -36,17 +36,15 @@
   <script>
     const essayTitle = "America Thought Marianne Meant Feelings. She Meant Power.";
     const essayDescription = "how Marianne Williamson’s politics of love was not sentimental softness, but a theory of fear, responsibility, human dignity, civilization, and what power is for.";
-    const sourceUrl = "https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/13084dddad50d25fd2a4ca03637a5e990eb3335c/america-thought-marianne-meant-feelings-she-meant-power-ai.html";
+    const sourceUrl = "https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/b6df9d66d5122761855d2c0b79f96e14cdfadf97/essay-sources/america-thought-marianne-meant-feelings-she-meant-power.txt";
 
     async function getEssayText() {
       const cached = document.getElementById("essayText").innerText.trim();
       if (cached) return cached;
       const response = await fetch(sourceUrl);
-      const html = await response.text();
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      const essay = doc.getElementById("essayText").innerText.trim();
-      document.getElementById("essayText").innerText = essay;
-      return essay;
+      const essay = await response.text();
+      document.getElementById("essayText").innerText = essay.trim();
+      return essay.trim();
     }
 
     async function copyToClipboard(text, successMessage) {
