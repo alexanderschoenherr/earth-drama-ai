@@ -27,6 +27,8 @@
         radial-gradient(ellipse at 18% 18%, rgba(95, 112, 129, 0.16), transparent 34%),
         radial-gradient(ellipse at 88% 34%, rgba(128, 87, 46, 0.13), transparent 38%),
         radial-gradient(ellipse at 38% 72%, rgba(255, 255, 255, 0.36), transparent 46%);
+      animation: atmosphereDrift 34s ease-in-out infinite alternate;
+      will-change: transform, opacity;
     }
     .atmosphere::before {
       content: "";
@@ -38,6 +40,8 @@
         repeating-linear-gradient(26deg, rgba(255, 255, 255, 0.28) 0 1px, transparent 1px 22px);
       transform: rotate(-2deg);
       mix-blend-mode: multiply;
+      animation: signalDrift 46s linear infinite alternate;
+      will-change: transform;
     }
     .atmosphere::after {
       content: "";
@@ -51,6 +55,8 @@
         radial-gradient(circle, rgba(255, 231, 172, 0.42) 0%, rgba(228, 188, 112, 0.16) 37%, transparent 70%);
       filter: blur(14px);
       opacity: 0.72;
+      animation: glowBreathe 28s ease-in-out infinite alternate;
+      will-change: transform, opacity;
     }
     body::before {
       content: "";
@@ -61,6 +67,21 @@
       opacity: 0.05;
       background-image: repeating-radial-gradient(circle at 20% 30%, rgba(0,0,0,0.22) 0 0.4px, transparent 0.4px 3px);
       mix-blend-mode: multiply;
+    }
+    @keyframes atmosphereDrift {
+      0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.96; }
+      100% { transform: translate3d(-10px, 14px, 0) scale(1.035); opacity: 1; }
+    }
+    @keyframes signalDrift {
+      0% { transform: translate3d(0, 0, 0) rotate(-2deg); }
+      100% { transform: translate3d(-18px, 12px, 0) rotate(-1deg); }
+    }
+    @keyframes glowBreathe {
+      0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.62; }
+      100% { transform: translate3d(-12px, 18px, 0) scale(1.08); opacity: 0.84; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .atmosphere, .atmosphere::before, .atmosphere::after { animation: none; }
     }
     .eyebrow, h1, .dek, .helper, .button-row, #status { position: relative; z-index: 1; }
     .eyebrow { font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.62; margin-bottom: 22px; }
@@ -79,7 +100,7 @@
   <div class="eyebrow">Earth Drama · AI Companion</div>
   <h1>Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings</h1>
   <p class="dek">How one of the most mocked ideas in American politics became one of the most misunderstood.</p>
-  <p class="helper">Copy the essay with a guided AI prompt, then paste it into ChatGPT, Claude, Gemini, or any AI tool.</p>
+  <p class="helper">Copy the essay with or without a guided AI prompt, then paste it into ChatGPT, Claude, Gemini, or any AI tool.</p>
   <div class="button-row">
     <button onclick="copyEssayWithGuide(this)">Copy Essay + Guided AI Prompt</button>
     <button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button>
