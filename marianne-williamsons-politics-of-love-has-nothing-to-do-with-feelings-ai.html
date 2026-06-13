@@ -6,40 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
+      position: relative;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       max-width: 760px;
       margin: 0 auto;
       padding: 38px 20px 48px;
       line-height: 1.5;
       color: #111;
-      background:
-        radial-gradient(circle at 50% 8%, rgba(210, 178, 118, 0.22), transparent 34%),
-        radial-gradient(circle at 15% 22%, rgba(120, 132, 145, 0.10), transparent 32%),
-        radial-gradient(circle at 85% 18%, rgba(92, 70, 52, 0.08), transparent 30%),
-        linear-gradient(180deg, #fbf7ef 0%, #f4eadc 58%, #efe3d1 100%);
+      background: linear-gradient(180deg, #fbf7ef 0%, #f4eadc 58%, #efe3d1 100%);
       min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .atmosphere {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 72% 4%, rgba(239, 190, 94, 0.38), transparent 32%),
+        radial-gradient(ellipse at 18% 18%, rgba(95, 112, 129, 0.16), transparent 34%),
+        radial-gradient(ellipse at 88% 34%, rgba(128, 87, 46, 0.13), transparent 38%),
+        radial-gradient(ellipse at 38% 72%, rgba(255, 255, 255, 0.36), transparent 46%);
+    }
+    .atmosphere::before {
+      content: "";
+      position: absolute;
+      inset: -18%;
+      opacity: 0.18;
+      background:
+        repeating-linear-gradient(112deg, rgba(80, 58, 35, 0.22) 0 1px, transparent 1px 18px),
+        repeating-linear-gradient(26deg, rgba(255, 255, 255, 0.28) 0 1px, transparent 1px 22px);
+      transform: rotate(-2deg);
+      mix-blend-mode: multiply;
+    }
+    .atmosphere::after {
+      content: "";
+      position: absolute;
+      width: 78vw;
+      height: 78vw;
+      left: 44%;
+      top: -24vw;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(255, 231, 172, 0.42) 0%, rgba(228, 188, 112, 0.16) 37%, transparent 70%);
+      filter: blur(14px);
+      opacity: 0.72;
     }
     body::before {
       content: "";
       position: fixed;
       inset: 0;
+      z-index: 0;
       pointer-events: none;
-      opacity: 0.055;
-      background-image: repeating-radial-gradient(circle at 20% 30%, rgba(0,0,0,0.18) 0 0.4px, transparent 0.4px 3px);
+      opacity: 0.05;
+      background-image: repeating-radial-gradient(circle at 20% 30%, rgba(0,0,0,0.22) 0 0.4px, transparent 0.4px 3px);
       mix-blend-mode: multiply;
     }
+    .eyebrow, h1, .dek, .helper, .button-row, #status { position: relative; z-index: 1; }
     .eyebrow { font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.62; margin-bottom: 22px; }
     h1 { font-size: clamp(2rem, 8.4vw, 4.2rem); line-height: 0.98; letter-spacing: -0.055em; margin: 0 0 14px; }
     .dek { font-size: 1rem; line-height: 1.38; margin: 0 0 24px; color: #333; font-weight: 650; }
     .helper { font-size: 1.02rem; line-height: 1.45; margin: 0 0 24px; color: #444; }
-    .button-row { display: flex; flex-direction: column; gap: 12px; margin: 0 0 14px; }
+    .button-row { display: flex; flex-direction: column; gap: 12px; margin: 0; }
     button { font-size: 1rem; font-weight: 750; padding: 16px 18px; border-radius: 999px; border: 1.5px solid #111; background: #111; color: #fff; cursor: pointer; box-shadow: 0 8px 22px rgba(0,0,0,0.08); }
-    button.secondary { background: transparent; color: #111; box-shadow: none; }
-    #status { min-height: 1.3em; margin-top: 12px; font-size: 0.98rem; line-height: 1.35; font-weight: 750; color: #111; }
+    button.secondary { background: rgba(255,255,255,0.08); color: #111; box-shadow: none; }
+    #status { min-height: 0; margin-top: 12px; font-size: 0.96rem; line-height: 1.35; font-weight: 750; color: #111; }
     #essayText { display: none; }
   </style>
 </head>
 <body>
+  <div class="atmosphere" aria-hidden="true"></div>
   <div class="eyebrow">Earth Drama · AI Companion</div>
   <h1>Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings</h1>
   <p class="dek">How one of the most mocked ideas in American politics became one of the most misunderstood.</p>
@@ -48,7 +84,7 @@
     <button onclick="copyEssayWithGuide(this)">Copy Essay + Guided AI Prompt</button>
     <button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button>
   </div>
-  <div id="status"></div>
+  <div id="status" aria-live="polite"></div>
 
   <div id="essayText"></div>
 
@@ -66,17 +102,17 @@
       return essay.trim();
     }
 
-    function temporarilyConfirmButton(button, message) {
+    function temporarilyConfirmButton(button) {
       const originalText = button.innerText;
       button.innerText = "Copied — Paste Into AI";
-      document.getElementById("status").innerText = message;
       setTimeout(() => { button.innerText = originalText; }, 2200);
     }
 
-    async function copyToClipboard(text, successMessage, button) {
+    async function copyToClipboard(text, button) {
       try {
         await navigator.clipboard.writeText(text);
-        temporarilyConfirmButton(button, successMessage);
+        document.getElementById("status").innerText = "";
+        temporarilyConfirmButton(button);
       }
       catch (err) { document.getElementById("status").innerText = "Copy failed. Try opening this page in your browser and tapping the button again."; }
     }
@@ -139,12 +175,12 @@ Then end with this exact final question in bold, without quotation marks:
 Here is the essay:
 
 ${essay}`;
-        copyToClipboard(guide, "Copied. Now paste it into ChatGPT, Claude, Gemini, or any AI tool.", button);
+        copyToClipboard(guide, button);
       } catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
     }
 
     async function copyEssayOnly(button) {
-      try { copyToClipboard(await getEssayText(), "Copied. Now paste it into ChatGPT, Claude, Gemini, or any AI tool.", button); }
+      try { copyToClipboard(await getEssayText(), button); }
       catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
     }
   </script>
