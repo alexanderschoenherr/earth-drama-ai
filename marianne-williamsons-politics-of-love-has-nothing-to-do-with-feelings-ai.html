@@ -5,7 +5,29 @@
   <title>Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings — AI Companion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 0 auto; padding: 42px 20px 56px; line-height: 1.55; color: #111; background: #faf7f1; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 42px 20px 56px;
+      line-height: 1.55;
+      color: #111;
+      background:
+        radial-gradient(circle at 50% 8%, rgba(210, 178, 118, 0.22), transparent 34%),
+        radial-gradient(circle at 15% 22%, rgba(120, 132, 145, 0.10), transparent 32%),
+        radial-gradient(circle at 85% 18%, rgba(92, 70, 52, 0.08), transparent 30%),
+        linear-gradient(180deg, #fbf7ef 0%, #f4eadc 58%, #efe3d1 100%);
+      min-height: 100vh;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.055;
+      background-image: repeating-radial-gradient(circle at 20% 30%, rgba(0,0,0,0.18) 0 0.4px, transparent 0.4px 3px);
+      mix-blend-mode: multiply;
+    }
     .eyebrow { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.62; margin-bottom: 28px; }
     h1 { font-size: clamp(2.15rem, 9vw, 4.4rem); line-height: 0.98; letter-spacing: -0.055em; margin: 0 0 18px; }
     .dek { font-size: 1.15rem; line-height: 1.42; margin: 0 0 28px; color: #333; font-weight: 650; }
