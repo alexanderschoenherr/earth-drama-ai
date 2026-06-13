@@ -2,122 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>America Thought Marianne Meant Feelings. She Meant Power. — AI Companion</title>
+  <title>Redirecting — Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=./marianne-williamsons-politics-of-love-has-nothing-to-do-with-feelings-ai.html?v=4">
+  <link rel="canonical" href="./marianne-williamsons-politics-of-love-has-nothing-to-do-with-feelings-ai.html?v=4">
   <style>
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 0 auto; padding: 42px 20px 56px; line-height: 1.55; color: #111; background: #faf7f1; }
-    .eyebrow { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.62; margin-bottom: 28px; }
-    h1 { font-size: clamp(2.15rem, 9vw, 4.4rem); line-height: 0.98; letter-spacing: -0.055em; margin: 0 0 24px; }
-    p { font-size: 1.08rem; }
-    .intro { font-size: 1.15rem; line-height: 1.48; margin: 0 0 18px; color: #222; }
-    .helper { font-size: 1rem; line-height: 1.5; margin: 0 0 30px; color: #555; }
-    .button-row { display: flex; flex-direction: column; gap: 12px; margin: 30px 0; }
-    button { font-size: 1rem; font-weight: 750; padding: 16px 18px; border-radius: 999px; border: 1.5px solid #111; background: #111; color: #fff; cursor: pointer; box-shadow: 0 8px 22px rgba(0,0,0,0.08); }
-    button.secondary { background: transparent; color: #111; box-shadow: none; }
-    #status { margin-top: 16px; font-weight: 750; }
-    .note { font-size: 0.98rem; line-height: 1.5; opacity: 0.72; margin-top: 30px; }
-    #essayText { display: none; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 680px; margin: 0 auto; padding: 48px 20px; line-height: 1.55; color: #111; background: #faf7f1; }
+    a { color: #111; font-weight: 750; }
   </style>
 </head>
 <body>
-  <div class="eyebrow">Earth Drama · AI Companion</div>
-  <h1>America Thought Marianne Meant Feelings. She Meant Power.</h1>
-  <p class="intro">Use this page to bring the full essay into AI for a faster, deeper reading experience.</p>
-  <p class="helper">Choose the guided version for a structured reading guide, or copy the essay alone if you want to ask your own questions.</p>
-  <div class="button-row">
-    <button onclick="copyEssayWithGuide()">Copy Essay + AI Reading Guide</button>
-    <button class="secondary" onclick="copyEssayOnly()">Copy Essay Only</button>
-  </div>
-  <div id="status"></div>
-  <p class="note">Paste it into ChatGPT, Claude, Gemini, or any AI tool to summarize, reflect, question, or go deeper.</p>
-
-  <div id="essayText"></div>
-
-  <script>
-    const essayTitle = "America Thought Marianne Meant Feelings. She Meant Power.";
-    const essayDescription = "how Marianne Williamson’s politics of love was not sentimental softness, but a theory of fear, responsibility, human dignity, civilization, and what power is for.";
-    const sourceUrl = "https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/b6df9d66d5122761855d2c0b79f96e14cdfadf97/essay-sources/america-thought-marianne-meant-feelings-she-meant-power.txt";
-
-    async function getEssayText() {
-      const cached = document.getElementById("essayText").innerText.trim();
-      if (cached) return cached;
-      const response = await fetch(sourceUrl);
-      const essay = await response.text();
-      document.getElementById("essayText").innerText = essay.trim();
-      return essay.trim();
-    }
-
-    async function copyToClipboard(text, successMessage) {
-      try { await navigator.clipboard.writeText(text); document.getElementById("status").innerText = successMessage; }
-      catch (err) { document.getElementById("status").innerText = "Copy failed. Try opening this page in your browser and tapping the button again."; }
-    }
-
-    async function copyEssayWithGuide() {
-      try {
-        const essay = await getEssayText();
-        const guide =
-`I’m going to paste an essay titled "${essayTitle}."
-
-This piece is about ${essayDescription}
-
-Respond in the regular chat as plain markdown.
-
-Create a concise AI reading guide that helps me quickly understand the piece, its argument, its emotional force, and why it matters.
-
-Use the section headings below in this exact order. Do not number the sections.
-
-Keep each main section to one compact, alive paragraph. The sections should feel roughly balanced, but do not make the response stiff or academic.
-
-Write like a sharp, thoughtful reader explaining why the piece matters — not like a book report, abstract, or classroom summary. Favor vivid, precise language that preserves the essay’s tension and force.
-
-What This Piece Is Really About
-Give a short plain-English summary of what the essay is truly about beneath the surface topic.
-
-The Core Argument
-State the main claim the piece is making.
-
-Why It Matters
-Explain the human, moral, cultural, spiritual, or political stakes.
-
-The Deepest Insight
-Name the deeper truth, warning, revelation, or moral pressure the piece is trying to reveal.
-
-What To Carry Forward
-Help me understand what I should question, feel, remember, or keep thinking about after reading.
-
-Aim for 450–650 words total.
-
-Preserve the author’s voice, framing, urgency, and emotional force.
-
-Do not rewrite the essay, debate it, fact-check it, sanitize it, flatten it into academic commentary, or make it generic.
-
-Do not over-explain every turn of the essay or remove the reason to read the full piece.
-
-End with a short section titled:
-
-How I Can Help You Go Deeper
-
-In that section, include only these 4 options:
-- explore the idea that challenged or moved you most
-- think through where you agree, disagree, or feel conflicted
-- connect the piece to your own life, work, politics, beliefs, or relationships
-- turn your reaction into a thoughtful comment on the piece
-
-Then end with this exact final question in bold, without quotation marks:
-
-**How would you like to go deeper with this piece?**
-
-Here is the essay:
-
-${essay}`;
-        copyToClipboard(guide, "Copied: essay + AI reading guide.");
-      } catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
-    }
-
-    async function copyEssayOnly() {
-      try { copyToClipboard(await getEssayText(), "Copied: essay only."); }
-      catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
-    }
-  </script>
+  <p>Redirecting to the updated AI companion page for <strong>Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings</strong>.</p>
+  <p><a href="./marianne-williamsons-politics-of-love-has-nothing-to-do-with-feelings-ai.html?v=4">Open the updated page</a></p>
+  <script>window.location.replace("./marianne-williamsons-politics-of-love-has-nothing-to-do-with-feelings-ai.html?v=4");</script>
 </body>
 </html>
