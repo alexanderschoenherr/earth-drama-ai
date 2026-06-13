@@ -19,45 +19,70 @@
     }
     .atmosphere {
       position: fixed;
-      inset: -22%;
+      inset: 0;
       z-index: 0;
+      overflow: hidden;
       pointer-events: none;
       background:
-        radial-gradient(ellipse at 68% 4%, rgba(239, 190, 94, 0.52), transparent 30%),
-        radial-gradient(ellipse at 8% 20%, rgba(86, 106, 126, 0.22), transparent 32%),
-        radial-gradient(ellipse at 90% 38%, rgba(126, 80, 40, 0.18), transparent 36%),
-        radial-gradient(ellipse at 42% 75%, rgba(255, 255, 255, 0.46), transparent 48%),
-        linear-gradient(120deg, rgba(255,255,255,0.18), transparent 42%, rgba(193,143,72,0.14));
-      background-size: 115% 115%;
-      animation: ambientPan 22s ease-in-out infinite alternate;
-      will-change: transform, background-position, filter, opacity;
+        radial-gradient(ellipse at 50% 0%, rgba(255, 246, 220, 0.62), transparent 44%),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(213,170,100,0.10));
     }
     .atmosphere::before {
       content: "";
       position: absolute;
-      inset: -16%;
-      opacity: 0.18;
+      inset: -18%;
+      opacity: 0.15;
       background:
         repeating-linear-gradient(112deg, rgba(80, 58, 35, 0.22) 0 1px, transparent 1px 18px),
-        repeating-linear-gradient(26deg, rgba(255, 255, 255, 0.28) 0 1px, transparent 1px 22px);
+        repeating-linear-gradient(26deg, rgba(255, 255, 255, 0.30) 0 1px, transparent 1px 22px);
       mix-blend-mode: multiply;
-      animation: signalPan 30s linear infinite alternate;
+      animation: signalFloat 36s linear infinite alternate;
       will-change: transform;
     }
-    .atmosphere::after {
-      content: "";
+    .blob {
       position: absolute;
-      width: 105vw;
-      height: 105vw;
-      left: 24%;
-      top: -34vw;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle, rgba(255, 231, 172, 0.64) 0%, rgba(228, 188, 112, 0.26) 38%, transparent 72%);
-      filter: blur(18px);
-      opacity: 0.82;
-      animation: glowPan 20s ease-in-out infinite alternate;
-      will-change: transform, opacity;
+      display: block;
+      border-radius: 46% 54% 58% 42% / 48% 42% 58% 52%;
+      filter: blur(30px);
+      opacity: 0.72;
+      transform: translate3d(0,0,0);
+      will-change: transform, border-radius, opacity;
+      mix-blend-mode: multiply;
+    }
+    .blob.gold {
+      width: 82vw;
+      height: 66vw;
+      left: 38vw;
+      top: -18vw;
+      background: radial-gradient(circle at 38% 42%, rgba(255, 219, 127, 0.62), rgba(224, 163, 72, 0.24) 46%, transparent 72%);
+      animation: goldWeather 18s ease-in-out infinite alternate;
+      mix-blend-mode: normal;
+    }
+    .blob.smoke {
+      width: 70vw;
+      height: 74vw;
+      left: -28vw;
+      top: 6vh;
+      background: radial-gradient(circle at 50% 50%, rgba(92, 111, 130, 0.20), rgba(116, 130, 142, 0.10) 48%, transparent 72%);
+      animation: smokeWeather 22s ease-in-out infinite alternate;
+    }
+    .blob.dust {
+      width: 76vw;
+      height: 70vw;
+      right: -36vw;
+      top: 34vh;
+      background: radial-gradient(circle at 48% 46%, rgba(142, 92, 45, 0.18), rgba(201, 153, 90, 0.12) 45%, transparent 74%);
+      animation: dustWeather 26s ease-in-out infinite alternate;
+    }
+    .blob.light {
+      width: 82vw;
+      height: 58vw;
+      left: 6vw;
+      top: 48vh;
+      background: radial-gradient(circle at 44% 48%, rgba(255,255,255,0.68), rgba(255,245,220,0.24) 48%, transparent 76%);
+      opacity: 0.50;
+      animation: lightWeather 20s ease-in-out infinite alternate;
+      mix-blend-mode: screen;
     }
     body::before {
       content: "";
@@ -69,37 +94,32 @@
       background-image: repeating-radial-gradient(circle at 20% 30%, rgba(0,0,0,0.22) 0 0.4px, transparent 0.4px 3px);
       mix-blend-mode: multiply;
     }
-    @keyframes ambientPan {
-      0% {
-        transform: translate3d(-26px, -22px, 0) scale(1.04);
-        background-position: 42% 42%;
-        filter: saturate(0.98) brightness(1.01);
-        opacity: 0.92;
-      }
-      50% {
-        transform: translate3d(10px, 18px, 0) scale(1.09);
-        background-position: 56% 50%;
-        filter: saturate(1.08) brightness(1.03);
-        opacity: 1;
-      }
-      100% {
-        transform: translate3d(36px, 46px, 0) scale(1.13);
-        background-position: 68% 60%;
-        filter: saturate(1.02) brightness(1.02);
-        opacity: 0.96;
-      }
+    @keyframes goldWeather {
+      0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.52; border-radius: 46% 54% 58% 42% / 48% 42% 58% 52%; }
+      45% { transform: translate3d(-26vw, 12vh, 0) scale(1.18); opacity: 0.76; border-radius: 58% 42% 46% 54% / 42% 60% 40% 58%; }
+      100% { transform: translate3d(-8vw, 30vh, 0) scale(1.05); opacity: 0.60; border-radius: 42% 58% 55% 45% / 60% 44% 56% 40%; }
     }
-    @keyframes signalPan {
-      0% { transform: translate3d(-18px, -10px, 0) rotate(-2.2deg) scale(1.02); }
-      100% { transform: translate3d(38px, 24px, 0) rotate(-0.4deg) scale(1.05); }
+    @keyframes smokeWeather {
+      0% { transform: translate3d(0, 0, 0) scale(0.96); opacity: 0.34; border-radius: 54% 46% 45% 55% / 48% 60% 40% 52%; }
+      50% { transform: translate3d(28vw, 9vh, 0) scale(1.14); opacity: 0.50; border-radius: 42% 58% 61% 39% / 58% 42% 58% 42%; }
+      100% { transform: translate3d(16vw, 32vh, 0) scale(1.02); opacity: 0.38; border-radius: 60% 40% 48% 52% / 40% 56% 44% 60%; }
     }
-    @keyframes glowPan {
-      0% { transform: translate3d(-38px, -16px, 0) scale(0.94); opacity: 0.58; }
-      50% { transform: translate3d(0, 18px, 0) scale(1.08); opacity: 0.86; }
-      100% { transform: translate3d(52px, 44px, 0) scale(1.18); opacity: 0.72; }
+    @keyframes dustWeather {
+      0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.34; border-radius: 45% 55% 60% 40% / 50% 44% 56% 50%; }
+      45% { transform: translate3d(-34vw, -12vh, 0) scale(1.20); opacity: 0.50; border-radius: 58% 42% 46% 54% / 44% 60% 40% 56%; }
+      100% { transform: translate3d(-18vw, 14vh, 0) scale(1.10); opacity: 0.40; border-radius: 40% 60% 55% 45% / 62% 42% 58% 38%; }
+    }
+    @keyframes lightWeather {
+      0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.34; border-radius: 48% 52% 44% 56% / 50% 58% 42% 50%; }
+      50% { transform: translate3d(22vw, -22vh, 0) scale(1.22); opacity: 0.56; border-radius: 60% 40% 58% 42% / 42% 48% 52% 58%; }
+      100% { transform: translate3d(6vw, -8vh, 0) scale(1.08); opacity: 0.42; border-radius: 44% 56% 50% 50% / 58% 44% 56% 42%; }
+    }
+    @keyframes signalFloat {
+      0% { transform: translate3d(-10px, -10px, 0) rotate(-2.1deg) scale(1.02); }
+      100% { transform: translate3d(28px, 18px, 0) rotate(-0.8deg) scale(1.04); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .atmosphere, .atmosphere::before, .atmosphere::after { animation: none; }
+      .atmosphere::before, .blob { animation: none; }
     }
     .eyebrow, h1, .dek, .helper, .button-row, #status { position: relative; z-index: 1; }
     .eyebrow { font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.62; margin-bottom: 22px; }
@@ -114,7 +134,12 @@
   </style>
 </head>
 <body>
-  <div class="atmosphere" aria-hidden="true"></div>
+  <div class="atmosphere" aria-hidden="true">
+    <span class="blob gold"></span>
+    <span class="blob smoke"></span>
+    <span class="blob dust"></span>
+    <span class="blob light"></span>
+  </div>
   <div class="eyebrow">Earth Drama · AI Companion</div>
   <h1>Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings</h1>
   <p class="dek">How one of the most mocked ideas in American politics became one of the most misunderstood.</p>
