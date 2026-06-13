@@ -25,9 +25,9 @@
   <h1>Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings</h1>
   <p class="dek">How one of the most mocked ideas in American politics became one of the most misunderstood.</p>
   <p class="intro">Use this page to bring the full essay into AI for a faster, deeper reading experience.</p>
-  <p class="helper">Choose the guided version for a structured reading guide, or copy the essay alone if you want to ask your own questions.</p>
+  <p class="helper">Use the guided prompt to help AI summarize the essay, surface the core argument, and suggest ways to go deeper. Or copy the essay alone if you want to ask your own questions.</p>
   <div class="button-row">
-    <button onclick="copyEssayWithGuide()">Copy Essay + AI Reading Guide</button>
+    <button onclick="copyEssayWithGuide()">Copy Essay + Guided AI Prompt</button>
     <button class="secondary" onclick="copyEssayOnly()">Copy Essay Only</button>
   </div>
   <div id="status"></div>
@@ -112,12 +112,12 @@ Then end with this exact final question in bold, without quotation marks:
 Here is the essay:
 
 ${essay}`;
-        copyToClipboard(guide, "Copied: essay + AI reading guide.");
+        copyToClipboard(guide, "Copied. Now paste it into ChatGPT, Claude, Gemini, or any AI tool.");
       } catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
     }
 
     async function copyEssayOnly() {
-      try { copyToClipboard(await getEssayText(), "Copied: essay only."); }
+      try { copyToClipboard(await getEssayText(), "Copied. Now paste it into ChatGPT, Claude, Gemini, or any AI tool."); }
       catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
     }
   </script>
