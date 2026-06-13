@@ -19,43 +19,44 @@
     }
     .atmosphere {
       position: fixed;
-      inset: -8%;
+      inset: -22%;
       z-index: 0;
       pointer-events: none;
       background:
-        radial-gradient(ellipse at 76% 2%, rgba(239, 190, 94, 0.48), transparent 32%),
-        radial-gradient(ellipse at 12% 20%, rgba(95, 112, 129, 0.20), transparent 34%),
-        radial-gradient(ellipse at 90% 38%, rgba(128, 87, 46, 0.17), transparent 38%),
-        radial-gradient(ellipse at 38% 72%, rgba(255, 255, 255, 0.40), transparent 46%);
-      animation: atmosphereDrift 18s ease-in-out infinite alternate;
-      will-change: transform, opacity, filter;
+        radial-gradient(ellipse at 68% 4%, rgba(239, 190, 94, 0.52), transparent 30%),
+        radial-gradient(ellipse at 8% 20%, rgba(86, 106, 126, 0.22), transparent 32%),
+        radial-gradient(ellipse at 90% 38%, rgba(126, 80, 40, 0.18), transparent 36%),
+        radial-gradient(ellipse at 42% 75%, rgba(255, 255, 255, 0.46), transparent 48%),
+        linear-gradient(120deg, rgba(255,255,255,0.18), transparent 42%, rgba(193,143,72,0.14));
+      background-size: 115% 115%;
+      animation: ambientPan 22s ease-in-out infinite alternate;
+      will-change: transform, background-position, filter, opacity;
     }
     .atmosphere::before {
       content: "";
       position: absolute;
-      inset: -18%;
-      opacity: 0.20;
+      inset: -16%;
+      opacity: 0.18;
       background:
-        repeating-linear-gradient(112deg, rgba(80, 58, 35, 0.23) 0 1px, transparent 1px 18px),
-        repeating-linear-gradient(26deg, rgba(255, 255, 255, 0.30) 0 1px, transparent 1px 22px);
-      transform: rotate(-2deg);
+        repeating-linear-gradient(112deg, rgba(80, 58, 35, 0.22) 0 1px, transparent 1px 18px),
+        repeating-linear-gradient(26deg, rgba(255, 255, 255, 0.28) 0 1px, transparent 1px 22px);
       mix-blend-mode: multiply;
-      animation: signalDrift 28s linear infinite alternate;
+      animation: signalPan 30s linear infinite alternate;
       will-change: transform;
     }
     .atmosphere::after {
       content: "";
       position: absolute;
-      width: 92vw;
-      height: 92vw;
-      left: 34%;
-      top: -30vw;
+      width: 105vw;
+      height: 105vw;
+      left: 24%;
+      top: -34vw;
       border-radius: 50%;
       background:
-        radial-gradient(circle, rgba(255, 231, 172, 0.56) 0%, rgba(228, 188, 112, 0.22) 38%, transparent 72%);
-      filter: blur(16px);
-      opacity: 0.78;
-      animation: glowBreathe 16s ease-in-out infinite alternate;
+        radial-gradient(circle, rgba(255, 231, 172, 0.64) 0%, rgba(228, 188, 112, 0.26) 38%, transparent 72%);
+      filter: blur(18px);
+      opacity: 0.82;
+      animation: glowPan 20s ease-in-out infinite alternate;
       will-change: transform, opacity;
     }
     body::before {
@@ -68,17 +69,34 @@
       background-image: repeating-radial-gradient(circle at 20% 30%, rgba(0,0,0,0.22) 0 0.4px, transparent 0.4px 3px);
       mix-blend-mode: multiply;
     }
-    @keyframes atmosphereDrift {
-      0% { transform: translate3d(-8px, -8px, 0) scale(1); opacity: 0.90; filter: saturate(0.98); }
-      100% { transform: translate3d(28px, 34px, 0) scale(1.055); opacity: 1; filter: saturate(1.08); }
+    @keyframes ambientPan {
+      0% {
+        transform: translate3d(-26px, -22px, 0) scale(1.04);
+        background-position: 42% 42%;
+        filter: saturate(0.98) brightness(1.01);
+        opacity: 0.92;
+      }
+      50% {
+        transform: translate3d(10px, 18px, 0) scale(1.09);
+        background-position: 56% 50%;
+        filter: saturate(1.08) brightness(1.03);
+        opacity: 1;
+      }
+      100% {
+        transform: translate3d(36px, 46px, 0) scale(1.13);
+        background-position: 68% 60%;
+        filter: saturate(1.02) brightness(1.02);
+        opacity: 0.96;
+      }
     }
-    @keyframes signalDrift {
-      0% { transform: translate3d(-8px, -4px, 0) rotate(-2deg); }
-      100% { transform: translate3d(28px, 20px, 0) rotate(-0.6deg); }
+    @keyframes signalPan {
+      0% { transform: translate3d(-18px, -10px, 0) rotate(-2.2deg) scale(1.02); }
+      100% { transform: translate3d(38px, 24px, 0) rotate(-0.4deg) scale(1.05); }
     }
-    @keyframes glowBreathe {
-      0% { transform: translate3d(-18px, -8px, 0) scale(0.96); opacity: 0.58; }
-      100% { transform: translate3d(28px, 34px, 0) scale(1.16); opacity: 0.92; }
+    @keyframes glowPan {
+      0% { transform: translate3d(-38px, -16px, 0) scale(0.94); opacity: 0.58; }
+      50% { transform: translate3d(0, 18px, 0) scale(1.08); opacity: 0.86; }
+      100% { transform: translate3d(52px, 44px, 0) scale(1.18); opacity: 0.72; }
     }
     @media (prefers-reduced-motion: reduce) {
       .atmosphere, .atmosphere::before, .atmosphere::after { animation: none; }
