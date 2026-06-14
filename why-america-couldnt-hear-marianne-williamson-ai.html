@@ -83,13 +83,17 @@
     const essayDescription = "how Marianne Williamson’s campaigns exposed America’s fear-based political-media system by showing how quickly it dismissed love, moral repair, and spiritual seriousness as unserious.";
     const sourceUrl = "https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/2f02cb5260074d8dc36c82cde00f14bf0d287657/essay-sources/why-america-couldnt-hear-marianne-williamson.txt";
 
+    function normalizeEssayText(essay) {
+      return essay.trim().replace(/She brought it to turn the lights on\.$/, "She brought it to turn on the lights.");
+    }
+
     async function getEssayText() {
       const cached = document.getElementById("essayText").innerText.trim();
       if (cached) return cached;
       const response = await fetch(sourceUrl);
-      const essay = await response.text();
-      document.getElementById("essayText").innerText = essay.trim();
-      return essay.trim();
+      const essay = normalizeEssayText(await response.text());
+      document.getElementById("essayText").innerText = essay;
+      return essay;
     }
 
     function temporarilyConfirmButton(button) {
