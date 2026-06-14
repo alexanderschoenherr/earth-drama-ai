@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings — AI Companion</title>
+  <title>Marianne Williamson Wasn’t Talking About Feelings — AI Companion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
@@ -66,7 +66,7 @@
 </head>
 <body>
   <div class="eyebrow">Earth Drama · AI Companion</div>
-  <h1>Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings</h1>
+  <h1>Marianne Williamson Wasn’t Talking About Feelings</h1>
   <p class="dek">How one of the most mocked ideas in American politics became one of the most misunderstood.</p>
   <div class="rule"></div>
   <p class="helper">Copy the essay with or without a guided AI prompt, then paste it into ChatGPT, Claude, Gemini, or any AI tool.</p>
@@ -79,17 +79,21 @@
   <div id="essayText"></div>
 
   <script>
-    const essayTitle = "Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings";
+    const essayTitle = "Marianne Williamson Wasn’t Talking About Feelings";
     const essayDescription = "how Marianne Williamson’s politics of love was mistaken for softness or sentiment, when it is actually a civilizational standard for power, responsibility, human dignity, and flourishing.";
     const sourceUrl = "https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/4f6a1f3768b4947373b5e60b7eb486715e78e8e4/essay-sources/marianne-williamsons-politics-of-love-has-nothing-to-do-with-feelings.txt";
+
+    function normalizeEssayText(essay) {
+      return essay.trim().replace(/^Marianne Williamson’s Politics of Love Has Nothing to Do With Feelings/, "Marianne Williamson Wasn’t Talking About Feelings");
+    }
 
     async function getEssayText() {
       const cached = document.getElementById("essayText").innerText.trim();
       if (cached) return cached;
       const response = await fetch(sourceUrl);
-      const essay = await response.text();
-      document.getElementById("essayText").innerText = essay.trim();
-      return essay.trim();
+      const essay = normalizeEssayText(await response.text());
+      document.getElementById("essayText").innerText = essay;
+      return essay;
     }
 
     function temporarilyConfirmButton(button) {
