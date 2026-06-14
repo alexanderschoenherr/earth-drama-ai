@@ -14,11 +14,11 @@
       line-height: 1.5;
       color: #111;
       background:
-        radial-gradient(ellipse at 18% 3%, rgba(185, 139, 76, 0.24), transparent 32%),
-        radial-gradient(ellipse at 82% 22%, rgba(255, 244, 218, 0.72), transparent 42%),
-        radial-gradient(ellipse at 78% 88%, rgba(184, 135, 70, 0.20), transparent 34%),
-        radial-gradient(ellipse at 2% 96%, rgba(205, 168, 104, 0.18), transparent 34%),
-        linear-gradient(180deg, #f8f0df 0%, #efe2cd 58%, #e6d4b7 100%);
+        radial-gradient(ellipse at 18% 3%, rgba(185, 139, 76, 0.13), transparent 34%),
+        radial-gradient(ellipse at 82% 22%, rgba(255, 249, 232, 0.78), transparent 44%),
+        radial-gradient(ellipse at 78% 88%, rgba(184, 135, 70, 0.10), transparent 36%),
+        radial-gradient(ellipse at 2% 96%, rgba(205, 168, 104, 0.09), transparent 36%),
+        linear-gradient(180deg, #fcf7ee 0%, #f6ede1 58%, #efe4d2 100%);
       min-height: 100vh;
       overflow-x: hidden;
     }
@@ -28,11 +28,11 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.20;
+      opacity: 0.12;
       background:
-        radial-gradient(circle at 16% 18%, rgba(92, 63, 34, 0.20) 0 0.55px, transparent 0.75px 4px),
-        radial-gradient(circle at 72% 34%, rgba(255, 255, 255, 0.45) 0 0.55px, transparent 0.75px 5px),
-        radial-gradient(circle at 44% 78%, rgba(138, 91, 45, 0.14) 0 0.45px, transparent 0.7px 4px);
+        radial-gradient(circle at 16% 18%, rgba(92, 63, 34, 0.14) 0 0.5px, transparent 0.75px 4px),
+        radial-gradient(circle at 72% 34%, rgba(255, 255, 255, 0.46) 0 0.55px, transparent 0.75px 5px),
+        radial-gradient(circle at 44% 78%, rgba(138, 91, 45, 0.08) 0 0.45px, transparent 0.7px 4px);
       background-size: 31px 31px, 43px 43px, 27px 27px;
       mix-blend-mode: multiply;
     }
@@ -42,12 +42,12 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.42;
+      opacity: 0.28;
       background:
-        radial-gradient(ellipse at 10% 8%, rgba(137, 98, 53, 0.18), transparent 33%),
-        radial-gradient(ellipse at 50% 42%, rgba(255, 255, 245, 0.44), transparent 48%),
-        radial-gradient(ellipse at 92% 88%, rgba(169, 122, 63, 0.19), transparent 34%),
-        linear-gradient(135deg, rgba(255,255,255,0.12), transparent 44%, rgba(116,83,45,0.05));
+        radial-gradient(ellipse at 10% 8%, rgba(137, 98, 53, 0.10), transparent 35%),
+        radial-gradient(ellipse at 50% 42%, rgba(255, 255, 248, 0.50), transparent 50%),
+        radial-gradient(ellipse at 92% 88%, rgba(169, 122, 63, 0.10), transparent 36%),
+        linear-gradient(135deg, rgba(255,255,255,0.18), transparent 46%, rgba(116,83,45,0.025));
       filter: blur(0.2px);
       mix-blend-mode: multiply;
     }
@@ -55,7 +55,7 @@
     .eyebrow { font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.66; margin-bottom: 26px; }
     h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.36rem, 8.95vw, 4.75rem); line-height: 1; letter-spacing: -0.052em; margin: 0 0 18px; font-weight: 740; }
     .dek { font-size: 1.02rem; line-height: 1.36; margin: 0 0 24px; color: #252525; font-weight: 650; }
-    .rule { width: 132px; height: 2px; background: rgba(92, 63, 33, 0.24); margin: 0 0 24px; }
+    .rule { width: 132px; height: 2px; background: rgba(92, 63, 33, 0.18); margin: 0 0 24px; }
     .helper { font-size: 1.02rem; line-height: 1.45; margin: 0 0 24px; color: #3f3f3f; }
     .button-row { display: flex; flex-direction: column; gap: 12px; margin: 0; }
     button { font-size: 1rem; font-weight: 750; padding: 16px 18px; border-radius: 999px; border: 1.5px solid #111; background: #111; color: #fff; cursor: pointer; box-shadow: 0 8px 22px rgba(0,0,0,0.08); }
@@ -110,8 +110,7 @@
     async function copyEssayWithGuide(button) {
       try {
         const essay = await getEssayText();
-        const guide =
-`I’m going to paste an essay titled "${essayTitle}."
+        const guide = `I’m going to paste an essay titled "${essayTitle}."
 
 This piece is about ${essayDescription}
 
