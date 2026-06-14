@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The First Trillionaire and the Last Excuse — AI Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      position: relative;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 38px 24px 48px;
+      line-height: 1.5;
+      color: #111;
+      background:
+        radial-gradient(ellipse at 18% 3%, rgba(185, 139, 76, 0.13), transparent 34%),
+        radial-gradient(ellipse at 82% 22%, rgba(255, 249, 232, 0.78), transparent 44%),
+        radial-gradient(ellipse at 78% 88%, rgba(184, 135, 70, 0.10), transparent 36%),
+        radial-gradient(ellipse at 2% 96%, rgba(205, 168, 104, 0.09), transparent 36%),
+        linear-gradient(180deg, #fcf7ee 0%, #f6ede1 58%, #efe4d2 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.12;
+      background:
+        radial-gradient(circle at 16% 18%, rgba(92, 63, 34, 0.14) 0 0.5px, transparent 0.75px 4px),
+        radial-gradient(circle at 72% 34%, rgba(255, 255, 255, 0.46) 0 0.55px, transparent 0.75px 5px),
+        radial-gradient(circle at 44% 78%, rgba(138, 91, 45, 0.08) 0 0.45px, transparent 0.7px 4px);
+      background-size: 31px 31px, 43px 43px, 27px 27px;
+      mix-blend-mode: multiply;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.28;
+      background:
+        radial-gradient(ellipse at 10% 8%, rgba(137, 98, 53, 0.10), transparent 35%),
+        radial-gradient(ellipse at 50% 42%, rgba(255, 255, 248, 0.50), transparent 50%),
+        radial-gradient(ellipse at 92% 88%, rgba(169, 122, 63, 0.10), transparent 36%),
+        linear-gradient(135deg, rgba(255,255,255,0.18), transparent 46%, rgba(116,83,45,0.025));
+      filter: blur(0.2px);
+      mix-blend-mode: multiply;
+    }
+    .eyebrow, h1, .dek, .rule, .helper, .button-row, #status { position: relative; z-index: 1; }
+    .eyebrow { font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800; opacity: 0.66; margin-bottom: 26px; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.36rem, 8.95vw, 4.75rem); line-height: 1; letter-spacing: -0.052em; margin: 0 0 18px; font-weight: 740; }
+    .dek { font-size: 1.02rem; line-height: 1.36; margin: 0 0 24px; color: #252525; font-weight: 650; }
+    .rule { width: 132px; height: 2px; background: rgba(92, 63, 33, 0.18); margin: 0 0 24px; }
+    .helper { font-size: 1.02rem; line-height: 1.45; margin: 0 0 24px; color: #3f3f3f; }
+    .button-row { display: flex; flex-direction: column; gap: 12px; margin: 0; }
+    button { font-size: 1rem; font-weight: 750; padding: 16px 18px; border-radius: 999px; border: 1.5px solid #111; background: #111; color: #fff; cursor: pointer; box-shadow: 0 8px 22px rgba(0,0,0,0.08); }
+    button.secondary { background: rgba(255,255,255,0.08); color: #111; box-shadow: none; }
+    #status { min-height: 0; margin-top: 12px; font-size: 0.96rem; line-height: 1.35; font-weight: 750; color: #111; }
+    #essayText { display: none; }
+  </style>
+</head>
+<body>
+  <div class="eyebrow">Earth Drama · AI Companion</div>
+  <h1>The First Trillionaire and the Last Excuse</h1>
+  <p class="dek">Once one man can be worth a trillion dollars, scarcity stops being an explanation and becomes an alibi.</p>
+  <div class="rule"></div>
+  <p class="helper">Copy the essay with or without a guided AI prompt, then paste it into ChatGPT, Claude, Gemini, or any AI tool.</p>
+  <div class="button-row">
+    <button onclick="copyEssayWithGuide(this)">Copy Essay + Guided AI Prompt</button>
+    <button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button>
+  </div>
+  <div id="status" aria-live="polite"></div>
+
+  <div id="essayText"></div>
+
+  <script>
+    const essayTitle = "The First Trillionaire and the Last Excuse";
+    const essayDescription = "how America’s first paper trillionaire exposes scarcity as a moral alibi, revealing a civilization capable of concentrating abundance but unwilling to arrange power around dignity, life, and love.";
+    const sourceUrl = "https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/5d6c7ffe21b82f85d8dbd3517979202da574c20e/essay-sources/the-first-trillionaire-and-the-last-excuse.txt";
+
+    async function getEssayText() {
+      const cached = document.getElementById("essayText").innerText.trim();
+      if (cached) return cached;
+      const response = await fetch(sourceUrl);
+      const essay = await response.text();
+      document.getElementById("essayText").innerText = essay.trim();
+      return essay.trim();
+    }
+
+    function temporarilyConfirmButton(button) {
+      const originalText = button.innerText;
+      button.innerText = "Copied — Paste Into AI";
+      setTimeout(() => { button.innerText = originalText; }, 2200);
+    }
+
+    async function copyToClipboard(text, button) {
+      try {
+        await navigator.clipboard.writeText(text);
+        document.getElementById("status").innerText = "";
+        temporarilyConfirmButton(button);
+      }
+      catch (err) { document.getElementById("status").innerText = "Copy failed. Try opening this page in your browser and tapping the button again."; }
+    }
+
+    async function copyEssayWithGuide(button) {
+      try {
+        const essay = await getEssayText();
+        const guide =
+`I’m going to paste an essay titled "${essayTitle}."
+
+This piece is about ${essayDescription}
+
+Respond in the regular chat as plain markdown.
+
+Create a concise AI reading guide that helps me quickly understand the piece, its argument, its emotional force, and why it matters.
+
+Use the section headings below in this exact order. Do not number the sections.
+
+Keep each main section to one compact, alive paragraph. The sections should feel roughly balanced, but do not make the response stiff or academic.
+
+Write like a sharp, thoughtful reader explaining why the piece matters — not like a book report, abstract, or classroom summary. Favor vivid, precise language that preserves the essay’s tension and force.
+
+What This Piece Is Really About
+Give a short plain-English summary of what the essay is truly about beneath the surface topic.
+
+The Core Argument
+State the main claim the piece is making.
+
+Why It Matters
+Explain the human, moral, cultural, spiritual, or political stakes.
+
+The Deepest Insight
+Name the deeper truth, warning, revelation, or moral pressure the piece is trying to reveal.
+
+What To Carry Forward
+Help me understand what I should question, feel, remember, or keep thinking about after reading.
+
+Aim for 450–650 words total.
+
+Preserve the author’s voice, framing, urgency, and emotional force.
+
+Do not rewrite the essay, debate it, fact-check it, sanitize it, flatten it into academic commentary, or make it generic.
+
+Do not over-explain every turn of the essay or remove the reason to read the full piece.
+
+End with a short section titled:
+
+How I Can Help You Go Deeper
+
+In that section, include only these 4 options:
+- explore the idea that challenged or moved you most
+- think through where you agree, disagree, or feel conflicted
+- connect the piece to your own life, work, politics, beliefs, or relationships
+- turn your reaction into a thoughtful comment on the piece
+
+Then end with this exact final question in bold, without quotation marks:
+
+**How would you like to go deeper with this piece?**
+
+Here is the essay:
+
+${essay}`;
+        copyToClipboard(guide, button);
+      } catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
+    }
+
+    async function copyEssayOnly(button) {
+      try { copyToClipboard(await getEssayText(), button); }
+      catch (err) { document.getElementById("status").innerText = "Copy failed. Try again in a moment."; }
+    }
+  </script>
+</body>
+</html>
