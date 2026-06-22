@@ -1,1 +1,38 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Earth Drama AI Companion</title></head><body><h1>Earth Drama AI Companion</h1><p>Page loading.</p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>A Country Cannot Fly With One Wing — AI Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:760px;margin:0 auto;padding:38px 24px 48px;color:#111;background:linear-gradient(180deg,#fcf7ee 0%,#f6ede1 58%,#efe4d2 100%);min-height:100vh;}
+    .eyebrow{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;opacity:.66;margin-bottom:26px;}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.36rem,8.95vw,4.75rem);line-height:1;letter-spacing:-.052em;margin:0 0 18px;font-weight:740;}
+    .dek{font-size:1.02rem;line-height:1.36;margin:0 0 24px;color:#252525;font-weight:650;}
+    .rule{width:132px;height:2px;background:rgba(92,63,33,.18);margin:0 0 24px;}
+    .helper{font-size:1.02rem;line-height:1.45;margin:0 0 24px;color:#3f3f3f;}
+    .button-row{display:flex;flex-direction:column;gap:12px;margin:0;}
+    button{font-size:1rem;font-weight:750;padding:16px 18px;border-radius:999px;border:1.5px solid #111;background:#111;color:#fff;cursor:pointer;}
+    button.secondary{background:rgba(255,255,255,.08);color:#111;}
+    #status{margin-top:12px;font-size:.96rem;font-weight:750;color:#111;}
+    #essayText{display:none;}
+  </style>
+</head>
+<body>
+  <div class="eyebrow">Earth Drama · AI Companion</div>
+  <h1>A Country Cannot Fly With One Wing</h1>
+  <p class="dek">The other side carries the questions your side cannot afford to ignore.</p>
+  <div class="rule"></div>
+  <p class="helper">Copy the essay with or without a guided AI prompt, then paste it into ChatGPT, Claude, Gemini, or any AI tool.</p>
+  <div class="button-row"><button onclick="copyEssayWithGuide(this)">Copy Essay + Guided AI Prompt</button><button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button></div>
+  <div id="status" aria-live="polite"></div><div id="essayText"></div>
+  <script>
+    const sourceUrl="https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/ceac282297db7787ea43bdad394f9c3fcd7f3c8c/essay-sources/a-country-cannot-fly-with-one-wing.txt";
+    async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
+    function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
+    async function copyText(text,b){try{await navigator.clipboard.writeText(text);document.getElementById('status').innerText='';confirmButton(b);}catch(e){document.getElementById('status').innerText='Copy failed. Try opening this page in your browser and tapping the button again.';}}
+    async function copyEssayOnly(b){copyText(await getEssayText(),b);}
+    async function copyEssayWithGuide(b){const essay=await getEssayText();const prompt='I am going to paste an essay. Create a concise AI reading guide with these sections: What This Piece Is Really About, The Core Argument, Why It Matters, The Deepest Insight, What To Carry Forward, and How I Can Help You Go Deeper. Aim for 450-650 words total. Preserve the author voice and do not rewrite the essay. Here is the essay:\n\n'+essay;copyText(prompt,b);}
+  </script>
+</body>
+</html>
