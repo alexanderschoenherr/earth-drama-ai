@@ -27,12 +27,70 @@
   <div class="button-row"><button onclick="copyEssayWithGuide(this)">Copy Essay + Guided AI Prompt</button><button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button></div>
   <div id="status" aria-live="polite"></div><div id="essayText"></div>
   <script>
+    const essayTitle = "A Country Cannot Fly With One Wing";
+    const essayDescription = "how a divided country loses wholeness when each side refuses to learn from the questions carried by the other, and why love means seeing more of reality instead of shrinking reality to one side.";
     const sourceUrl=['https://raw.githubusercontent.com','alexanderschoenherr','earth-drama-ai','main','essay-sources','a-country-cannot-fly-with-one-wing.txt'].join('/');
     async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
     function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
     async function copyText(text,b){try{await navigator.clipboard.writeText(text);document.getElementById('status').innerText='';confirmButton(b);}catch(e){document.getElementById('status').innerText='Copy failed. Try opening this page in your browser and tapping the button again.';}}
+    function buildGuide(essay){return [
+      `I’m going to paste an essay titled "${essayTitle}."`,
+      "",
+      `This piece is about ${essayDescription}`,
+      "",
+      "Respond in the regular chat as plain markdown.",
+      "",
+      "Create a concise AI reading guide that helps me quickly understand the piece, its argument, its emotional force, and why it matters.",
+      "",
+      "Use the section headings below in this exact order. Do not number the sections.",
+      "",
+      "Keep each main section to one compact, alive paragraph. The sections should feel roughly balanced, but do not make the response stiff or academic.",
+      "",
+      "Write like a sharp, thoughtful reader explaining why the piece matters — not like a book report, abstract, or classroom summary. Favor vivid, precise language that preserves the essay’s tension and force.",
+      "",
+      "What This Piece Is Really About",
+      "Give a short plain-English summary of what the essay is truly about beneath the surface topic.",
+      "",
+      "The Core Argument",
+      "State the main claim the piece is making.",
+      "",
+      "Why It Matters",
+      "Explain the human, moral, cultural, spiritual, or political stakes.",
+      "",
+      "The Deepest Insight",
+      "Name the deeper truth, warning, revelation, or moral pressure the piece is trying to reveal.",
+      "",
+      "What To Carry Forward",
+      "Help me understand what I should question, feel, remember, or keep thinking about after reading.",
+      "",
+      "Aim for 450–650 words total.",
+      "",
+      "Preserve the author’s voice, framing, urgency, and emotional force.",
+      "",
+      "Do not rewrite the essay, debate it, fact-check it, sanitize it, flatten it into academic commentary, or make it generic.",
+      "",
+      "Do not over-explain every turn of the essay or remove the reason to read the full piece.",
+      "",
+      "End with a short section titled:",
+      "",
+      "How I Can Help You Go Deeper",
+      "",
+      "In that section, include only these 4 options:",
+      "- explore the idea that challenged or moved you most",
+      "- think through where you agree, disagree, or feel conflicted",
+      "- connect the piece to your own life, work, politics, beliefs, or relationships",
+      "- turn your reaction into a thoughtful comment on the piece",
+      "",
+      "Then end with this exact final question in bold, without quotation marks:",
+      "",
+      "**How would you like to go deeper with this piece?**",
+      "",
+      "Here is the essay:",
+      "",
+      essay
+    ].join('\n');}
     async function copyEssayOnly(b){copyText(await getEssayText(),b);}
-    async function copyEssayWithGuide(b){const essay=await getEssayText();const prompt='I am going to paste an essay. Create a concise AI reading guide with these sections: What This Piece Is Really About, The Core Argument, Why It Matters, The Deepest Insight, What To Carry Forward, and How I Can Help You Go Deeper. Aim for 450-650 words total. Preserve the author voice and do not rewrite the essay. Here is the essay:\n\n'+essay;copyText(prompt,b);}
+    async function copyEssayWithGuide(b){const essay=await getEssayText();copyText(buildGuide(essay),b);}
   </script>
 </body>
 </html>
