@@ -27,7 +27,7 @@
   <div class="button-row"><button onclick="copyEssayWithGuide(this)">Copy Essay + Guided AI Prompt</button><button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button></div>
   <div id="status" aria-live="polite"></div><div id="essayText"></div>
   <script>
-    const sourceUrl="https://raw.githubusercontent.com/alexanderschoenherr/earth-drama-ai/ceac282297db7787ea43bdad394f9c3fcd7f3c8c/essay-sources/a-country-cannot-fly-with-one-wing.txt";
+    const sourceUrl=['https://raw.githubusercontent.com','alexanderschoenherr','earth-drama-ai','main','essay-sources','a-country-cannot-fly-with-one-wing.txt'].join('/');
     async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
     function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
     async function copyText(text,b){try{await navigator.clipboard.writeText(text);document.getElementById('status').innerText='';confirmButton(b);}catch(e){document.getElementById('status').innerText='Copy failed. Try opening this page in your browser and tapping the button again.';}}
