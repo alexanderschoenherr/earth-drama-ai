@@ -21,14 +21,14 @@
 <body>
   <div class="eyebrow">Earth Drama · AI Companion</div>
   <h1>The Strongman Is Not the Savior</h1>
-  <p class="dek">James Talarico, Donald Trump, and the Christianity that mistakes domination for power.</p>
+  <p class="dek">How the attacks on James Talarico reveal a Christianity trained to recognize domination faster than mercy.</p>
   <div class="rule"></div>
   <p class="helper">Copy the essay with or without a guided AI prompt, then paste it into ChatGPT, Claude, Gemini, or any AI tool.</p>
   <div class="button-row"><button onclick="copyEssayWithGuide(this)">Copy Essay + Guided AI Prompt</button><button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button></div>
   <div id="status" aria-live="polite"></div><div id="essayText"></div>
   <script>
     const essayTitle = "The Strongman Is Not the Savior";
-    const essayDescription = "how strongman politics can confuse domination with power, and how a Christianity centered on mercy, the neighbor, and the vulnerable exposes the spiritual danger of mistaking control for faith.";
+    const essayDescription = "how the attacks on James Talarico reveal a Christianity trained to recognize domination faster than mercy, and how strongman politics can confuse control with faith and power with cruelty.";
     const sourceUrl=['https://raw.githubusercontent.com','alexanderschoenherr','earth-drama-ai','main','essay-sources','the-strongman-is-not-the-savior.txt'].join('/');
     async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
     function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
