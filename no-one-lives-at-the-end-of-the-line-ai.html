@@ -28,7 +28,7 @@
   <div id="status" aria-live="polite"></div><div id="essayText"></div>
   <script>
     const essayTitle = "No One Lives at the End of the Line";
-    const essayDescription = "how opposites give one another shape, why human beings do not live at pure endpoints, and how wholeness comes from meeting the rejected opposite without turning it into an enemy.";
+    const essayDescription = "how opposites give one another shape, why human beings do not live at pure endpoints, and how wholeness, range, and love come from meeting the rejected opposite without turning it into an enemy.";
     const sourceUrl=['https://raw.githubusercontent.com','alexanderschoenherr','earth-drama-ai','main','essay-sources','no-one-lives-at-the-end-of-the-line.txt'].join('/');
     async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
     function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
@@ -44,7 +44,7 @@
       "",
       "Use the section headings below in this exact order. Do not number the sections.",
       "",
-      "Keep each main section to one compact, alive paragraph. The sections should feel roughly balanced, but do not make the response stiff or academic.",
+      "Keep each main section brief and readable on a phone. Most sections should be 2–3 short sentences. Use a fourth sentence only when it adds real clarity or force.",
       "",
       "Write like a sharp, thoughtful reader explaining why the piece matters — not like a book report, abstract, or classroom summary. Favor vivid, precise language that preserves the essay’s tension and force.",
       "",
@@ -63,7 +63,11 @@
       "What To Carry Forward",
       "Help me understand what I should question, feel, remember, or keep thinking about after reading.",
       "",
-      "Aim for 450–650 words total.",
+      "Aim for 300–425 words total.",
+      "",
+      "Do not turn any section into a long paragraph. Prioritize quick orientation over completeness.",
+      "",
+      "The guide should feel like a sharp map of the essay, not a second essay.",
       "",
       "Preserve the author’s voice, framing, urgency, and emotional force.",
       "",
@@ -73,17 +77,17 @@
       "",
       "End with a short section titled:",
       "",
-      "How I Can Help You Go Deeper",
+      "Ask Me To Go Deeper",
       "",
-      "In that section, include only these 4 options:",
-      "- explore the idea that challenged or moved you most",
-      "- think through where you agree, disagree, or feel conflicted",
-      "- connect the piece to your own life, work, politics, beliefs, or relationships",
-      "- turn your reaction into a thoughtful comment on the piece",
+      "In that section, include 4 brief options phrased as things the reader can ask the AI to help with:",
+      "- unpack the idea that challenged, moved, or unsettled you most",
+      "- help you think through where you agree, disagree, resist, or feel conflicted",
+      "- connect the piece to your own life, relationships, politics, faith, work, or culture",
+      "- help turn your reaction into a thoughtful comment on the piece",
       "",
       "Then end with this exact final question in bold, without quotation marks:",
       "",
-      "**How would you like to go deeper with this piece?**",
+      "**What do you want me to help you explore?**",
       "",
       "Here is the essay:",
       "",
