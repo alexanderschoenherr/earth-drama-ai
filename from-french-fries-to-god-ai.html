@@ -28,7 +28,7 @@
   <div id="status" aria-live="polite"></div><div id="essayText"></div>
   <script>
     const essayTitle = "From French Fries to God";
-    const essayDescription = "how love is not one flat feeling but a ladder of consciousness, rising from appetite and beauty into care, justice, perception, unity, God, and the political power to protect life.";
+    const essayDescription = "how love is not one flat feeling but a ladder of consciousness, rising from appetite and beauty into care, justice, perception, unity, God, and the political power to protect life, and why Marianne Williamson’s language of love was misheard by a culture trained to flatten love into private feeling.";
     const sourceUrl=['https://raw.githubusercontent.com','alexanderschoenherr','earth-drama-ai','main','essay-sources','from-french-fries-to-god.txt'].join('/');
     async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
     function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
