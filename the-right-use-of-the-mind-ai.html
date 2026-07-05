@@ -28,7 +28,7 @@
   <div id="status" aria-live="polite"></div><div id="essayText"></div>
   <script>
     const essayTitle = "The Right Use of the Mind";
-    const essayDescription = "how the human mind names reality in order to survive, then has to learn its place as an instrument rather than reality itself, so it can stop worshiping names, labels, fears, stories, and identities and return to truth, wholeness, range, and conscious unity.";
+    const essayDescription = "how the mind names, sorts, protects, and explains reality in order to survive, but has to learn its place as an instrument rather than reality itself so it can stop worshiping names, labels, fears, stories, and identities and return to truth, wholeness, range, and conscious unity.";
     const sourceUrl=['https://raw.githubusercontent.com','alexanderschoenherr','earth-drama-ai','main','essay-sources','the-right-use-of-the-mind.txt'].join('/');
     async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
     function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
