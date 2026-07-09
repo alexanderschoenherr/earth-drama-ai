@@ -1,100 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>From French Fries to God — AI Companion</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:760px;margin:0 auto;padding:38px 24px 48px;color:#111;background:linear-gradient(180deg,#fcf7ee 0%,#f6ede1 58%,#efe4d2 100%);min-height:100vh;}
-    .eyebrow{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;opacity:.66;margin-bottom:26px;}
-    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.36rem,8.95vw,4.75rem);line-height:1;letter-spacing:-.052em;margin:0 0 18px;font-weight:740;}
-    .dek{font-size:1.02rem;line-height:1.36;margin:0 0 24px;color:#252525;font-weight:650;}
-    .rule{width:132px;height:2px;background:rgba(92,63,33,.18);margin:0 0 24px;}
-    .helper{font-size:1.02rem;line-height:1.45;margin:0 0 24px;color:#3f3f3f;}
-    .button-row{display:flex;flex-direction:column;gap:12px;margin:0;}
-    button{font-size:1rem;font-weight:750;padding:16px 18px;border-radius:999px;border:1.5px solid #111;background:#111;color:#fff;cursor:pointer;}
-    button.secondary{background:rgba(255,255,255,.08);color:#111;}
-    #status{margin-top:12px;font-size:.96rem;font-weight:750;color:#111;}
-    #essayText{display:none;}
-  </style>
+<meta charset="utf-8">
+<title>From French Fries to God — AI Companion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--ink:#111;--muted:#4b4037;--line:rgba(87,58,30,.18)}*{box-sizing:border-box}html{min-height:100%}body{position:relative;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;padding:28px 18px 42px;color:var(--ink);background:radial-gradient(ellipse at 18% 3%,rgba(185,139,76,.16),transparent 34%),radial-gradient(ellipse at 82% 18%,rgba(255,249,232,.82),transparent 44%),radial-gradient(ellipse at 78% 88%,rgba(184,135,70,.11),transparent 36%),radial-gradient(ellipse at 2% 96%,rgba(205,168,104,.10),transparent 36%),linear-gradient(180deg,#fcf7ee 0%,#f6ede1 58%,#efe4d2 100%);min-height:100vh;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background:radial-gradient(circle at 16% 18%,rgba(92,63,34,.14) 0 .5px,transparent .75px 4px),radial-gradient(circle at 72% 34%,rgba(255,255,255,.46) 0 .55px,transparent .75px 5px),radial-gradient(circle at 44% 78%,rgba(138,91,45,.08) 0 .45px,transparent .7px 4px);background-size:31px 31px,43px 43px,27px 27px;mix-blend-mode:multiply}body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.30;background:radial-gradient(ellipse at 10% 8%,rgba(137,98,53,.10),transparent 35%),radial-gradient(ellipse at 50% 42%,rgba(255,255,248,.54),transparent 50%),radial-gradient(ellipse at 92% 88%,rgba(169,122,63,.10),transparent 36%),linear-gradient(135deg,rgba(255,255,255,.20),transparent 46%,rgba(116,83,45,.025));mix-blend-mode:multiply}.shell{position:relative;z-index:1;width:min(100%,760px);margin:0 auto;min-height:calc(100vh - 70px);display:flex;align-items:center;justify-content:center}.card{width:100%;padding:34px 24px 30px;border:1px solid rgba(116,83,45,.16);border-radius:30px;background:linear-gradient(180deg,rgba(255,252,244,.86),rgba(249,238,220,.70));box-shadow:0 24px 80px rgba(75,52,27,.13),inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(7px)}.brand{display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:27px;text-align:center}.seal{width:94px;height:94px;display:block;object-fit:contain;filter:drop-shadow(0 12px 24px rgba(74,52,31,.18))}.eyebrow{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:850;color:rgba(63,44,24,.68)}h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.45rem,9.4vw,4.95rem);line-height:.97;letter-spacing:-.055em;text-align:center;margin:0 0 18px;font-weight:740}.dek{max-width:620px;margin:0 auto 24px;text-align:center;font-size:clamp(1.02rem,2.6vw,1.18rem);line-height:1.38;color:#2a2520;font-weight:650}.rule{width:132px;height:2px;margin:0 auto 24px;background:linear-gradient(90deg,transparent,var(--line),transparent)}.helper{max-width:600px;margin:0 auto 24px;text-align:center;font-size:1.02rem;line-height:1.48;color:var(--muted);font-weight:540}.button-row{display:flex;flex-direction:column;gap:12px;width:min(100%,440px);margin:0 auto}button{font-size:1rem;font-weight:800;letter-spacing:.01em;padding:16px 18px;border-radius:999px;border:1.5px solid #111;background:#111;color:#fff;cursor:pointer;box-shadow:0 12px 28px rgba(0,0,0,.10);transition:transform .16s ease,box-shadow .16s ease}button:hover{transform:translateY(-1px);box-shadow:0 16px 32px rgba(0,0,0,.13)}button.secondary{background:rgba(255,255,255,.18);color:#111;box-shadow:none;border-color:rgba(17,17,17,.78)}#status{min-height:22px;margin-top:14px;text-align:center;font-size:.96rem;line-height:1.35;font-weight:760;color:#111}.footnote{margin:12px auto 0;text-align:center;font-size:.82rem;line-height:1.35;color:rgba(63,44,24,.56);font-weight:650}#essayText{display:none}@media (min-width:700px){body{padding:36px 24px 52px}.card{padding:42px 42px 36px;border-radius:36px}.seal{width:104px;height:104px}}
+</style>
 </head>
 <body>
-  <div class="eyebrow">Earth Drama · AI Companion</div>
-  <h1>From French Fries to God</h1>
-  <p class="dek">Love is not one flat feeling. It climbs from appetite to beauty, from care to justice, from private emotion to political power, from separation to God.</p>
-  <div class="rule"></div>
-  <p class="helper">Copy the essay with or without a guided AI prompt, then paste it into ChatGPT, Claude, Gemini, or any AI tool.</p>
-  <div class="button-row"><button onclick="copyEssayWithGuide(this)">Copy Essay + Guided AI Prompt</button><button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button></div>
-  <div id="status" aria-live="polite"></div><div id="essayText"></div>
-  <script>
-    const essayTitle = "From French Fries to God";
-    const essayDescription = "how love is not one flat feeling but a ladder of consciousness, rising from appetite and beauty into care, justice, perception, unity, God, and the political power to protect life, and why Marianne Williamson’s language of love was misheard by a culture trained to flatten love into private feeling.";
-    const sourceUrl=['https://raw.githubusercontent.com','alexanderschoenherr','earth-drama-ai','main','essay-sources','from-french-fries-to-god.txt'].join('/');
-    async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
-    function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
-    async function copyText(text,b){try{await navigator.clipboard.writeText(text);document.getElementById('status').innerText='';confirmButton(b);}catch(e){document.getElementById('status').innerText='Copy failed. Try opening this page in your browser and tapping the button again.';}}
-    function buildGuide(essay){return [
-      `I’m going to paste an essay titled "${essayTitle}."`,
-      "",
-      `This piece is about ${essayDescription}`,
-      "",
-      "Respond in the regular chat as plain markdown.",
-      "",
-      "Create a concise AI reading guide that helps me quickly understand the piece, its argument, its emotional force, and why it matters.",
-      "",
-      "Use the section headings below in this exact order. Do not number the sections.",
-      "",
-      "Keep each main section brief and readable on a phone. Most sections should be 2–3 short sentences. Use a fourth sentence only when it adds real clarity or force.",
-      "",
-      "Write like a sharp, thoughtful reader explaining why the piece matters — not like a book report, abstract, or classroom summary. Favor vivid, precise language that preserves the essay’s tension and force.",
-      "",
-      "What This Piece Is Really About",
-      "Give a short plain-English summary of what the essay is truly about beneath the surface topic.",
-      "",
-      "The Core Argument",
-      "State the main claim the piece is making.",
-      "",
-      "Why It Matters",
-      "Explain the human, moral, cultural, spiritual, or political stakes.",
-      "",
-      "The Deepest Insight",
-      "Name the deeper truth, warning, revelation, or moral pressure the piece is trying to reveal.",
-      "",
-      "What To Carry Forward",
-      "Help me understand what I should question, feel, remember, or keep thinking about after reading.",
-      "",
-      "Aim for 300–425 words total.",
-      "",
-      "Do not turn any section into a long paragraph. Prioritize quick orientation over completeness.",
-      "",
-      "The guide should feel like a sharp map of the essay, not a second essay.",
-      "",
-      "Preserve the author’s voice, framing, urgency, and emotional force.",
-      "",
-      "Do not rewrite the essay, debate it, fact-check it, sanitize it, flatten it into academic commentary, or make it generic.",
-      "",
-      "Do not over-explain every turn of the essay or remove the reason to read the full piece.",
-      "",
-      "End with a short section titled:",
-      "",
-      "Ask Me To Go Deeper",
-      "",
-      "In that section, include 4 brief options phrased as things the reader can ask the AI to help with:",
-      "- unpack the idea that challenged, moved, or unsettled you most",
-      "- help you think through where you agree, disagree, resist, or feel conflicted",
-      "- connect the piece to your own life, relationships, politics, faith, work, or culture",
-      "- help turn your reaction into a thoughtful comment on the piece",
-      "",
-      "Then end with this exact final question in bold, without quotation marks:",
-      "",
-      "**What do you want me to help you explore?**",
-      "",
-      "Here is the essay:",
-      "",
-      essay
-    ].join('\n');}
-    async function copyEssayOnly(b){copyText(await getEssayText(),b);}
-    async function copyEssayWithGuide(b){const essay=await getEssayText();copyText(buildGuide(essay),b);}
-  </script>
+<main class="shell"><section class="card" aria-label="AI reading companion"><div class="brand"><img class="seal" id="sealImg" alt="Earth Drama logo"><div class="eyebrow">Earth Drama · AI Reading Companion</div></div><h1>From French Fries to God</h1><p class="dek">Love is not one flat feeling. It climbs from appetite to beauty, from care to justice, from private emotion to political power, from separation to God.</p><div class="rule"></div><p class="helper">Create a concise AI reading guide for this essay, then keep exploring the ideas, tensions, and questions it opens.</p><div class="button-row"><button onclick="copyEssayWithGuide(this)">Copy Guide + Essay</button><button class="secondary" onclick="copyEssayOnly(this)">Copy Essay Only</button></div><div id="status" aria-live="polite"></div><p class="footnote">Designed for reflection, conversation, and deeper reading.</p><div id="essayText"></div></section></main>
+<script>
+const essayTitle="From French Fries to God";
+const essayDescription="how love is not one flat feeling but a ladder of consciousness, rising from appetite and beauty into care, justice, perception, unity, God, and the political power to protect life, and why Marianne Williamson’s language of love was misheard by a culture trained to flatten love into private feeling.";
+const sourceUrl=['https://raw.githubusercontent.com','alexanderschoenherr','earth-drama-ai','main','essay-sources','from-french-fries-to-god.txt'].join('/');
+const sealAssetUrl='assets/earth-drama-seal-256.webp.b64?v=2';
+async function loadSeal(){const img=document.getElementById('sealImg');try{const r=await fetch(sealAssetUrl,{cache:'no-store'});const b64=(await r.text()).trim();img.onerror=()=>{img.remove()};img.src='data:image/webp;base64,'+b64;}catch(e){img.remove();}}
+loadSeal();
+async function getEssayText(){const cached=document.getElementById('essayText').innerText.trim();if(cached)return cached;const r=await fetch(sourceUrl);const e=(await r.text()).trim();document.getElementById('essayText').innerText=e;return e;}
+function confirmButton(b){const t=b.innerText;b.innerText='Copied — Paste Into AI';setTimeout(()=>{b.innerText=t;},2200);}
+async function copyText(text,b){try{await navigator.clipboard.writeText(text);document.getElementById('status').innerText='';confirmButton(b);}catch(e){document.getElementById('status').innerText='Copy failed. Try opening this page in your browser and tapping the button again.';}}
+function buildGuide(essay){return [`I’m going to paste an essay titled "${essayTitle}."`,``,`This piece is about ${essayDescription}`,``,`Respond in the regular chat as plain markdown.`,``,`Create a concise AI reading guide that helps me quickly understand the piece, its argument, its emotional force, and why it matters.`,``,`Use the section headings below in this exact order. Do not number the sections.`,``,`Keep each main section brief and readable on a phone. Most sections should be 2–3 short sentences. Use a fourth sentence only when it adds real clarity or force.`,``,`Write like a sharp, thoughtful reader explaining why the piece matters — not like a book report, abstract, or classroom summary. Favor vivid, precise language that preserves the essay’s tension and force.`,``,`What This Piece Is Really About`,`Give a short plain-English summary of what the essay is truly about beneath the surface topic.`,``,`The Core Argument`,`State the main claim the piece is making.`,``,`Why It Matters`,`Explain the human, moral, cultural, spiritual, or political stakes.`,``,`The Deepest Insight`,`Name the deeper truth, warning, revelation, or moral pressure the piece is trying to reveal.`,``,`What To Carry Forward`,`Help me understand what I should question, feel, remember, or keep thinking about after reading.`,``,`Aim for 300–425 words total.`,``,`Do not turn any section into a long paragraph. Prioritize quick orientation over completeness.`,``,`The guide should feel like a sharp map of the essay, not a second essay.`,``,`Preserve the author’s voice, framing, urgency, and emotional force.`,``,`Do not rewrite the essay, debate it, fact-check it, sanitize it, flatten it into academic commentary, or make it generic.`,``,`Do not over-explain every turn of the essay or remove the reason to read the full piece.`,``,`End with a short section titled:`,``,`Ask Me To Go Deeper`,``,`In that section, include 4 brief options phrased as things the reader can ask the AI to help with:`,`- unpack the idea that challenged, moved, or unsettled you most`,`- help you think through where you agree, disagree, resist, or feel conflicted`,`- connect the piece to your own life, relationships, politics, faith, work, or culture`,`- help turn your reaction into a thoughtful comment on the piece`,``,`Then end with this exact final question in bold, without quotation marks:`,``,`**What do you want me to help you explore?**`,``,`Here is the essay:`,``,essay].join('\n');}
+async function copyEssayOnly(b){copyText(await getEssayText(),b)}async function copyEssayWithGuide(b){const essay=await getEssayText();copyText(buildGuide(essay),b)}
+</script>
 </body>
 </html>
