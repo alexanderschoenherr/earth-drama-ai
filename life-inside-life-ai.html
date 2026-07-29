@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f3eadc">
 <meta name="description" content="Continue The Life Inside Life with the Earth Drama Companion—an interactive AI experience for exploring spirit, interiority, worldviews, and the sacred.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Life Inside Life — Earth Drama Companion">
+<meta property="og:description" content="Turn The Life Inside Life into an interactive conversation with the Earth Drama Companion.">
+<meta property="og:url" content="https://alexanderschoenherr.github.io/earth-drama-ai/life-inside-life-ai.html">
+<link rel="canonical" href="https://alexanderschoenherr.github.io/earth-drama-ai/life-inside-life-ai.html">
 <title>The Life Inside Life — Earth Drama Companion</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,10 +39,6 @@ h1 em{font-weight:400}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
 .step{color:var(--muted);font-size:13px;line-height:1.55}
 .step span{display:block;margin-bottom:7px;color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase}
-.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:23px 0 0}
-.path{padding:13px 14px;border:1px solid rgba(76,55,39,.12);border-radius:12px;background:rgba(255,255,255,.22);color:#51443a;font-size:13px;line-height:1.4;cursor:default}
-.path b{display:block;margin-bottom:3px;color:var(--ink)}
-.path-note{margin:15px 2px 0;color:var(--muted);font-size:12.5px;line-height:1.6}
 .start{text-align:center}
 .start .section-intro{margin-left:auto;margin-right:auto}
 .actions{margin-top:22px}
@@ -46,12 +47,16 @@ button{font-family:Lora,Georgia,serif;-webkit-tap-highlight-color:transparent}
 .primary:hover{transform:translateY(-1px)}
 .primary:focus-visible,.essay-only:focus-visible{outline:3px solid rgba(139,85,45,.28);outline-offset:3px}
 .primary:disabled{opacity:.65;cursor:wait;transform:none}
-.recommended{margin:9px 0 0;color:var(--muted);font-size:11.5px;line-height:1.5}
 .essay-choice{margin:18px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
 .essay-only{border:0;padding:0;color:var(--dark);background:transparent;font-size:12px;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .essay-only:disabled{opacity:.65;cursor:wait}
 .paste-help{max-width:640px;margin:17px auto 0;color:var(--muted);font-size:11.75px;line-height:1.55;text-align:center}
-.status{min-height:42px;margin:10px 4px 0;color:var(--dark);font-size:13px;line-height:1.55;text-align:center}
+.status{margin:10px 4px 0;color:var(--dark);font-size:13px;line-height:1.55;text-align:center}
+.status:empty{display:none}
+.paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:23px 0 0}
+.path{padding:13px 14px;border:1px solid rgba(76,55,39,.12);border-radius:12px;background:rgba(255,255,255,.22);color:#51443a;font-size:13px;line-height:1.4;cursor:default}
+.path b{display:block;margin-bottom:3px;color:var(--ink)}
+.path-note{margin:15px 2px 0;color:var(--muted);font-size:12.5px;line-height:1.6}
 .note{margin:31px 0 0;padding:18px 19px;border:1px solid var(--line);border-radius:17px;background:rgba(255,255,255,.32);color:var(--muted);font-size:12.5px;line-height:1.65}
 footer{padding:24px 12px 0;text-align:center;color:var(--muted);font-size:12px;line-height:1.6}
 footer .final{display:block;margin-bottom:5px;color:#4d4036;font:italic 21px "Instrument Serif",Georgia,serif}
@@ -68,11 +73,12 @@ h1{font-size:clamp(40px,13vw,56px)}
 .section{margin-top:32px;padding-top:26px}
 .section h2{font-size:29px}
 .steps{grid-template-columns:1fr;gap:15px;margin-top:18px}
-.paths{grid-template-columns:1fr;gap:8px;margin-top:20px}
-.path{padding:12px 13px}
 .primary{width:100%}
 .paste-help{font-size:11.5px}
+.paths{grid-template-columns:1fr;gap:8px;margin-top:20px}
+.path{padding:12px 13px}
 }
+@media(prefers-reduced-motion:reduce){.primary{transition:none}.primary:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -88,16 +94,25 @@ h1{font-size:clamp(40px,13vw,56px)}
 <section class="section" aria-labelledby="howTitle">
 <h2 id="howTitle">How It Works</h2>
 <div class="steps">
-<div class="step"><span>01 · Copy</span>Press the button below to copy the Companion instructions and the complete essay together.</div>
+<div class="step"><span>01 · Copy</span>Press “Copy Everything to Begin” to copy the Companion instructions and complete essay together.</div>
 <div class="step"><span>02 · Paste</span>Open a new chat in ChatGPT, Claude, Gemini, or another AI assistant and paste what was copied.</div>
 <div class="step"><span>03 · Send</span>Send the pasted text. The Companion will introduce itself and show you ways to begin. You do not need to write another prompt first.</div>
 </div>
 </section>
 
+<section class="section start" aria-labelledby="startTitle">
+<h2 id="startTitle">Start the Companion</h2>
+<p class="section-intro">One click copies the Companion instructions and complete essay together.</p>
+<div class="actions"><button class="primary" id="copyCompanion" aria-describedby="pasteHelp">Copy Everything to Begin</button></div>
+<p class="essay-choice">Prefer the essay without the guided experience? <button class="essay-only" id="copyEssay">Copy the essay only.</button></p>
+<p class="paste-help" id="pasteHelp"><em>*After copying: open a new AI chat and click or tap the message box. Choose Paste. If Paste does not appear on a phone, touch and hold the message box, then choose Paste.</em></p>
+<div class="status" id="copyStatus" aria-live="polite">Preparing the Companion…</div>
+</section>
+
 <section class="section" aria-labelledby="exploreTitle">
-<h2 id="exploreTitle">What the Companion Can Help You Explore</h2>
-<p class="section-intro">After you copy, paste, and send the Companion, you can ask it to help with any of the following. <strong>These are examples, not buttons.</strong></p>
-<div class="paths" aria-label="Examples of what the Companion can help explore">
+<h2 id="exploreTitle">Ways to Explore the Essay</h2>
+<p class="section-intro">Once the Companion begins, you can take the conversation in any of these directions.</p>
+<div class="paths" aria-label="Ways to explore the essay with the Companion">
 <div class="path"><b>Understand What Spirit Means</b>Clarify what the essay means—and what it does not.</div>
 <div class="path"><b>Translate Across Worldviews</b>Compare secular, scientific, philosophical, and spiritual language.</div>
 <div class="path"><b>Begin With an Experience</b>Explore something you have actually felt before deciding what it proves.</div>
@@ -106,16 +121,6 @@ h1{font-size:clamp(40px,13vw,56px)}
 <div class="path"><b>Practice Recognition</b>Turn the idea into a small real-world practice.</div>
 </div>
 <p class="path-note">You can also paste a passage, describe an experience, name a disagreement, ask about a spiritual or secular idea, or simply say what felt true, difficult, or alive.</p>
-</section>
-
-<section class="section start" aria-labelledby="startTitle">
-<h2 id="startTitle">Start the Companion</h2>
-<p class="section-intro">The recommended option includes everything the AI needs to guide the experience.</p>
-<div class="actions"><button class="primary" id="copyCompanion" aria-describedby="pasteHelp">Copy Everything to Begin</button></div>
-<p class="recommended">Recommended — includes the Companion instructions and complete essay.</p>
-<p class="essay-choice">Prefer the essay without the guided experience? <button class="essay-only" id="copyEssay">Copy the essay only.</button></p>
-<p class="paste-help" id="pasteHelp"><em>*After copying: open a new chat in your AI assistant and tap the message box. Tap Paste when it appears. If it doesn’t appear, touch and hold the message box, then tap Paste.</em></p>
-<div class="status" id="copyStatus" aria-live="polite">Preparing the Companion…</div>
 </section>
 
 <p class="note"><strong>Privacy:</strong> This page does not access your AI account or send anything automatically. The button only copies text to your clipboard. After you paste it into an AI assistant, that service’s own privacy and memory settings apply. The Companion is instructed not to invent personal details, pressure belief, or tell you with false certainty what an experience means.</p>
@@ -154,14 +159,17 @@ const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([prompt,
 async function write(text){
   if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return;}
   const field=document.createElement('textarea');
-  field.value=text;
-  field.setAttribute('readonly','');
-  field.style.cssText='position:fixed;opacity:0;pointer-events:none';
-  document.body.appendChild(field);
-  field.focus();
-  field.select();
-  if(!document.execCommand('copy'))throw new Error('Copy failed');
-  field.remove();
+  try{
+    field.value=text;
+    field.setAttribute('readonly','');
+    field.style.cssText='position:fixed;opacity:0;pointer-events:none';
+    document.body.appendChild(field);
+    field.focus();
+    field.select();
+    if(!document.execCommand('copy'))throw new Error('Copy failed');
+  }finally{
+    field.remove();
+  }
 }
 
 function confirm(button,message){
