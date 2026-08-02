@@ -1,0 +1,69 @@
+name: One-time subtitle update
+
+on:
+  push:
+    paths:
+      - '.github/workflows/one-time-subtitle-update.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-subtitle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update subtitle everywhere
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          old = "What if Trump didn’t break American politics—what if he perfected it?"
+          old_upper = "WHAT IF TRUMP DIDN’T BREAK AMERICAN POLITICS—WHAT IF HE PERFECTED IT?"
+          new = "How did Donald Trump become the perfect politician—and what does that reveal about a civilization getting better at the wrong things?"
+          new_upper = new.upper()
+
+          essay_path = Path("essay-sources/best-politician-worst-politician.txt")
+          essay = essay_path.read_text(encoding="utf-8")
+          if old not in essay:
+              raise SystemExit("Old subtitle not found in essay source")
+          essay_path.write_text(essay.replace(old, new, 1), encoding="utf-8")
+
+          page_path = Path("best-politician-worst-politician-ai.html")
+          page = page_path.read_text(encoding="utf-8")
+          if old_upper not in page:
+              raise SystemExit("Old subtitle not found on Companion page")
+          page = page.replace(old_upper, new_upper, 1)
+          page = page.replace(
+              'content="Enter The Apparatus: an interactive conversation about what systems are for, what they reward, and what happens when the means becomes the master."',
+              f'content="{new}"',
+              1,
+          )
+          page_path.write_text(page, encoding="utf-8")
+
+          prompt_path = Path("companion-prompts/best-politician-worst-politician.txt")
+          prompt = prompt_path.read_text(encoding="utf-8")
+          subtitle_line = f'\n\nThe essay’s subtitle is: “{new}”'
+          anchor = 'You are now the Earth Drama Companion for “The Best Politician Is the Worst Politician” by Alexander Schoenherr.'
+          if subtitle_line.strip() not in prompt:
+              if anchor not in prompt:
+                  raise SystemExit("Prompt anchor not found")
+              prompt = prompt.replace(anchor, anchor + subtitle_line, 1)
+              prompt_path.write_text(prompt, encoding="utf-8")
+
+          Path(".github/workflows/one-time-subtitle-update.yml").unlink()
+          PY
+
+      - name: Commit update
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add best-politician-worst-politician-ai.html \
+                  essay-sources/best-politician-worst-politician.txt \
+                  companion-prompts/best-politician-worst-politician.txt \
+                  .github/workflows/one-time-subtitle-update.yml
+          git commit -m "Update Best Politician subtitle"
+          git push
