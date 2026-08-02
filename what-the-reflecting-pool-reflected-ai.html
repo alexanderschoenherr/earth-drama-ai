@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07151d">
+<meta name="description" content="Continue What the Reflecting Pool Reflected with the Earth Drama Companion—an interactive AI experience about surfaces, scapegoats, loyalty, patriotism, correction, and what power refuses to see.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What the Reflecting Pool Reflected — Earth Drama Companion">
+<meta property="og:description" content="A rushed patriotic spectacle began to peel. Enter the reflection and examine how failure became sabotage, certainty became law, and an American became the culprit.">
+<meta property="og:url" content="https://alexanderschoenherr.github.io/earth-drama-ai/what-the-reflecting-pool-reflected-ai.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://alexanderschoenherr.github.io/earth-drama-ai/what-the-reflecting-pool-reflected-ai.html">
+<title>What the Reflecting Pool Reflected — Earth Drama Companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#06131b;
+  --night2:#0a202c;
+  --deep:#0c3040;
+  --water:#0d607d;
+  --water2:#128eb3;
+  --electric:#59cef1;
+  --ice:#e7f8fd;
+  --paper:#f2ece2;
+  --paper2:#d7cec2;
+  --muted:#9eabb0;
+  --gold:#d5af4f;
+  --gold2:#f2d477;
+  --peel:#b8a58e;
+  --line:rgba(231,248,253,.14);
+}
+*{box-sizing:border-box}
+html{background:var(--night)}
+body{
+  min-height:100vh;
+  margin:0;
+  color:var(--paper);
+  font-family:Lora,Georgia,serif;
+  background-color:var(--night);
+  background-image:
+    radial-gradient(circle at 50% -12%,rgba(89,206,241,.16),transparent 32rem),
+    radial-gradient(circle at 8% 44%,rgba(13,96,125,.2),transparent 32rem),
+    radial-gradient(circle at 94% 68%,rgba(213,175,79,.09),transparent 28rem),
+    linear-gradient(180deg,#07151d 0%,#071923 45%,#082532 100%);
+  overflow-x:hidden;
+}
+body:before{
+  content:"SURFACE  /  STORY  /  EVIDENCE  /  REFLECTION";
+  position:fixed;
+  top:50%;
+  right:18px;
+  transform:translateY(-50%) rotate(180deg);
+  writing-mode:vertical-rl;
+  color:rgba(231,248,253,.04);
+  font:500 9px "DM Mono",monospace;
+  letter-spacing:.28em;
+  pointer-events:none;
+}
+body:after{
+  content:"";
+  position:fixed;
+  inset:52% 0 0;
+  pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg,rgba(89,206,241,.022) 0,rgba(89,206,241,.022) 1px,transparent 1px,transparent 6px),
+    linear-gradient(180deg,rgba(18,142,179,.07),rgba(6,19,27,.01));
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent);
+}
+.page{
+  position:relative;
+  z-index:1;
+  width:min(100% - 28px,1140px);
+  margin:auto;
+  padding:max(24px,env(safe-area-inset-top)) 0 max(52px,env(safe-area-inset-bottom));
+}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:4px 0 22px;
+}
+.ed-symbol{display:block;overflow:visible}
+.top .ed-symbol{
+  width:48px;
+  height:48px;
+  filter:drop-shadow(0 5px 18px rgba(213,175,79,.2));
+}
+.brand{
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.shell{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(231,248,253,.14);
+  border-radius:20px;
+  background:
+    linear-gradient(180deg,rgba(11,35,47,.97),rgba(5,18,26,.985));
+  box-shadow:0 40px 110px rgba(0,0,0,.52),0 0 0 1px rgba(255,255,255,.025) inset;
+}
+.shell:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    repeating-linear-gradient(0deg,rgba(255,255,255,.011) 0,rgba(255,255,255,.011) 1px,transparent 1px,transparent 5px),
+    linear-gradient(90deg,transparent 0 49.94%,rgba(89,206,241,.04) 50%,transparent 50.06%);
+  mix-blend-mode:screen;
+}
+.shell:after{
+  content:"THE REFLECTION";
+  position:absolute;
+  right:-44px;
+  top:104px;
+  transform:rotate(90deg);
+  color:rgba(231,248,253,.03);
+  font:500 27px "DM Mono",monospace;
+  letter-spacing:.23em;
+  pointer-events:none;
+}
+.inner{
+  position:relative;
+  z-index:1;
+  padding:clamp(30px,5.5vw,70px);
+}
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(355px,.95fr);
+  gap:clamp(42px,7vw,88px);
+  align-items:center;
+}
+.eyebrow{
+  margin:0 0 17px;
+  color:var(--electric);
+  font:500 10px "DM Mono",monospace;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+h1{
+  max-width:700px;
+  margin:0;
+  font-family:"Instrument Serif",Georgia,serif;
+  font-size:clamp(58px,8vw,90px);
+  font-weight:400;
+  line-height:.9;
+  letter-spacing:-.042em;
+  text-wrap:balance;
+}
+h1 em{font-weight:400;color:#f8f1e7}
+.thesis{
+  max-width:650px;
+  margin:23px 0 0;
+  color:var(--gold2);
+  font:500 11.5px "DM Mono",monospace;
+  letter-spacing:.055em;
+  line-height:1.7;
+  text-transform:uppercase;
+}
+.dek{
+  max-width:670px;
+  margin:23px 0 0;
+  color:#dce7e8;
+  font-size:clamp(16.5px,2vw,19.5px);
+  line-height:1.72;
+}
+.support{
+  max-width:650px;
+  margin:15px 0 0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.72;
+}
+.promise{
+  margin:27px 0 0;
+  padding:17px 19px;
+  border-left:3px solid var(--electric);
+  background:linear-gradient(90deg,rgba(89,206,241,.09),rgba(89,206,241,.018));
+  color:#d3e0e2;
+  font-size:14.5px;
+  line-height:1.68;
+}
+.mirror-stage{
+  position:relative;
+  min-height:490px;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid rgba(231,248,253,.13);
+  clip-path:polygon(7% 0,93% 0,100% 8%,100% 92%,93% 100%,7% 100%,0 92%,0 8%);
+  background:
+    linear-gradient(180deg,rgba(5,19,27,.18) 0 43%,rgba(12,70,91,.2) 43% 44%,rgba(8,42,57,.5) 44% 100%),
+    repeating-linear-gradient(90deg,rgba(231,248,253,.028) 0,rgba(231,248,253,.028) 1px,transparent 1px,transparent 32px),
+    repeating-linear-gradient(0deg,rgba(231,248,253,.022) 0,rgba(231,248,253,.022) 1px,transparent 1px,transparent 32px);
+  box-shadow:0 26px 70px rgba(0,0,0,.35),0 0 55px rgba(18,142,179,.04) inset;
+}
+.mirror-stage:before{
+  content:"";
+  position:absolute;
+  inset:44% 0 0;
+  background:
+    linear-gradient(180deg,rgba(89,206,241,.12),transparent 28%),
+    repeating-linear-gradient(0deg,rgba(89,206,241,.06) 0,rgba(89,206,241,.06) 1px,transparent 1px,transparent 9px);
+  animation:waterShift 8s linear infinite;
+}
+.waterline{
+  position:absolute;
+  left:5%;
+  right:5%;
+  top:44%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--electric),var(--ice),var(--electric),transparent);
+  opacity:.64;
+  box-shadow:0 0 22px rgba(89,206,241,.4);
+}
+.monument{
+  position:absolute;
+  top:16%;
+  left:50%;
+  width:190px;
+  height:108px;
+  transform:translateX(-50%);
+  opacity:.38;
+}
+.monument .roof{
+  position:absolute;
+  top:0;
+  left:8px;
+  right:8px;
+  height:18px;
+  background:linear-gradient(90deg,transparent,rgba(231,248,253,.72) 12%,rgba(231,248,253,.72) 88%,transparent);
+  clip-path:polygon(12% 100%,22% 0,78% 0,88% 100%);
+}
+.monument .columns{
+  position:absolute;
+  top:23px;
+  left:28px;
+  right:28px;
+  height:59px;
+  background:repeating-linear-gradient(90deg,rgba(231,248,253,.64) 0 7px,transparent 7px 19px);
+}
+.monument .base{
+  position:absolute;
+  left:11px;
+  right:11px;
+  bottom:4px;
+  height:13px;
+  border-top:2px solid rgba(231,248,253,.72);
+  border-bottom:4px solid rgba(231,248,253,.55);
+}
+.mark-above{
+  position:absolute;
+  left:50%;
+  top:25%;
+  width:112px;
+  height:112px;
+  transform:translate(-50%,-50%);
+  filter:drop-shadow(0 8px 22px rgba(213,175,79,.25));
+}
+.reflection-window{
+  position:absolute;
+  left:50%;
+  top:44%;
+  width:180px;
+  height:190px;
+  transform:translateX(-50%);
+  overflow:hidden;
+  mask-image:linear-gradient(to bottom,#000,rgba(0,0,0,.82) 55%,transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom,#000,rgba(0,0,0,.82) 55%,transparent 100%);
+}
+.mark-below{
+  position:absolute;
+  left:50%;
+  top:-55px;
+  width:112px;
+  height:112px;
+  transform:translateX(-50%) scaleY(-1);
+  opacity:.26;
+  filter:blur(.45px) drop-shadow(0 6px 16px rgba(89,206,241,.18));
+  animation:reflectionDrift 5.5s ease-in-out infinite;
+}
+.reflection-window:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:repeating-linear-gradient(0deg,transparent 0 7px,rgba(6,19,27,.28) 7px 9px);
+  animation:waterShift 7s linear infinite reverse;
+}
+.ripple{
+  position:absolute;
+  left:50%;
+  top:61%;
+  border:1px solid rgba(89,206,241,.28);
+  border-radius:50%;
+  transform:translate(-50%,-50%) scale(.35);
+  opacity:0;
+  animation:ripple 5.4s ease-out infinite;
+}
+.ripple.one{width:175px;height:48px}
+.ripple.two{width:260px;height:72px;animation-delay:1.8s}
+.ripple.three{width:345px;height:94px;animation-delay:3.6s}
+.peeling-surface{
+  position:absolute;
+  left:7%;
+  right:7%;
+  bottom:8%;
+  height:76px;
+  border:1px solid rgba(89,206,241,.2);
+  background:
+    linear-gradient(105deg,rgba(18,142,179,.42),rgba(10,74,97,.22)),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 8px);
+  transform:perspective(500px) rotateX(61deg);
+  transform-origin:center bottom;
+  box-shadow:0 -14px 38px rgba(89,206,241,.06) inset;
+}
+.peel{
+  position:absolute;
+  right:7%;
+  bottom:11.5%;
+  width:86px;
+  height:67px;
+  clip-path:polygon(0 100%,100% 0,100% 100%);
+  background:linear-gradient(145deg,#d4c5b0,#8da5ac 62%,#1b7896 64%);
+  transform-origin:100% 100%;
+  filter:drop-shadow(-7px -5px 8px rgba(0,0,0,.28));
+  animation:peelLift 6s ease-in-out infinite;
+}
+.choice{
+  position:absolute;
+  color:#a9c0c7;
+  font:500 8px "DM Mono",monospace;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.choice.what{left:7%;top:49%}
+.choice.who{right:7%;top:49%;color:var(--gold2)}
+.axiom{
+  position:absolute;
+  left:50%;
+  bottom:1.5%;
+  transform:translateX(-50%);
+  width:max-content;
+  max-width:90%;
+  padding:9px 14px;
+  border:1px solid rgba(89,206,241,.25);
+  background:rgba(5,20,29,.9);
+  color:#dbe9eb;
+  font:500 8.5px "DM Mono",monospace;
+  letter-spacing:.13em;
+  text-align:center;
+  text-transform:uppercase;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+.section{
+  margin-top:48px;
+  padding-top:35px;
+  border-top:1px solid var(--line);
+}
+.section-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:18px;
+}
+.section h2{
+  margin:0;
+  font:400 36px "Instrument Serif",Georgia,serif;
+  color:#f0e9df;
+  text-wrap:balance;
+}
+.section-tag{
+  color:var(--electric);
+  font:500 9px "DM Mono",monospace;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.section-intro{
+  max-width:750px;
+  margin:11px 0 0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.68;
+}
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:25px;
+}
+.step{
+  padding:17px 0 0;
+  border-top:2px solid rgba(89,206,241,.2);
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+.step span{
+  display:block;
+  margin-bottom:8px;
+  color:var(--electric);
+  font:500 10px "DM Mono",monospace;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.start{
+  padding:34px 24px 30px;
+  border:1px solid rgba(89,206,241,.2);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(89,206,241,.1),transparent 25rem),
+    linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.007));
+  text-align:center;
+}
+.start .section-intro{margin-left:auto;margin-right:auto}
+.actions{margin-top:22px}
+button{font-family:Lora,Georgia,serif;-webkit-tap-highlight-color:transparent}
+.primary{
+  width:min(100%,520px);
+  min-height:58px;
+  border:1px solid rgba(231,248,253,.25);
+  border-radius:13px;
+  padding:15px 24px;
+  color:#06131b;
+  background:linear-gradient(135deg,#bceefa,var(--electric) 55%,#36b9df);
+  box-shadow:0 13px 32px rgba(89,206,241,.2);
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .18s,box-shadow .18s;
+}
+.primary:active{transform:scale(.99)}
+.primary:focus-visible,.essay-only:focus-visible{outline:3px solid rgba(89,206,241,.35);outline-offset:3px}
+.primary:disabled{opacity:.6;cursor:wait}
+.essay-choice{margin:17px 0 0;color:var(--muted);font-size:12px}
+.essay-only{
+  border:0;
+  padding:0;
+  color:var(--paper2);
+  background:transparent;
+  font-size:12px;
+  font-weight:600;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  cursor:pointer;
+}
+.paste-help{
+  max-width:720px;
+  margin:18px auto 0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.58;
+}
+.status{margin:11px 4px 0;color:var(--electric);font-size:13px}
+.status:empty{display:none}
+.paths{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:42px;
+  margin:27px 0 0;
+  counter-reset:path;
+}
+.path{
+  position:relative;
+  min-height:122px;
+  padding:20px 0 23px 54px;
+  border-top:1px solid rgba(231,248,253,.12);
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.54;
+  counter-increment:path;
+}
+.path:before{
+  content:counter(path,decimal-leading-zero);
+  position:absolute;
+  left:0;
+  top:20px;
+  color:var(--electric);
+  font:500 10px "DM Mono",monospace;
+}
+.path b{display:block;margin-bottom:5px;color:#f0e9df;font-size:14px}
+.path-note{
+  margin:19px 0 0;
+  padding:16px 18px;
+  border-left:2px solid var(--electric);
+  background:rgba(89,206,241,.05);
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.64;
+}
+.note{
+  margin:34px 0 0;
+  padding:19px 20px;
+  border:1px solid rgba(231,248,253,.11);
+  background:rgba(255,255,255,.017);
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.66;
+}
+footer{
+  padding:25px 12px 0;
+  text-align:center;
+  color:#85969c;
+  font-size:12px;
+  line-height:1.6;
+}
+footer .final{
+  display:block;
+  margin-bottom:5px;
+  color:#dce8e8;
+  font:italic 22px "Instrument Serif",Georgia,serif;
+}
+.hidden{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:pre-wrap!important;
+  border:0!important;
+}
+.reveal{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(12px);transition:opacity .65s ease,transform .65s ease}
+.js .reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes waterShift{to{background-position:0 36px,0 0}}
+@keyframes reflectionDrift{0%,100%{transform:translateX(-50%) scaleY(-1) skewX(-1deg)}50%{transform:translateX(-49%) scaleY(-1) skewX(2deg)}}
+@keyframes ripple{0%{transform:translate(-50%,-50%) scale(.35);opacity:0}15%{opacity:.48}100%{transform:translate(-50%,-50%) scale(1.15);opacity:0}}
+@keyframes peelLift{0%,100%{transform:rotateX(0deg) rotateZ(0deg)}50%{transform:rotateX(9deg) rotateZ(-2deg)}}
+@media(hover:hover) and (pointer:fine){.primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(89,206,241,.27)}}
+@media(max-width:870px){
+  .hero{grid-template-columns:1fr}
+  .mirror-stage{min-height:455px}
+}
+@media(max-width:620px){
+  body:before{display:none}
+  .page{width:min(100% - 16px,1140px);padding-top:max(17px,env(safe-area-inset-top))}
+  .top{margin-bottom:15px}
+  .top .ed-symbol{width:40px;height:40px}
+  .shell{border-radius:15px}
+  .shell:after{display:none}
+  .inner{padding:28px 20px 27px}
+  h1{font-size:clamp(48px,13.5vw,63px)}
+  .thesis{font-size:10.25px}
+  .dek{font-size:16px}
+  .support{font-size:13.5px}
+  .promise{font-size:14px}
+  .mirror-stage{min-height:420px}
+  .monument{width:156px;height:92px;top:17%}
+  .mark-above{width:94px;height:94px}
+  .reflection-window{width:150px;height:160px}
+  .mark-below{width:94px;height:94px;top:-46px}
+  .choice{font-size:6.8px;letter-spacing:.1em}
+  .choice.what{left:4%}.choice.who{right:4%}
+  .peeling-surface{left:5%;right:5%}
+  .peel{right:5%;width:72px;height:58px}
+  .axiom{font-size:7.25px;letter-spacing:.1em}
+  .section{margin-top:36px;padding-top:28px}
+  .section h2{font-size:31px}
+  .section-tag{display:none}
+  .steps{grid-template-columns:1fr;gap:18px}
+  .start{padding:28px 15px 25px}
+  .primary{width:100%}
+  .paste-help{font-size:11.75px}
+  .paths{grid-template-columns:1fr;margin-top:23px}
+  .path{min-height:auto;padding-left:49px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+  .primary{transition:none}
+  .primary:hover{transform:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d978"/><stop offset=".45" stop-color="#cfa741"/><stop offset="1" stop-color="#e2c15d"/></linearGradient>
+<mask id="earth-drama-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><circle cx="500" cy="500" r="137" fill="#000"/></mask>
+<symbol id="earth-drama" viewBox="0 0 1000 1000">
+<g mask="url(#earth-drama-cutout)" fill="url(#gold)" stroke="#a98228" stroke-width="2">
+<path d="M500 0 535 330Q548 394 610 421L1000 500 610 579Q548 606 535 670L500 1000 465 670Q452 606 390 579L0 500 390 421Q452 394 465 330Z"/>
+<path d="M205 455A305 305 0 0 1 455 205L460 230A280 280 0 0 0 230 460Z"/>
+<path d="M545 205A305 305 0 0 1 795 455L770 460A280 280 0 0 0 540 230Z"/>
+<path d="M795 545A305 305 0 0 1 545 795L540 770A280 280 0 0 0 770 540Z"/>
+<path d="M455 795A305 305 0 0 1 205 545L230 540A280 280 0 0 0 460 770Z"/>
+</g>
+<circle cx="500" cy="500" r="145" fill="none" stroke="url(#gold)" stroke-width="16"/>
+<g fill="url(#gold)"><path d="M397 448 420 418 455 404 471 420 486 412 505 428 496 445 470 442 452 455 430 453 416 467Z"/><path d="M388 472 410 459 428 467 435 488 424 501 441 516 454 544 445 563 420 546 410 521 392 506Z"/><path d="M456 570 475 553 501 558 521 574 554 579 581 598 570 625 548 631 529 655 507 682 487 672 490 644 472 625Z"/><path d="M516 392 535 386 552 401 549 420 526 422 514 411Z"/><path d="M557 416 585 420 610 441 600 458 577 453 563 439Z"/><path d="M590 478 618 470 633 493 625 522 607 544 595 530 602 506Z"/></g>
+</symbol>
+</defs>
+</svg>
+
+<main class="page">
+<div class="top" aria-label="Earth Drama"><svg class="ed-symbol" aria-hidden="true"><use href="#earth-drama"/></svg><div class="brand">Earth Drama</div></div>
+<article class="shell"><div class="inner">
+<section class="hero">
+<div>
+<p class="eyebrow">An Earth Drama AI Experience · The Reflection</p>
+<h1>Continue <em>What the Reflecting Pool Reflected</em> with AI</h1>
+<p class="thesis">A rushed patriotic spectacle began to peel. The administration called it sabotage—and turned an American Olympian into the culprit.</p>
+<p class="dek">The <strong>Earth Drama Companion</strong> is a set of instructions you paste into ChatGPT or another AI assistant. Once sent, it turns this essay into an interactive conversation—no prompt-writing or AI experience required.</p>
+<p class="support">It can help you separate the failing surface from the story placed over it, trace how certainty became criminal jeopardy, examine patriotism that protects symbols before citizens, and recognize loyalty systems that value people only while they return the preferred reflection.</p>
+<p class="promise"><strong>It will not ask you to presume that every official acted in bad faith or that every question about Hearn’s conduct disappeared.</strong><br>It is designed to preserve the essay’s distinctions while asking what power does when reality begins damaging the image it claimed as proof of itself.</p>
+</div>
+<div class="mirror-stage" aria-hidden="true">
+<div class="monument"><span class="roof"></span><span class="columns"></span><span class="base"></span></div>
+<svg class="ed-symbol mark-above"><use href="#earth-drama"/></svg>
+<div class="waterline"></div>
+<div class="reflection-window"><svg class="ed-symbol mark-below"><use href="#earth-drama"/></svg></div>
+<div class="ripple one"></div><div class="ripple two"></div><div class="ripple three"></div>
+<div class="peeling-surface"></div><div class="peel"></div>
+<div class="choice what">What went wrong?</div><div class="choice who">Who did this to us?</div>
+<div class="axiom">The surface failed. The reflection did not.</div>
+</div>
+</section>
+
+<section class="section reveal" aria-labelledby="howTitle">
+<div class="section-head"><h2 id="howTitle">How It Works</h2><span class="section-tag">Copy · Paste · Send</span></div>
+<div class="steps">
+<div class="step"><span>01 · Copy</span>Press “Copy Everything to Begin” to copy the Companion instructions and complete essay together.</div>
+<div class="step"><span>02 · Paste</span>Open a new chat in ChatGPT, Claude, Gemini, or another AI assistant and paste what was copied.</div>
+<div class="step"><span>03 · Send</span>Click or tap the Send button—usually an arrow—or press Enter on a computer. You do not need to read, edit, or add anything first. The Companion will introduce itself and show you how to begin.</div>
+</div>
+</section>
+
+<section class="section start reveal" aria-labelledby="startTitle">
+<h2 id="startTitle">Enter the Reflection</h2>
+<p class="section-intro">One click copies the Companion instructions and complete essay together.</p>
+<div class="actions"><button type="button" class="primary" id="copyCompanion" aria-describedby="pasteHelp">Copy Everything to Begin →</button></div>
+<p class="essay-choice">Prefer the essay without the guided experience? <button type="button" class="essay-only" id="copyEssay">Copy the essay only.</button></p>
+<p class="paste-help" id="pasteHelp"><em>*After copying, open a new AI chat. On a computer, click the message box, press Ctrl+V (Windows) or Command+V (Mac), then click the Send button—usually an arrow—or press Enter. On a phone or tablet, tap the message box, choose Paste (touch and hold if needed), then tap the Send arrow. You do not need to read or edit the pasted text first.</em></p>
+<div class="status" id="copyStatus" role="status" aria-live="polite">Preparing the Companion…</div>
+</section>
+
+<section class="section reveal" aria-labelledby="exploreTitle">
+<div class="section-head"><h2 id="exploreTitle">Ways to Read the Reflection</h2><span class="section-tag">Six examinations</span></div>
+<p class="section-intro">Once the Companion begins, you can take the conversation in any of these directions.</p>
+<div class="paths" aria-label="Ways to explore What the Reflecting Pool Reflected with the Companion">
+<div class="path"><b>Read the Reflection</b>Understand the essay’s movement from a physical construction failure to a political and moral revelation about image, power, and responsibility.</div>
+<div class="path"><b>Trace Failure into Sabotage</b>Follow how a claimed success became a threat, a threat became an enemy, and a construction problem became an attack on America.</div>
+<div class="path"><b>Follow the Story into Law</b>Examine how television certainty and official rhetoric descended through government until another person faced felony prosecution.</div>
+<div class="path"><b>Patriotism: Surface or Citizen</b>Explore the difference between protecting national imagery and accepting responsibility for what a nation does to actual people.</div>
+<div class="path"><b>Examine the Mirrors on Probation</b>Study systems that praise expertise and independence only while they return the leader’s preferred image.</div>
+<div class="path"><b>Turn the Pool Toward Me</b>Find where you, a group, or an institution may be protecting an image, relocating failure, or punishing an unwanted reflection.</div>
+</div>
+<p class="path-note">You can also paste a passage, ask about a factual distinction, bring in another political or institutional example, examine a patriotic symbol, or simply say what the pool reflected to you.</p>
+</section>
+
+<p class="note reveal"><strong>Privacy:</strong> This page does not access your AI account or send anything automatically. The button only copies text to your clipboard. After you paste it into an AI assistant, that service’s own privacy and memory settings apply. The Companion is instructed not to invent personal details, pressure political belief, or turn every disagreement into evidence of bad faith.</p>
+</div></article>
+<footer><span class="final">The essay is the doorway. The conversation is yours.</span>Earth Drama · Alexander Schoenherr</footer>
+</main>
+<textarea id="companionPrompt" class="hidden" aria-hidden="true"></textarea>
+<textarea id="essayText" class="hidden" aria-hidden="true"></textarea>
+<script>
+const promptUrl='companion-prompts/what-the-reflecting-pool-reflected.txt';
+const essayUrl='essay-sources/what-the-reflecting-pool-reflected.txt';
+const promptBox=document.getElementById('companionPrompt');
+const essayBox=document.getElementById('essayText');
+const status=document.getElementById('copyStatus');
+const buttons=[document.getElementById('copyCompanion'),document.getElementById('copyEssay')];
+buttons.forEach(button=>button.disabled=true);
+
+async function loadText(url){
+  const response=await fetch(url,{cache:'no-store'});
+  if(!response.ok)throw new Error(`Unable to load ${url}`);
+  return (await response.text()).trim();
+}
+
+const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([prompt,essay])=>{
+  promptBox.value=prompt;
+  essayBox.value=essay;
+  buttons.forEach(button=>button.disabled=false);
+  status.textContent='';
+  return {prompt,essay};
+}).catch(error=>{
+  console.error(error);
+  status.textContent='The Companion could not load. Refresh the page and try again.';
+  throw error;
+});
+
+async function write(text){
+  if(navigator.clipboard&&window.isSecureContext){
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const field=document.createElement('textarea');
+  try{
+    field.value=text;
+    field.setAttribute('readonly','');
+    field.style.cssText='position:fixed;opacity:0;pointer-events:none';
+    document.body.appendChild(field);
+    field.focus();
+    field.select();
+    if(!document.execCommand('copy'))throw new Error('Copy failed');
+  }finally{
+    field.remove();
+  }
+}
+
+function confirmCopy(button,message){
+  const original=button.dataset.original||button.textContent.trim();
+  button.dataset.original=original;
+  button.textContent='Copied ✓';
+  status.textContent=message;
+  clearTimeout(button._timer);
+  button._timer=setTimeout(()=>{
+    button.textContent=original;
+    status.textContent='';
+  },9000);
+}
+
+function fail(error){
+  console.error(error);
+  status.textContent='Copying was blocked. Open this page in your browser and try again.';
+}
+
+document.getElementById('copyCompanion').addEventListener('click',async function(){
+  try{
+    const {prompt,essay}=await ready;
+    await write(`${prompt}\n\n<essay>\n${essay}\n</essay>`);
+    confirmCopy(this,'Copied. Now open a new AI chat, paste it into the message box, and send.');
+  }catch(error){fail(error);}
+});
+
+document.getElementById('copyEssay').addEventListener('click',async function(){
+  try{
+    const {essay}=await ready;
+    await write(essay);
+    confirmCopy(this,'Essay copied. Paste it into an AI chat, note, or document.');
+  }catch(error){fail(error);}
+});
+
+const reveals=[...document.querySelectorAll('.reveal')];
+if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+    });
+  },{threshold:.08,rootMargin:'0px 0px -7%'});
+  reveals.forEach(element=>observer.observe(element));
+}else{
+  reveals.forEach(element=>element.classList.add('visible'));
+}
+</script>
+</body>
+</html>
