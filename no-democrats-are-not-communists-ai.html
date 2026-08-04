@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111216">
+<meta name="description" content="Continue No, Democrats Are Not Communists with The Decoder—an Earth Drama AI experience that removes frightening labels, reveals the actual policy, and restores the comparison.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="No, Democrats Are Not Communists — The Decoder">
+<meta property="og:description" content="Bring the claim. Remove the label. Compare the policies. Decide for yourself.">
+<meta property="og:url" content="https://alexanderschoenherr.github.io/earth-drama-ai/no-democrats-are-not-communists-ai.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://alexanderschoenherr.github.io/earth-drama-ai/no-democrats-are-not-communists-ai.html">
+<title>No, Democrats Are Not Communists — The Decoder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Lora:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#111216;
+  --ink2:#1b1c21;
+  --paper:#f4eee3;
+  --paper2:#e8ddcc;
+  --text:#1b1a18;
+  --muted:#68635d;
+  --red:#c42f36;
+  --red2:#8e171c;
+  --blue:#236d96;
+  --blue2:#77c8e8;
+  --gold:#d2aa48;
+  --gold2:#f0d274;
+  --line:rgba(27,26,24,.14);
+}
+*{box-sizing:border-box}
+html{background:var(--ink)}
+body{
+  min-height:100vh;
+  margin:0;
+  color:var(--paper);
+  font-family:Lora,Georgia,serif;
+  background-color:var(--ink);
+  background-image:
+    radial-gradient(circle at 14% 12%,rgba(196,47,54,.22),transparent 28rem),
+    radial-gradient(circle at 88% 26%,rgba(35,109,150,.2),transparent 31rem),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(0deg,rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(150deg,#0e0f12,#191b21);
+  background-size:auto,auto,40px 40px,40px 40px,auto;
+  overflow-x:hidden;
+}
+body:before{
+  content:"LABEL  /  FEAR  /  POLICY  /  ALTERNATIVE";
+  position:fixed;
+  right:17px;
+  top:50%;
+  transform:translateY(-50%) rotate(180deg);
+  writing-mode:vertical-rl;
+  color:rgba(244,238,227,.04);
+  font:500 10px "DM Mono",monospace;
+  letter-spacing:.24em;
+  pointer-events:none;
+}
+.page{
+  position:relative;
+  width:min(100% - 28px,1120px);
+  margin:auto;
+  padding:max(24px,env(safe-area-inset-top)) 0 max(52px,env(safe-area-inset-bottom));
+}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:4px 0 22px;
+}
+.ed-symbol{display:block;overflow:visible}
+.top .ed-symbol{width:48px;height:48px;filter:drop-shadow(0 5px 18px rgba(210,170,72,.22))}
+.brand{font-size:12px;font-weight:600;letter-spacing:.21em;text-transform:uppercase}
+.shell{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(240,210,116,.2);
+  border-radius:20px;
+  color:var(--text);
+  background:
+    repeating-linear-gradient(0deg,rgba(60,48,36,.018) 0,rgba(60,48,36,.018) 1px,transparent 1px,transparent 5px),
+    radial-gradient(circle at 12% 0%,rgba(255,255,255,.9),transparent 34rem),
+    var(--paper);
+  box-shadow:0 38px 110px rgba(0,0,0,.52),0 0 0 1px rgba(255,255,255,.38) inset;
+}
+.shell:after{
+  content:"THE DECODER";
+  position:absolute;
+  right:-38px;
+  top:105px;
+  transform:rotate(90deg);
+  color:rgba(17,18,22,.035);
+  font:600 28px Oswald,sans-serif;
+  letter-spacing:.22em;
+  pointer-events:none;
+}
+.inner{position:relative;z-index:1;padding:clamp(30px,5.4vw,68px)}
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.04fr) minmax(360px,.96fr);
+  gap:clamp(40px,7vw,82px);
+  align-items:center;
+}
+.eyebrow{
+  margin:0 0 17px;
+  color:var(--blue);
+  font:500 10px "DM Mono",monospace;
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+h1{
+  max-width:700px;
+  margin:0;
+  font-family:"Instrument Serif",Georgia,serif;
+  font-size:clamp(58px,8vw,90px);
+  font-weight:400;
+  line-height:.91;
+  letter-spacing:-.045em;
+  text-wrap:balance;
+}
+h1 em{font-weight:400;color:#0e0f12}
+.thesis{
+  max-width:680px;
+  margin:22px 0 0;
+  color:var(--red2);
+  font:600 12px "DM Mono",monospace;
+  letter-spacing:.045em;
+  line-height:1.65;
+  text-transform:uppercase;
+}
+.dek{
+  max-width:680px;
+  margin:22px 0 0;
+  color:#35312d;
+  font-size:clamp(16.5px,2vw,19.5px);
+  line-height:1.72;
+}
+.support{
+  max-width:680px;
+  margin:15px 0 0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.74;
+}
+.promise{
+  margin:27px 0 0;
+  padding:17px 19px;
+  border-left:3px solid var(--blue);
+  background:linear-gradient(90deg,rgba(35,109,150,.09),rgba(35,109,150,.018));
+  color:#403b36;
+  font-size:14.5px;
+  line-height:1.68;
+}
+.decoder-stage{
+  position:relative;
+  min-height:495px;
+  display:grid;
+  place-items:center;
+  isolation:isolate;
+}
+.decoder-stage:before{
+  content:"";
+  position:absolute;
+  inset:3% 0 0;
+  background:linear-gradient(150deg,#16181d,#0d0e11);
+  clip-path:polygon(7% 0,93% 0,100% 8%,100% 92%,93% 100%,7% 100%,0 92%,0 8%);
+  box-shadow:0 26px 70px rgba(0,0,0,.36),0 0 0 1px rgba(255,255,255,.07) inset;
+  z-index:-2;
+}
+.decoder-stage:after{
+  content:"DECODING POLITICAL LANGUAGE";
+  position:absolute;
+  top:8%;
+  left:50%;
+  transform:translateX(-50%);
+  color:rgba(244,238,227,.43);
+  font:500 8px "DM Mono",monospace;
+  letter-spacing:.2em;
+  white-space:nowrap;
+}
+.policy-sheet{
+  position:relative;
+  width:min(84%,390px);
+  min-height:330px;
+  padding:30px 28px 27px;
+  overflow:hidden;
+  color:#1b1a18;
+  background:
+    repeating-linear-gradient(0deg,rgba(60,48,36,.025) 0,rgba(60,48,36,.025) 1px,transparent 1px,transparent 5px),
+    #f5efe4;
+  border:1px solid rgba(232,221,204,.85);
+  box-shadow:0 26px 55px rgba(0,0,0,.42);
+  transform:rotate(-1.2deg);
+}
+.policy-sheet:before{
+  content:"POLICY UNDER REVIEW";
+  display:block;
+  margin-bottom:20px;
+  color:var(--blue);
+  font:600 9px "DM Mono",monospace;
+  letter-spacing:.19em;
+}
+.policy-title{
+  margin:0 0 17px;
+  font:500 27px/1.02 "Instrument Serif",Georgia,serif;
+}
+.policy-row{
+  display:grid;
+  grid-template-columns:112px 1fr;
+  gap:13px;
+  padding:11px 0;
+  border-top:1px solid rgba(27,26,24,.13);
+  font-size:11px;
+  line-height:1.45;
+}
+.policy-row span:first-child{
+  color:#6c665e;
+  font:500 8px "DM Mono",monospace;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.policy-row strong{font-weight:600}
+.red-word{
+  position:absolute;
+  left:50%;
+  top:48%;
+  transform:translate(-50%,-50%) rotate(-8deg);
+  padding:9px 18px 11px;
+  border:6px solid var(--red);
+  color:var(--red);
+  background:rgba(244,238,227,.1);
+  font:600 clamp(42px,6vw,68px)/1 Oswald,sans-serif;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  opacity:.9;
+  mix-blend-mode:multiply;
+  filter:drop-shadow(0 3px 0 rgba(142,23,28,.18));
+  animation:stampBreathe 7s ease-in-out infinite;
+  z-index:3;
+}
+.scan-beam{
+  position:absolute;
+  left:10%;
+  right:10%;
+  top:18%;
+  height:60px;
+  background:linear-gradient(180deg,transparent,rgba(119,200,232,.18),rgba(119,200,232,.55),rgba(119,200,232,.16),transparent);
+  border-top:1px solid rgba(119,200,232,.6);
+  border-bottom:1px solid rgba(119,200,232,.3);
+  box-shadow:0 0 28px rgba(119,200,232,.2);
+  mix-blend-mode:screen;
+  animation:decodeScan 6.7s ease-in-out infinite;
+  z-index:4;
+}
+.decoder-output{
+  position:absolute;
+  left:8%;
+  right:8%;
+  bottom:7%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:7px;
+  color:#d7d4cc;
+  font:500 7px "DM Mono",monospace;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.decoder-output span{
+  padding:8px 6px;
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.025);
+  text-align:center;
+}
+.decoder-output span:nth-child(1){color:#ef777b}
+.decoder-output span:nth-child(2){color:var(--blue2)}
+.decoder-output span:nth-child(3){color:var(--gold2)}
+.mark-watermark{
+  position:absolute;
+  width:78px;
+  height:78px;
+  right:7%;
+  top:10%;
+  opacity:.18;
+  filter:grayscale(.15);
+  z-index:2;
+}
+.axiom{
+  position:absolute;
+  left:50%;
+  bottom:-4px;
+  transform:translateX(-50%);
+  width:max-content;
+  max-width:92%;
+  padding:10px 14px;
+  border:1px solid rgba(119,200,232,.25);
+  background:#111216;
+  color:#ece7de;
+  font:500 9px "DM Mono",monospace;
+  letter-spacing:.13em;
+  text-align:center;
+  text-transform:uppercase;
+  box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+.section{
+  margin-top:48px;
+  padding-top:35px;
+  border-top:1px solid var(--line);
+}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px}
+.section h2{
+  margin:0;
+  font:400 36px "Instrument Serif",Georgia,serif;
+  color:#171613;
+  text-wrap:balance;
+}
+.section-tag{
+  color:var(--blue);
+  font:500 9px "DM Mono",monospace;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.section-intro{
+  max-width:750px;
+  margin:11px 0 0;
+  color:var(--muted);
+  font-size:13.5px;
+  line-height:1.68;
+}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:25px}
+.step{
+  padding:17px 0 0;
+  border-top:2px solid rgba(35,109,150,.2);
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+.step span{
+  display:block;
+  margin-bottom:8px;
+  color:var(--blue);
+  font:500 10px "DM Mono",monospace;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.start{
+  padding:34px 24px 30px;
+  border:1px solid rgba(35,109,150,.2);
+  color:var(--paper);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(35,109,150,.23),transparent 25rem),
+    linear-gradient(145deg,#1a1c22,#111216);
+  text-align:center;
+}
+.start h2{color:#f3ede3}
+.start .section-intro{margin-left:auto;margin-right:auto;color:#b9b3aa}
+.actions{margin-top:22px}
+button{font-family:Lora,Georgia,serif;-webkit-tap-highlight-color:transparent}
+.primary{
+  width:min(100%,520px);
+  min-height:58px;
+  border:1px solid rgba(119,200,232,.32);
+  border-radius:13px;
+  padding:15px 24px;
+  color:#f9f4ea;
+  background:linear-gradient(135deg,#2c7fa9,#195d84);
+  box-shadow:0 13px 32px rgba(35,109,150,.26);
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .18s,box-shadow .18s;
+}
+.primary:active{transform:scale(.99)}
+.primary:focus-visible,.essay-only:focus-visible{outline:3px solid rgba(119,200,232,.4);outline-offset:3px}
+.primary:disabled{opacity:.6;cursor:wait}
+.essay-choice{margin:17px 0 0;color:#aaa49c;font-size:12px}
+.essay-only{
+  border:0;
+  padding:0;
+  color:#e8dfd2;
+  background:transparent;
+  font-size:12px;
+  font-weight:600;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  cursor:pointer;
+}
+.paste-help{max-width:720px;margin:18px auto 0;color:#aaa49c;font-size:12px;line-height:1.58}
+.status{margin:11px 4px 0;color:var(--blue2);font-size:13px}
+.status:empty{display:none}
+.paths{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:42px;
+  margin:27px 0 0;
+  counter-reset:path;
+}
+.path{
+  position:relative;
+  min-height:122px;
+  padding:20px 0 23px 54px;
+  border-top:1px solid rgba(27,26,24,.13);
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.55;
+  counter-increment:path;
+}
+.path:before{
+  content:counter(path,decimal-leading-zero);
+  position:absolute;
+  left:0;
+  top:20px;
+  color:var(--red);
+  font:600 10px "DM Mono",monospace;
+}
+.path b{display:block;margin-bottom:5px;color:#1b1a18;font-size:14px}
+.path-note{
+  margin:19px 0 0;
+  padding:16px 18px;
+  border-left:2px solid var(--red);
+  background:rgba(196,47,54,.055);
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.64;
+}
+.decoder-card{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  margin-top:26px;
+  overflow:hidden;
+  border:1px solid rgba(27,26,24,.15);
+  background:rgba(27,26,24,.15);
+}
+.card-cell{min-height:118px;padding:17px;background:#eee5d8}
+.card-cell span{
+  display:block;
+  margin-bottom:8px;
+  color:var(--blue);
+  font:600 8px "DM Mono",monospace;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.card-cell strong{font-size:13px;line-height:1.5}
+.card-cell.claim span{color:var(--red)}
+.card-cell.ask{background:#1a1c21;color:#f3ede3}
+.card-cell.ask span{color:var(--gold2)}
+.note{
+  margin:34px 0 0;
+  padding:19px 20px;
+  border:1px solid rgba(27,26,24,.12);
+  background:rgba(255,255,255,.25);
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.66;
+}
+footer{padding:25px 12px 0;text-align:center;color:#aaa49c;font-size:12px;line-height:1.6}
+footer .final{display:block;margin-bottom:5px;color:#e8dfd2;font:italic 22px "Instrument Serif",Georgia,serif}
+.hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:pre-wrap!important;border:0!important}
+.js .reveal{opacity:0;transform:translateY(10px);transition:opacity .55s ease,transform .55s ease}
+.js .reveal.visible{opacity:1;transform:none}
+@keyframes decodeScan{0%,100%{top:18%;opacity:.22}50%{top:66%;opacity:.9}}
+@keyframes stampBreathe{0%,100%{opacity:.9}50%{opacity:.48}}
+@media(hover:hover) and (pointer:fine){.primary:hover{transform:translateY(-2px);box-shadow:0 18px 39px rgba(35,109,150,.34)}}
+@media(max-width:880px){.hero{grid-template-columns:1fr}.decoder-stage{min-height:500px}.policy-sheet{width:min(78%,430px)}}
+@media(max-width:640px){
+  body:before{display:none}
+  .page{width:min(100% - 16px,1120px);padding-top:max(17px,env(safe-area-inset-top))}
+  .top{margin-bottom:15px}.top .ed-symbol{width:40px;height:40px}
+  .shell{border-radius:15px}.shell:after{display:none}
+  .inner{padding:28px 20px 27px}
+  h1{font-size:clamp(47px,13.2vw,62px)}
+  .thesis{font-size:10.5px}.dek{font-size:16px}.support{font-size:13.5px}.promise{font-size:14px}
+  .decoder-stage{min-height:430px}
+  .policy-sheet{width:88%;min-height:300px;padding:25px 22px}
+  .policy-title{font-size:23px}.policy-row{grid-template-columns:96px 1fr;font-size:10px}
+  .red-word{font-size:clamp(38px,12vw,54px);border-width:5px;padding:7px 12px 9px}
+  .decoder-output{font-size:6px;letter-spacing:.04em}
+  .mark-watermark{width:60px;height:60px}
+  .axiom{font-size:7.25px;letter-spacing:.09em}
+  .section{margin-top:36px;padding-top:28px}.section h2{font-size:31px}.section-tag{display:none}
+  .steps{grid-template-columns:1fr;gap:18px}
+  .start{padding:28px 15px 25px}.primary{width:100%}.paste-help{font-size:11.75px}
+  .paths{grid-template-columns:1fr;margin-top:23px}.path{min-height:auto;padding-left:49px}
+  .decoder-card{grid-template-columns:1fr}.card-cell{min-height:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
+  .primary{transition:none}.primary:hover{transform:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d978"/><stop offset=".45" stop-color="#cfa741"/><stop offset="1" stop-color="#e2c15d"/></linearGradient>
+<mask id="earth-drama-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><circle cx="500" cy="500" r="137" fill="#000"/></mask>
+<symbol id="earth-drama" viewBox="0 0 1000 1000">
+<g mask="url(#earth-drama-cutout)" fill="url(#gold)" stroke="#a98228" stroke-width="2">
+<path d="M500 0 535 330Q548 394 610 421L1000 500 610 579Q548 606 535 670L500 1000 465 670Q452 606 390 579L0 500 390 421Q452 394 465 330Z"/>
+<path d="M205 455A305 305 0 0 1 455 205L460 230A280 280 0 0 0 230 460Z"/>
+<path d="M545 205A305 305 0 0 1 795 455L770 460A280 280 0 0 0 540 230Z"/>
+<path d="M795 545A305 305 0 0 1 545 795L540 770A280 280 0 0 0 770 540Z"/>
+<path d="M455 795A305 305 0 0 1 205 545L230 540A280 280 0 0 0 460 770Z"/>
+</g>
+<circle cx="500" cy="500" r="145" fill="none" stroke="url(#gold)" stroke-width="16"/>
+<g fill="url(#gold)"><path d="M397 448 420 418 455 404 471 420 486 412 505 428 496 445 470 442 452 455 430 453 416 467Z"/><path d="M388 472 410 459 428 467 435 488 424 501 441 516 454 544 445 563 420 546 410 521 392 506Z"/><path d="M456 570 475 553 501 558 521 574 554 579 581 598 570 625 548 631 529 655 507 682 487 672 490 644 472 625Z"/><path d="M516 392 535 386 552 401 549 420 526 422 514 411Z"/><path d="M557 416 585 420 610 441 600 458 577 453 563 439Z"/><path d="M590 478 618 470 633 493 625 522 607 544 595 530 602 506Z"/></g>
+</symbol>
+</defs>
+</svg>
+
+<main class="page">
+<div class="top" aria-label="Earth Drama"><svg class="ed-symbol" aria-hidden="true"><use href="#earth-drama"/></svg><div class="brand">Earth Drama</div></div>
+<article class="shell"><div class="inner">
+<section class="hero">
+<div>
+<p class="eyebrow">An Earth Drama AI Experience · The Decoder</p>
+<h1>Continue <em>No, Democrats Are Not Communists</em> with AI</h1>
+<p class="thesis">How Republicans use one frightening word to stop voters from comparing the actual policies.</p>
+<p class="dek">The <strong>Earth Drama Companion</strong> is a set of instructions you paste into ChatGPT or another AI assistant. Once sent, it turns this essay into an interactive anti-propaganda tool—no prompt-writing or AI experience required.</p>
+<p class="support">Bring it a claim, headline, advertisement, policy, screenshot, or argument. It will remove the frightening label, identify what the proposal actually does, test the accusation consistently, compare the real alternatives, and help you prepare a clear response.</p>
+<p class="promise"><strong>It will not tell you that every Democratic policy is good or that every Republican criticism is dishonest.</strong><br>It is designed to make criticism specific enough to evaluate—and to restore the comparison propaganda was meant to replace.</p>
+</div>
+<div class="decoder-stage" aria-hidden="true">
+<svg class="ed-symbol mark-watermark"><use href="#earth-drama"/></svg>
+<div class="policy-sheet">
+<h3 class="policy-title">Public healthcare proposal</h3>
+<div class="policy-row"><span>Ownership</span><strong>Private property and businesses remain</strong></div>
+<div class="policy-row"><span>Mechanism</span><strong>Public funding, rules, and coverage</strong></div>
+<div class="policy-row"><span>Real debate</span><strong>Cost, choice, access, bureaucracy, incentives</strong></div>
+<div class="policy-row"><span>Alternative</span><strong>Private-insurance-centered system</strong></div>
+</div>
+<div class="red-word">Communism</div>
+<div class="scan-beam"></div>
+<div class="decoder-output"><span>Label</span><span>Policy</span><span>Alternative</span></div>
+<div class="axiom">Bring the claim. Remove the label. Compare the policies.</div>
+</div>
+</section>
+
+<section class="section reveal" aria-labelledby="howTitle">
+<div class="section-head"><h2 id="howTitle">How It Works</h2><span class="section-tag">Copy · Paste · Send</span></div>
+<div class="steps">
+<div class="step"><span>01 · Copy</span>Press “Copy Everything to Begin” to copy The Decoder instructions and complete essay together.</div>
+<div class="step"><span>02 · Paste</span>Open a new chat in ChatGPT, Claude, Gemini, or another AI assistant and paste what was copied.</div>
+<div class="step"><span>03 · Send</span>Click or tap the Send button—usually an arrow—or press Enter on a computer. You do not need to read, edit, or add anything first. The Decoder will introduce itself and show you how to begin.</div>
+</div>
+</section>
+
+<section class="section start reveal" aria-labelledby="startTitle">
+<h2 id="startTitle">Start Decoding</h2>
+<p class="section-intro">One click copies The Decoder instructions and complete essay together.</p>
+<div class="actions"><button type="button" class="primary" id="copyCompanion" aria-describedby="pasteHelp">Copy Everything to Begin →</button></div>
+<p class="essay-choice">Prefer the essay without the guided experience? <button type="button" class="essay-only" id="copyEssay">Copy the essay only.</button></p>
+<p class="paste-help" id="pasteHelp"><em>*After copying, open a new AI chat. On a computer, click the message box, press Ctrl+V (Windows) or Command+V (Mac), then click the Send button—usually an arrow—or press Enter. On a phone or tablet, tap the message box, choose Paste (touch and hold if needed), then tap the Send arrow. You do not need to read or edit the pasted text first.</em></p>
+<div class="status" id="copyStatus" role="status" aria-live="polite">Preparing The Decoder…</div>
+</section>
+
+<section class="section reveal" aria-labelledby="exploreTitle">
+<div class="section-head"><h2 id="exploreTitle">Ways to Use The Decoder</h2><span class="section-tag">Six civic tools</span></div>
+<p class="section-intro">Once The Decoder begins, you can bring it a live political claim or use it to think more deeply with the essay.</p>
+<div class="paths" aria-label="Ways to use The Decoder">
+<div class="path"><b>Decode a Communism Claim</b>Bring a statement, headline, advertisement, clip, or post and separate the frightening label from the policy underneath it.</div>
+<div class="path"><b>Name the Actual Policy</b>Translate slogans into concrete changes in taxes, ownership, regulation, funding, benefits, enforcement, and power.</div>
+<div class="path"><b>Compare the Real Alternatives</b>Place the proposal beside the Republican alternative—or the status quo—using the same standards for costs, risks, freedoms, and outcomes.</div>
+<div class="path"><b>Test the Accusation Consistently</b>Ask whether the definition would also classify Social Security, Medicare, public schools, the military, tariffs, or other accepted programs as communist.</div>
+<div class="path"><b>Separate the Political Traditions</b>Clarify the differences among mainstream Democrats, social democrats, democratic socialists, socialists, communists, and authoritarian communist states.</div>
+<div class="path"><b>Prepare a Clear Response</b>Create a calm question, one-sentence correction, family response, shareable paragraph, or screenshot-ready Decoder Card.</div>
+</div>
+<p class="path-note">You can also paste a policy passage, ask what evidence is missing, examine another frightening political label, or simply describe a conversation in which the label replaced the argument.</p>
+</section>
+
+<section class="section reveal" aria-labelledby="cardTitle">
+<div class="section-head"><h2 id="cardTitle">The Decoder Card</h2><span class="section-tag">Built to share</span></div>
+<p class="section-intro">After analyzing a claim, The Decoder can compress the result into a clear, screenshot-ready card without pretending the policy has no legitimate weaknesses.</p>
+<div class="decoder-card">
+<div class="card-cell claim"><span>The Claim</span><strong>“This healthcare proposal is communism.”</strong></div>
+<div class="card-cell"><span>The Actual Policy</span><strong>What changes in funding, rules, benefits, and ownership?</strong></div>
+<div class="card-cell"><span>What Remains Private</span><strong>Which businesses, property, providers, markets, and investments remain?</strong></div>
+<div class="card-cell"><span>The Real Argument</span><strong>Cost, access, bureaucracy, choice, incentives, authority, and implementation.</strong></div>
+<div class="card-cell"><span>The Alternative</span><strong>What does the opposing side propose—or what happens under the status quo?</strong></div>
+<div class="card-cell ask"><span>Ask</span><strong>What specific feature makes this communist, and what are you offering instead?</strong></div>
+</div>
+</section>
+
+<p class="note reveal"><strong>Privacy:</strong> This page does not access your AI account or send anything automatically. The button only copies text to your clipboard. After you paste it into an AI assistant, that service’s own privacy and memory settings apply. The Decoder is instructed not to invent policy details, pressure a party preference, minimize communist repression, or treat disagreement as proof of propaganda.</p>
+</div></article>
+<footer><span class="final">The essay is the doorway. The judgment is yours.</span>Earth Drama · Alexander Schoenherr</footer>
+</main>
+<textarea id="companionPrompt" class="hidden" aria-hidden="true"></textarea>
+<textarea id="essayText" class="hidden" aria-hidden="true"></textarea>
+<script>
+const promptUrl='companion-prompts/no-democrats-are-not-communists.txt';
+const essayUrl='essay-sources/no-democrats-are-not-communists.txt';
+const promptBox=document.getElementById('companionPrompt');
+const essayBox=document.getElementById('essayText');
+const status=document.getElementById('copyStatus');
+const buttons=[document.getElementById('copyCompanion'),document.getElementById('copyEssay')];
+buttons.forEach(button=>button.disabled=true);
+
+async function loadText(url){
+  const response=await fetch(url,{cache:'no-store'});
+  if(!response.ok)throw new Error(`Unable to load ${url}`);
+  return (await response.text()).trim();
+}
+
+const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([prompt,essay])=>{
+  promptBox.value=prompt;
+  essayBox.value=essay;
+  buttons.forEach(button=>button.disabled=false);
+  status.textContent='';
+  return {prompt,essay};
+}).catch(error=>{
+  console.error(error);
+  status.textContent='The Decoder could not load. Refresh the page and try again.';
+  throw error;
+});
+
+async function write(text){
+  if(navigator.clipboard&&window.isSecureContext){
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const field=document.createElement('textarea');
+  try{
+    field.value=text;
+    field.setAttribute('readonly','');
+    field.style.cssText='position:fixed;opacity:0;pointer-events:none';
+    document.body.appendChild(field);
+    field.focus();
+    field.select();
+    if(!document.execCommand('copy'))throw new Error('Copy failed');
+  }finally{
+    field.remove();
+  }
+}
+
+function confirmCopy(button,message){
+  const original=button.dataset.original||button.textContent.trim();
+  button.dataset.original=original;
+  button.textContent='Copied ✓';
+  status.textContent=message;
+  clearTimeout(button._timer);
+  button._timer=setTimeout(()=>{
+    button.textContent=original;
+    status.textContent='';
+  },9000);
+}
+
+function fail(error){
+  console.error(error);
+  status.textContent='Copying was blocked. Open this page in your browser and try again.';
+}
+
+document.getElementById('copyCompanion').addEventListener('click',async function(){
+  try{
+    const {prompt,essay}=await ready;
+    await write(`${prompt}\n\n<essay>\n${essay}\n</essay>`);
+    confirmCopy(this,'Copied. Now open a new AI chat, paste it into the message box, and send.');
+  }catch(error){fail(error)}
+});
+
+document.getElementById('copyEssay').addEventListener('click',async function(){
+  try{
+    const {essay}=await ready;
+    await write(essay);
+    confirmCopy(this,'Essay copied. Paste it into an AI chat, note, or document.');
+  }catch(error){fail(error)}
+});
+
+const observer=new IntersectionObserver(entries=>{
+  for(const entry of entries){
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  }
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));
+</script>
+</body>
+</html>
