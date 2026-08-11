@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1216">
+<meta name="description" content="THE LEVERAGE MAP is an Earth Drama civic-strategy tool. See the story. Find the power. Locate the leverage. Make the next move visible.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="THE LEVERAGE MAP — Earth Drama">
+<meta property="og:description" content="Outrage tells you something is wrong. The Leverage Map helps you find where it can still be changed.">
+<meta property="og:url" content="https://alexanderschoenherr.github.io/earth-drama-ai/how-democrats-should-fight-trump-ai.html">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://alexanderschoenherr.github.io/earth-drama-ai/how-democrats-should-fight-trump-ai.html">
+<title>THE LEVERAGE MAP — Earth Drama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#0d1216;
+  --night2:#131b20;
+  --paper:#efe9df;
+  --paper2:#e6ded1;
+  --ink:#171a1c;
+  --muted:#6c706f;
+  --gold:#d0aa4b;
+  --gold2:#efd67f;
+  --signal:#8fc6c3;
+  --signal2:#5c9694;
+  --rust:#b6674c;
+  --line:rgba(22,27,30,.13);
+}
+*{box-sizing:border-box}
+html{background:var(--night)}
+body{
+  min-height:100vh;
+  margin:0;
+  color:var(--paper);
+  font-family:Lora,Georgia,serif;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(92,150,148,.12),transparent 30rem),
+    radial-gradient(circle at 86% 18%,rgba(208,170,75,.12),transparent 28rem),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(0deg,rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(150deg,#0a0f12,#151d22);
+  background-size:auto,auto,46px 46px,46px 46px,auto;
+  overflow-x:hidden;
+}
+body:before{
+  content:"EVENT  /  STORY  /  POWER  /  LEVERAGE  /  ACTION";
+  position:fixed;
+  top:50%;right:15px;
+  transform:translateY(-50%) rotate(180deg);
+  writing-mode:vertical-rl;
+  color:rgba(239,233,223,.035);
+  font:500 9px "DM Mono",monospace;
+  letter-spacing:.22em;
+  pointer-events:none;
+}
+.page{width:min(100% - 28px,1120px);margin:auto;padding:max(24px,env(safe-area-inset-top)) 0 max(54px,env(safe-area-inset-bottom))}
+.top{display:flex;align-items:center;justify-content:center;gap:11px;margin:4px 0 21px}
+.ed-symbol{display:block;overflow:visible;width:46px;height:46px;filter:drop-shadow(0 5px 17px rgba(208,170,75,.2))}
+.brand{font-size:12px;font-weight:600;letter-spacing:.21em;text-transform:uppercase}
+.shell{position:relative;overflow:hidden;color:var(--ink);border:1px solid rgba(239,214,127,.18);border-radius:21px;background:repeating-linear-gradient(0deg,rgba(70,58,42,.018) 0,rgba(70,58,42,.018) 1px,transparent 1px,transparent 5px),radial-gradient(circle at 10% 0%,rgba(255,255,255,.9),transparent 35rem),var(--paper);box-shadow:0 38px 110px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.33) inset}
+.inner{padding:clamp(29px,5vw,64px)}
+.hero{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(370px,.97fr);gap:clamp(42px,7vw,84px);align-items:center}
+.eyebrow{margin:0 0 15px;color:var(--signal2);font:500 10px "DM Mono",monospace;letter-spacing:.18em;text-transform:uppercase}
+.built-for{display:inline-block;margin-bottom:20px;padding:7px 10px;border:1px solid rgba(92,150,148,.18);background:rgba(92,150,148,.06);color:#506766;font:500 9px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+h1{margin:0;color:#111619;font:400 clamp(64px,9vw,104px)/.88 "Instrument Serif",Georgia,serif;letter-spacing:-.048em}
+.promise{max-width:690px;margin:21px 0 0;color:#705f2c;font:600 11.5px/1.68 "DM Mono",monospace;letter-spacing:.035em;text-transform:uppercase}
+.dek{max-width:680px;margin:21px 0 0;color:#373b3c;font-size:clamp(16.5px,2vw,19.5px);line-height:1.72}
+.support{max-width:680px;margin:14px 0 0;color:var(--muted);font-size:14px;line-height:1.72}
+.guardrail{margin:24px 0 0;padding:16px 18px;border-left:3px solid var(--signal2);background:linear-gradient(90deg,rgba(92,150,148,.09),rgba(92,150,148,.016));color:#414646;font-size:14px;line-height:1.65}
+.hero-actions{margin-top:25px}
+.primary{width:min(100%,500px);min-height:59px;padding:15px 23px;border:1px solid rgba(143,198,195,.34);border-radius:13px;color:#fbf7ef;background:linear-gradient(135deg,#356e6c,#214e4e);box-shadow:0 13px 32px rgba(34,79,79,.28);font:600 15px Lora,Georgia,serif;cursor:pointer;transition:transform .18s,box-shadow .18s;-webkit-tap-highlight-color:transparent}
+.primary:active{transform:scale(.99)}
+.primary:disabled{opacity:.58;cursor:wait}
+.primary:focus-visible,.essay-only:focus-visible{outline:3px solid rgba(143,198,195,.45);outline-offset:3px}
+.compatibility{margin:10px 0 0;color:#7a7d7b;font-size:11.5px}
+.essay-choice{margin:13px 0 0;color:#7a7d7b;font-size:11.5px}
+.essay-only{border:0;padding:0;color:#496a69;background:transparent;font:600 11.5px Lora,Georgia,serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.status{margin:10px 0 0;color:var(--signal2);font-size:12.5px;line-height:1.45}.status:empty{display:none}
+.map-stage{position:relative;min-height:510px;display:grid;place-items:center;isolation:isolate}
+.map-stage:before{content:"";position:absolute;inset:2% 0 2%;z-index:-3;background:linear-gradient(150deg,#172126,#0c1114);clip-path:polygon(6% 0,94% 0,100% 7%,100% 93%,94% 100%,6% 100%,0 93%,0 7%);box-shadow:0 27px 70px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.06) inset}
+.map-stage:after{content:"CIVIC STRATEGY / ACTIVE MAP";position:absolute;top:7%;left:50%;transform:translateX(-50%);white-space:nowrap;color:rgba(239,233,223,.38);font:500 8px "DM Mono",monospace;letter-spacing:.21em}
+.map-grid{position:relative;width:min(88%,430px);height:385px;border:1px solid rgba(143,198,195,.16);background:linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.025) 1px,transparent 1px),rgba(255,255,255,.018);background-size:32px 32px;box-shadow:0 16px 46px rgba(0,0,0,.25) inset}
+.map-axis{position:absolute;inset:0;pointer-events:none}.map-axis:before,.map-axis:after{content:"";position:absolute;background:rgba(143,198,195,.12)}.map-axis:before{left:50%;top:0;bottom:0;width:1px}.map-axis:after{top:50%;left:0;right:0;height:1px}
+.node{position:absolute;min-width:88px;padding:9px 10px;border:1px solid rgba(255,255,255,.1);background:#11191d;color:#d9dfdc;font:500 8px/1.3 "DM Mono",monospace;letter-spacing:.11em;text-transform:uppercase;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.24)}
+.node strong{display:block;margin-top:4px;color:var(--gold2);font-size:9px;letter-spacing:.04em}.n1{left:5%;top:8%}.n2{right:5%;top:8%}.n3{left:3%;bottom:10%}.n4{right:3%;bottom:10%}
+.center-card{position:absolute;left:50%;top:50%;width:66%;transform:translate(-50%,-50%);padding:23px 18px;border:1px solid rgba(239,214,127,.27);background:linear-gradient(160deg,rgba(30,42,47,.96),rgba(16,23,27,.98));color:#f1ede5;text-align:center;box-shadow:0 20px 44px rgba(0,0,0,.38)}
+.center-card span{display:block;color:var(--signal);font:500 8px "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase}.center-card b{display:block;margin:10px 0 13px;font:400 clamp(25px,4vw,38px)/1.02 "Instrument Serif",Georgia,serif}.center-card em{display:block;color:var(--gold2);font:500 9px/1.5 "DM Mono",monospace;letter-spacing:.09em;text-transform:uppercase;font-style:normal}
+.flow{position:absolute;left:50%;bottom:5%;transform:translateX(-50%);width:max-content;max-width:94%;padding:9px 12px;border:1px solid rgba(143,198,195,.18);background:#0e1518;color:#b9c5c1;font:500 7px "DM Mono",monospace;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}
+.flow strong{color:var(--gold2);font-weight:500}
+.section{margin-top:45px;padding-top:32px;border-top:1px solid var(--line)}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.section h2{margin:0;color:#171b1d;font:400 36px "Instrument Serif",Georgia,serif}
+.section-tag{color:var(--signal2);font:500 9px "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase}
+.section-intro{max-width:760px;margin:10px 0 0;color:var(--muted);font-size:13.5px;line-height:1.68}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}.step{padding-top:15px;border-top:2px solid rgba(92,150,148,.18);color:var(--muted);font-size:13px;line-height:1.58}.step span{display:block;margin-bottom:7px;color:var(--signal2);font:500 10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
+.jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:23px}.job{padding:19px;border:1px solid rgba(22,27,30,.11);background:rgba(255,255,255,.29)}.job b{display:block;margin-bottom:6px;color:#181d1f;font-size:14px}.job span{color:var(--muted);font-size:12.8px;line-height:1.55}
+.bring-line{margin-top:22px;padding:20px 21px;border:1px solid rgba(22,27,30,.1);background:#151d21;color:#dfe4e0;font-size:13.5px;line-height:1.72;text-align:center}.bring-line strong{color:var(--gold2)}
+.fight-test{display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,.8fr);gap:18px;margin-top:23px}.test-card{padding:22px;border:1px solid rgba(22,27,30,.12);background:#ebe3d6}.test-card .label{color:var(--rust);font:600 9px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}.test-card h3{margin:9px 0 14px;font:400 29px "Instrument Serif",Georgia,serif}.test-list{display:grid;gap:9px;margin:0;padding:0;list-style:none}.test-list li{padding-top:9px;border-top:1px solid rgba(22,27,30,.1);color:#414746;font-size:12.5px;line-height:1.5}.test-list strong{color:#192023}.verdict{display:grid;align-content:center;padding:23px;border:1px solid rgba(143,198,195,.2);background:#11191d;color:#e8ede9}.verdict span{color:var(--signal);font:500 8px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}.verdict b{margin:9px 0 11px;color:#fff7e3;font:400 30px/1.05 "Instrument Serif",Georgia,serif}.verdict p{margin:0;color:#bac4c0;font-size:12.5px;line-height:1.6}.verdict .question{margin-top:17px;padding-top:14px;border-top:1px solid rgba(255,255,255,.09);color:var(--gold2);font:500 9px/1.55 "DM Mono",monospace;letter-spacing:.05em;text-transform:uppercase}
+.privacy{margin:32px 0 0;padding:17px 18px;border:1px solid rgba(22,27,30,.11);background:rgba(255,255,255,.21);color:var(--muted);font-size:12px;line-height:1.64}
+footer{padding:25px 12px 0;text-align:center;color:#a8aeaa;font-size:12px;line-height:1.6}footer .final{display:block;margin-bottom:5px;color:#ece6dc;font:italic 23px "Instrument Serif",Georgia,serif}
+.hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:pre-wrap!important;border:0!important}.js .reveal{opacity:0;transform:translateY(9px);transition:opacity .5s ease,transform .5s ease}.js .reveal.visible{opacity:1;transform:none}
+@media(hover:hover) and (pointer:fine){.primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(34,79,79,.34)}}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.map-stage{min-height:470px}.map-grid{width:min(82%,500px)}.fight-test{grid-template-columns:1fr}}
+@media(max-width:620px){body:before{display:none}.page{width:min(100% - 16px,1120px);padding-top:max(17px,env(safe-area-inset-top))}.top{margin-bottom:15px}.ed-symbol{width:40px;height:40px}.shell{border-radius:15px}.inner{padding:27px 20px 27px}h1{font-size:clamp(59px,18vw,78px)}.promise{font-size:10.5px}.dek{font-size:16px}.support,.guardrail{font-size:13.5px}.primary{width:100%}.map-stage{min-height:410px}.map-grid{width:96%;height:340px}.node{min-width:74px;padding:8px 7px;font-size:6.7px}.node strong{font-size:7.5px}.center-card{width:68%;padding:18px 12px}.center-card b{font-size:26px}.flow{font-size:5.8px;letter-spacing:.07em}.section{margin-top:35px;padding-top:27px}.section h2{font-size:30px}.section-tag{display:none}.steps,.jobs{grid-template-columns:1fr;gap:17px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.primary{transition:none}.primary:hover{transform:none}.js .reveal{opacity:1;transform:none;transition:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d978"/><stop offset=".45" stop-color="#cfa741"/><stop offset="1" stop-color="#e2c15d"/></linearGradient>
+<mask id="earth-drama-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><circle cx="500" cy="500" r="137" fill="#000"/></mask>
+<symbol id="earth-drama" viewBox="0 0 1000 1000"><g mask="url(#earth-drama-cutout)" fill="url(#gold)" stroke="#a98228" stroke-width="2"><path d="M500 0 535 330Q548 394 610 421L1000 500 610 579Q548 606 535 670L500 1000 465 670Q452 606 390 579L0 500 390 421Q452 394 465 330Z"/><path d="M205 455A305 305 0 0 1 455 205L460 230A280 280 0 0 0 230 460Z"/><path d="M545 205A305 305 0 0 1 795 455L770 460A280 280 0 0 0 540 230Z"/><path d="M795 545A305 305 0 0 1 545 795L540 770A280 280 0 0 0 770 540Z"/><path d="M455 795A305 305 0 0 1 205 545L230 540A280 280 0 0 0 460 770Z"/></g><circle cx="500" cy="500" r="145" fill="none" stroke="url(#gold)" stroke-width="16"/><g fill="url(#gold)"><path d="M397 448 420 418 455 404 471 420 486 412 505 428 496 445 470 442 452 455 430 453 416 467Z"/><path d="M388 472 410 459 428 467 435 488 424 501 441 516 454 544 445 563 420 546 410 521 392 506Z"/><path d="M456 570 475 553 501 558 521 574 554 579 581 598 570 625 548 631 529 655 507 682 487 672 490 644 472 625Z"/></g></symbol>
+</defs>
+</svg>
+
+<main class="page">
+<div class="top" aria-label="Earth Drama"><svg class="ed-symbol" aria-hidden="true"><use href="#earth-drama"/></svg><div class="brand">Earth Drama</div></div>
+<article class="shell"><div class="inner">
+<section class="hero">
+<div>
+<p class="eyebrow">An Earth Drama civic-strategy tool</p>
+<span class="built-for">Built for “How Democrats Should Fight Trump”</span>
+<h1>THE LEVERAGE MAP</h1>
+<p class="promise">See the story. Find the power. Locate the leverage. Make the next move visible.</p>
+<p class="dek">Bring it a Trump statement or action, a Democratic response, a court fight, protest, policy, scandal, or any political moment that leaves you asking: <strong>“Why aren’t they fighting?”</strong></p>
+<p class="support">The Leverage Map moves past outrage and generic fact-checking. It helps you identify what is actually happening, who controls the outcome, what that power depends on, and where a real democratic next move exists.</p>
+<p class="guardrail"><strong>The goal is not a Democratic Trump.</strong> The tool does not reward aggression for its own sake. It asks a harder question: what action protects people, changes incentives, builds capacity, creates legitimate consequences, or improves the chance of winning?</p>
+<div class="hero-actions"><button type="button" class="primary" id="copyCompanion" aria-describedby="compatibility pasteHelp">Copy THE LEVERAGE MAP to Start →</button><p class="compatibility" id="compatibility">Works with ChatGPT, Claude, Gemini, and other AI assistants.</p><p class="essay-choice">Need the source text by itself? <button type="button" class="essay-only" id="copyEssay">Copy the essay only.</button></p><div class="status" id="copyStatus" role="status" aria-live="polite">Preparing The Leverage Map…</div></div>
+</div>
+<div class="map-stage" aria-hidden="true"><div class="map-grid"><div class="map-axis"></div><div class="node n1">01 / EVENT<strong>What happened?</strong></div><div class="node n2">02 / STORY<strong>What is it doing?</strong></div><div class="node n3">05 / DEPENDENCY<strong>What do they need?</strong></div><div class="node n4">06 / LEVERAGE<strong>What moves it?</strong></div><div class="center-card"><span>Locate the decision</span><b>Who can change this?</b><em>What changes their calculation?</em></div></div><div class="flow">EVENT → STORY → POWER → <strong>DEPENDENCY → LEVERAGE → ACTION</strong></div></div>
+</section>
+
+<section class="section reveal" aria-labelledby="startTitle"><div class="section-head"><h2 id="startTitle">Start in About 20 Seconds</h2><span class="section-tag">Copy · Paste · Map</span></div><div class="steps"><div class="step"><span>01 · Copy</span>Tap “Copy THE LEVERAGE MAP to Start.” The tool instructions and essay are copied together.</div><div class="step"><span>02 · Paste + Send</span>Open a new AI chat, paste what was copied, and send it. You do not need to edit anything first.</div><div class="step"><span>03 · Bring the Situation</span>Paste a quote, screenshot, link, policy, protest, Democratic response, or simply describe what happened. The Map takes it from there.</div></div><p class="section-intro" id="pasteHelp"><em>On a computer: Ctrl+V (Windows) or Command+V (Mac). On a phone or tablet: tap the message box, choose Paste, then tap Send.</em></p></section>
+
+<section class="section reveal" aria-labelledby="doesTitle"><div class="section-head"><h2 id="doesTitle">What The Leverage Map Does</h2><span class="section-tag">From outrage to orientation</span></div><div class="jobs"><div class="job"><b>Interpret the Move</b><span>Not only “Is this true?” but “What is this statement or action doing?” Is it creating an enemy, redirecting blame, weakening a restraint, or shifting the terms of debate?</span></div><div class="job"><b>Locate the Power</b><span>Who actually controls the decision? Which vote, court, institution, agency, company, election, budget, or implementation system can change the outcome?</span></div><div class="job"><b>Find the Leverage</b><span>What does that power-holder depend on—votes, law, money, labor, legitimacy, cooperation, implementation, reelection—and what can realistically change the calculation?</span></div><div class="job"><b>Make Agency Visible</b><span>What was attempted? Who resisted? What changed? What failed? What power remains? What is the next move?</span></div></div></section>
+
+<section class="section reveal" aria-labelledby="bringTitle"><div class="section-head"><h2 id="bringTitle">Bring It Something Real</h2><span class="section-tag">Use it in the wild</span></div><div class="bring-line">A Trump declaration. A Democratic press conference. A lawsuit. A protest. A budget fight. An executive order. A Senate vote. A governor’s decision. <strong>Something that makes you think: “Okay—but what can actually move this?”</strong></div></section>
+
+<section class="section reveal" aria-labelledby="fightTitle"><div class="section-head"><h2 id="fightTitle">Run The Fight Test</h2><span class="section-tag">Does it change anything?</span></div><p class="section-intro">Bring something Democrats—or anyone else—are doing and ask whether it is actually fighting, building power, protecting people, or mainly performing opposition.</p><div class="fight-test"><div class="test-card"><span class="label">THE FIGHT TEST</span><h3>What happens if this works?</h3><ul class="test-list"><li><strong>Target:</strong> What decision or outcome is this trying to change?</li><li><strong>Mechanism:</strong> How is the action supposed to create that change?</li><li><strong>Leverage:</strong> What dependency does it press on?</li><li><strong>Capacity:</strong> Does it build future power even if it does not win immediately?</li><li><strong>Visibility:</strong> Can people see what happened and what comes next?</li></ul></div><div class="verdict"><span>Core question</span><b>If this works, what changes?</b><p>The Fight Test does not reward anger, confrontation, or sacrifice simply because they look courageous. It asks whether the action has a real mechanism.</p><div class="question">And through what mechanism?</div></div></div></section>
+
+<p class="privacy reveal"><strong>Privacy:</strong> This page does not access your AI account or send anything automatically. The button only copies text to your clipboard. After you paste it into an AI assistant, that service’s own privacy and memory settings apply. The Leverage Map is instructed to separate fact from inference, verify current claims when possible, avoid inventing leverage, and keep political action lawful, democratic, and nonviolent.</p>
+</div></article>
+<footer><span class="final">Outrage tells you something is wrong. The Leverage Map helps you find where it can still be changed.</span>Earth Drama · Alexander Schoenherr</footer>
+</main>
+<textarea id="companionPrompt" class="hidden" aria-hidden="true"></textarea><textarea id="essayText" class="hidden" aria-hidden="true"></textarea>
+<script>
+const promptUrl='companion-prompts/how-democrats-should-fight-trump.txt';
+const essayUrl='essay-sources/how-democrats-should-fight-trump.txt';
+const promptBox=document.getElementById('companionPrompt');
+const essayBox=document.getElementById('essayText');
+const status=document.getElementById('copyStatus');
+const buttons=[document.getElementById('copyCompanion'),document.getElementById('copyEssay')];
+buttons.forEach(button=>button.disabled=true);
+async function loadText(url){const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error(`Unable to load ${url}`);return (await response.text()).trim()}
+const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([prompt,essay])=>{promptBox.value=prompt;essayBox.value=essay;buttons.forEach(button=>button.disabled=false);status.textContent='';return {prompt,essay}}).catch(error=>{console.error(error);status.textContent='The Leverage Map could not load. Refresh the page and try again.';throw error});
+async function write(text){if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return}const field=document.createElement('textarea');try{field.value=text;field.setAttribute('readonly','');field.style.cssText='position:fixed;opacity:0;pointer-events:none';document.body.appendChild(field);field.focus();field.select();if(!document.execCommand('copy'))throw new Error('Copy failed')}finally{field.remove()}}
+function confirmCopy(button,message){const original=button.dataset.original||button.textContent.trim();button.dataset.original=original;button.textContent='Copied ✓';status.textContent=message;clearTimeout(button._timer);button._timer=setTimeout(()=>{button.textContent=original;status.textContent=''},9000)}
+function fail(error){console.error(error);status.textContent='Copying was blocked. Open this page in your browser and try again.'}
+document.getElementById('copyCompanion').addEventListener('click',async function(){try{const {prompt,essay}=await ready;await write(`${prompt}\n\n<essay>\n${essay}\n</essay>`);confirmCopy(this,'Copied. Open a new AI chat, paste it into the message box, and send.')}catch(error){fail(error)}});
+document.getElementById('copyEssay').addEventListener('click',async function(){try{const {essay}=await ready;await write(essay);confirmCopy(this,'Essay copied. Paste it into a chat, note, message, or document.')}catch(error){fail(error)}});
+const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}},{threshold:.12});document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));
+</script>
+</body>
+</html>
