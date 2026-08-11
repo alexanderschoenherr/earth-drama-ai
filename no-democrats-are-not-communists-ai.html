@@ -9,530 +9,88 @@
 <meta property="og:title" content="THE DECODER — Earth Drama">
 <meta property="og:description" content="Bring the claim. Remove the label. Compare the policies. Decide for yourself.">
 <meta property="og:url" content="https://alexanderschoenherr.github.io/earth-drama-ai/no-democrats-are-not-communists-ai.html">
-<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://alexanderschoenherr.github.io/earth-drama-ai/no-democrats-are-not-communists-ai.html">
 <title>THE DECODER — Earth Drama</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Lora:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#101114;
-  --ink2:#181a1f;
-  --paper:#f5efe5;
-  --paper2:#e9dfd0;
-  --text:#191816;
-  --muted:#6e6861;
-  --red:#c72e35;
-  --red2:#951a20;
-  --blue:#246f98;
-  --blue2:#7bc9e8;
-  --gold:#d0a847;
-  --gold2:#efd171;
-  --line:rgba(25,24,22,.13);
-}
-*{box-sizing:border-box}
-html{background:var(--ink)}
-body{
-  min-height:100vh;
-  margin:0;
-  color:var(--paper);
-  font-family:Lora,Georgia,serif;
-  background:
-    radial-gradient(circle at 12% 8%,rgba(199,46,53,.18),transparent 28rem),
-    radial-gradient(circle at 89% 19%,rgba(36,111,152,.16),transparent 31rem),
-    linear-gradient(90deg,rgba(255,255,255,.016) 1px,transparent 1px),
-    linear-gradient(0deg,rgba(255,255,255,.016) 1px,transparent 1px),
-    linear-gradient(150deg,#0d0e11,#1a1c21);
-  background-size:auto,auto,42px 42px,42px 42px,auto;
-  overflow-x:hidden;
-}
-body:before{
-  content:"LABEL / POLICY / ALTERNATIVE";
-  position:fixed;
-  top:50%;
-  right:16px;
-  transform:translateY(-50%) rotate(180deg);
-  writing-mode:vertical-rl;
-  color:rgba(245,239,229,.038);
-  font:500 10px "DM Mono",monospace;
-  letter-spacing:.25em;
-  pointer-events:none;
-}
-.page{
-  width:min(100% - 28px,1080px);
-  margin:auto;
-  padding:max(24px,env(safe-area-inset-top)) 0 max(50px,env(safe-area-inset-bottom));
-}
-.top{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:11px;
-  margin:4px 0 21px;
-}
-.ed-symbol{display:block;overflow:visible}
-.top .ed-symbol{width:46px;height:46px;filter:drop-shadow(0 5px 17px rgba(208,168,71,.22))}
-.brand{font-size:12px;font-weight:600;letter-spacing:.21em;text-transform:uppercase}
-.shell{
-  position:relative;
-  overflow:hidden;
-  color:var(--text);
-  border:1px solid rgba(239,209,113,.18);
-  border-radius:20px;
-  background:
-    repeating-linear-gradient(0deg,rgba(75,60,42,.018) 0,rgba(75,60,42,.018) 1px,transparent 1px,transparent 5px),
-    radial-gradient(circle at 11% 0%,rgba(255,255,255,.92),transparent 34rem),
-    var(--paper);
-  box-shadow:0 38px 110px rgba(0,0,0,.52),0 0 0 1px rgba(255,255,255,.34) inset;
-}
+:root{--ink:#101114;--paper:#f5efe5;--text:#191816;--muted:#6e6861;--red:#b72a31;--blue:#246f98;--gold:#d0a847;--line:rgba(25,24,22,.13)}
+*{box-sizing:border-box} html{background:var(--ink)}
+body{margin:0;min-height:100vh;color:var(--paper);font-family:Lora,Georgia,serif;background:radial-gradient(circle at 12% 8%,rgba(183,42,49,.16),transparent 28rem),radial-gradient(circle at 89% 19%,rgba(36,111,152,.15),transparent 31rem),linear-gradient(150deg,#0d0e11,#1a1c21);overflow-x:hidden}
+.page{width:min(100% - 28px,1080px);margin:auto;padding:max(24px,env(safe-area-inset-top)) 0 max(50px,env(safe-area-inset-bottom))}
+.top{display:flex;align-items:center;justify-content:center;gap:10px;margin:4px 0 21px}.brand{font-size:12px;font-weight:600;letter-spacing:.21em;text-transform:uppercase}.brand-dot{width:16px;height:16px;border:1px solid var(--gold);transform:rotate(45deg);position:relative}.brand-dot:after{content:"";position:absolute;inset:4px;background:var(--gold)}
+.shell{overflow:hidden;color:var(--text);border:1px solid rgba(208,168,71,.2);border-radius:20px;background:repeating-linear-gradient(0deg,rgba(75,60,42,.018) 0,rgba(75,60,42,.018) 1px,transparent 1px,transparent 5px),radial-gradient(circle at 11% 0%,rgba(255,255,255,.92),transparent 34rem),var(--paper);box-shadow:0 38px 110px rgba(0,0,0,.52)}
 .inner{padding:clamp(28px,5vw,62px)}
-.hero{
-  display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(330px,.95fr);
-  gap:clamp(38px,6.5vw,76px);
-  align-items:center;
-}
-.eyebrow{
-  margin:0 0 15px;
-  color:var(--blue);
-  font:500 10px "DM Mono",monospace;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-}
-.built-for{
-  display:inline-block;
-  margin-bottom:19px;
-  padding:7px 10px;
-  border:1px solid rgba(36,111,152,.18);
-  background:rgba(36,111,152,.055);
-  color:#4e5f68;
-  font:500 9px "DM Mono",monospace;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-h1{
-  margin:0;
-  font:400 clamp(68px,10vw,112px)/.88 "Instrument Serif",Georgia,serif;
-  letter-spacing:-.05em;
-  color:#111214;
-}
-.promise-line{
-  max-width:650px;
-  margin:19px 0 0;
-  color:var(--red2);
-  font:600 12px/1.6 "DM Mono",monospace;
-  letter-spacing:.035em;
-  text-transform:uppercase;
-}
-.dek{
-  max-width:650px;
-  margin:20px 0 0;
-  color:#393530;
-  font-size:clamp(16.5px,2vw,19px);
-  line-height:1.7;
-}
-.support{
-  max-width:650px;
-  margin:14px 0 0;
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.72;
-}
-.guardrail{
-  margin:24px 0 0;
-  padding:15px 17px;
-  border-left:3px solid var(--blue);
-  background:linear-gradient(90deg,rgba(36,111,152,.085),rgba(36,111,152,.015));
-  color:#413d38;
-  font-size:14px;
-  line-height:1.65;
-}
-.hero-actions{margin-top:25px}
-.primary{
-  width:min(100%,470px);
-  min-height:58px;
-  padding:15px 22px;
-  border:1px solid rgba(123,201,232,.35);
-  border-radius:13px;
-  color:#fffaf2;
-  background:linear-gradient(135deg,#2c7faa,#1d6289);
-  box-shadow:0 13px 31px rgba(36,111,152,.26);
-  font:600 15px Lora,Georgia,serif;
-  cursor:pointer;
-  transition:transform .18s,box-shadow .18s;
-  -webkit-tap-highlight-color:transparent;
-}
-.primary:active{transform:scale(.99)}
-.primary:disabled{opacity:.58;cursor:wait}
-.primary:focus-visible,.essay-only:focus-visible{outline:3px solid rgba(123,201,232,.45);outline-offset:3px}
-.compatibility{margin:10px 0 0;color:#7a746d;font-size:11.5px}
-.essay-choice{margin:13px 0 0;color:#7a746d;font-size:11.5px}
-.essay-only{
-  border:0;
-  padding:0;
-  color:#3f5968;
-  background:transparent;
-  font:600 11.5px Lora,Georgia,serif;
-  text-decoration:underline;
-  text-underline-offset:3px;
-  cursor:pointer;
-}
-.status{margin:10px 0 0;color:var(--blue);font-size:12.5px;line-height:1.45}
-.status:empty{display:none}
-.decoder-visual{
-  position:relative;
-  min-height:460px;
-  display:grid;
-  place-items:center;
-  isolation:isolate;
-}
-.decoder-visual:before{
-  content:"";
-  position:absolute;
-  inset:5% 0 4%;
-  z-index:-2;
-  background:linear-gradient(150deg,#17191e,#0f1013);
-  clip-path:polygon(7% 0,93% 0,100% 8%,100% 92%,93% 100%,7% 100%,0 92%,0 8%);
-  box-shadow:0 24px 62px rgba(0,0,0,.36),0 0 0 1px rgba(255,255,255,.06) inset;
-}
-.policy-card{
-  position:relative;
-  width:min(82%,375px);
-  min-height:320px;
-  padding:28px 27px;
-  overflow:hidden;
-  border:1px solid rgba(233,223,208,.85);
-  background:
-    repeating-linear-gradient(0deg,rgba(70,55,38,.025) 0,rgba(70,55,38,.025) 1px,transparent 1px,transparent 5px),
-    #f5efe5;
-  box-shadow:0 25px 54px rgba(0,0,0,.4);
-  transform:rotate(-1deg);
-}
-.policy-card:before{
-  content:"REMOVE THE LABEL";
-  display:block;
-  margin-bottom:18px;
-  color:var(--blue);
-  font:600 9px "DM Mono",monospace;
-  letter-spacing:.17em;
-}
-.policy-title{margin:0 0 15px;font:400 27px/1.04 "Instrument Serif",Georgia,serif}
-.policy-list{display:grid;gap:0;margin:0;padding:0;list-style:none}
-.policy-list li{
-  padding:10px 0;
-  border-top:1px solid rgba(25,24,22,.12);
-  color:#2f2c29;
-  font-size:12px;
-  line-height:1.4;
-}
-.policy-list li:before{content:"•";margin-right:8px;color:var(--blue)}
-.red-word{
-  position:absolute;
-  left:50%;
-  top:47%;
-  z-index:3;
-  transform:translate(-50%,-50%) rotate(-7deg);
-  padding:8px 17px 10px;
-  border:6px solid var(--red);
-  color:var(--red);
-  background:rgba(245,239,229,.08);
-  font:600 clamp(43px,6vw,66px)/1 Oswald,sans-serif;
-  text-transform:uppercase;
-  mix-blend-mode:multiply;
-  opacity:.88;
-}
-.decode-beam{
-  position:absolute;
-  left:9%;
-  right:9%;
-  top:18%;
-  z-index:4;
-  height:54px;
-  border-top:1px solid rgba(123,201,232,.55);
-  border-bottom:1px solid rgba(123,201,232,.25);
-  background:linear-gradient(180deg,transparent,rgba(123,201,232,.16),rgba(123,201,232,.48),rgba(123,201,232,.13),transparent);
-  box-shadow:0 0 26px rgba(123,201,232,.19);
-  mix-blend-mode:screen;
-  animation:scan 6.4s ease-in-out infinite;
-}
-.questions{
-  position:absolute;
-  left:8%;
-  right:8%;
-  bottom:7%;
-  display:grid;
-  gap:7px;
-  color:#e9e4dc;
-  font:500 7px "DM Mono",monospace;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.questions span{padding:8px 7px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);text-align:center}
-.questions span:first-child{color:var(--blue2)}
-.questions span:last-child{color:var(--gold2)}
-.section{margin-top:43px;padding-top:31px;border-top:1px solid var(--line)}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
-.section h2{margin:0;font:400 35px "Instrument Serif",Georgia,serif;color:#171613}
-.section-tag{color:var(--blue);font:500 9px "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase}
-.section-intro{max-width:720px;margin:10px 0 0;color:var(--muted);font-size:13.5px;line-height:1.65}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:23px}
-.step{padding-top:15px;border-top:2px solid rgba(36,111,152,.18);color:var(--muted);font-size:13px;line-height:1.56}
-.step span{display:block;margin-bottom:7px;color:var(--blue);font:500 10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
-.jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:23px}
-.job{padding:19px 19px 18px;border:1px solid rgba(25,24,22,.11);background:rgba(255,255,255,.28)}
-.job b{display:block;margin-bottom:6px;color:#171613;font-size:14px}
-.job span{color:var(--muted);font-size:12.8px;line-height:1.54}
-.bring-line{
-  margin-top:22px;
-  padding:19px 20px;
-  border:1px solid rgba(25,24,22,.11);
-  background:#191a1f;
-  color:#e8e2da;
-  font-size:13.5px;
-  line-height:1.7;
-  text-align:center;
-}
-.bring-line strong{color:var(--gold2)}
-.decoder-card{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:1px;
-  margin-top:23px;
-  overflow:hidden;
-  border:1px solid rgba(25,24,22,.14);
-  background:rgba(25,24,22,.14);
-}
-.card-cell{min-height:110px;padding:16px 17px;background:#eee5d8}
-.card-cell span{display:block;margin-bottom:7px;color:var(--blue);font:600 8px "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase}
-.card-cell strong{font-size:12.8px;line-height:1.48}
-.card-cell.claim span{color:var(--red)}
-.card-cell.bottom{background:#1a1b20;color:#f2ece3}
-.card-cell.bottom span{color:var(--gold2)}
-.card-note{margin:13px 0 0;color:var(--muted);font-size:12px;line-height:1.55}
-.privacy{margin:31px 0 0;padding:17px 18px;border:1px solid rgba(25,24,22,.11);background:rgba(255,255,255,.21);color:var(--muted);font-size:12px;line-height:1.62}
-footer{padding:24px 12px 0;text-align:center;color:#aaa49b;font-size:12px;line-height:1.6}
-footer .final{display:block;margin-bottom:5px;color:#ece3d6;font:italic 23px "Instrument Serif",Georgia,serif}
-.hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:pre-wrap!important;border:0!important}
-.js .reveal{opacity:0;transform:translateY(9px);transition:opacity .5s ease,transform .5s ease}
-.js .reveal.visible{opacity:1;transform:none}
-@keyframes scan{0%,100%{top:18%;opacity:.25}50%{top:64%;opacity:.92}}
-@media(hover:hover) and (pointer:fine){.primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(36,111,152,.33)}}
-@media(max-width:830px){.hero{grid-template-columns:1fr}.decoder-visual{min-height:430px}.policy-card{width:min(80%,420px)}}
-@media(max-width:620px){
-  body:before{display:none}
-  .page{width:min(100% - 16px,1080px);padding-top:max(17px,env(safe-area-inset-top))}
-  .top{margin-bottom:15px}.top .ed-symbol{width:40px;height:40px}
-  .shell{border-radius:15px}.inner{padding:27px 20px 26px}
-  h1{font-size:clamp(66px,22vw,88px)}
-  .promise-line{font-size:10.5px}.dek{font-size:16px}.support{font-size:13.5px}.guardrail{font-size:13.5px}
-  .primary{width:100%}
-  .decoder-visual{min-height:390px}
-  .policy-card{width:90%;min-height:285px;padding:24px 22px}.policy-title{font-size:23px}.policy-list li{font-size:11px}
-  .red-word{font-size:clamp(38px,13vw,53px);border-width:5px;padding:7px 12px 9px}
-  .questions{font-size:6px}
-  .section{margin-top:34px;padding-top:26px}.section h2{font-size:30px}.section-tag{display:none}
-  .steps{grid-template-columns:1fr;gap:17px}.jobs{grid-template-columns:1fr}.decoder-card{grid-template-columns:1fr}.card-cell{min-height:auto}
-}
-@media(prefers-reduced-motion:reduce){
-  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}
-  .primary{transition:none}.primary:hover{transform:none}.js .reveal{opacity:1;transform:none;transition:none}
-}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:clamp(36px,6vw,72px);align-items:center}
+.eyebrow{margin:0 0 14px;color:var(--blue);font:500 10px "DM Mono",monospace;letter-spacing:.18em;text-transform:uppercase}.built{display:inline-block;margin-bottom:18px;padding:7px 10px;border:1px solid rgba(36,111,152,.18);background:rgba(36,111,152,.055);color:#4e5f68;font:500 9px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+h1{margin:0;font:400 clamp(68px,10vw,112px)/.88 "Instrument Serif",Georgia,serif;letter-spacing:-.05em;color:#111214}.promise{max-width:650px;margin:19px 0 0;color:#952229;font:600 12px/1.6 "DM Mono",monospace;letter-spacing:.035em;text-transform:uppercase}.dek{max-width:650px;margin:20px 0 0;color:#393530;font-size:clamp(16.5px,2vw,19px);line-height:1.7}.support{max-width:650px;margin:14px 0 0;color:var(--muted);font-size:14px;line-height:1.72}.guardrail{margin:24px 0 0;padding:15px 17px;border-left:3px solid var(--blue);background:linear-gradient(90deg,rgba(36,111,152,.085),rgba(36,111,152,.015));color:#413d38;font-size:14px;line-height:1.65}
+.primary{width:min(100%,470px);min-height:58px;margin-top:24px;padding:15px 22px;border:1px solid rgba(123,201,232,.35);border-radius:13px;color:#fffaf2;background:linear-gradient(135deg,#2c7faa,#1d6289);box-shadow:0 13px 31px rgba(36,111,152,.26);font:600 15px Lora,Georgia,serif;cursor:pointer}.primary:disabled{opacity:.58;cursor:wait}.compat,.essay-choice,.status{font-size:11.5px;color:#7a746d}.essay-choice{margin-top:12px}.essay-only{border:0;padding:0;background:transparent;color:#3f5968;font:600 11.5px Lora,Georgia,serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer}.status{margin-top:10px;color:var(--blue)}
+.visual{position:relative;min-height:430px;display:grid;place-items:center}.policy{width:min(84%,390px);padding:28px;background:#f5efe5;border:1px solid #ddd2c2;box-shadow:0 25px 54px rgba(0,0,0,.35);transform:rotate(-1deg)}.policy:before{content:"REMOVE THE LABEL";display:block;margin-bottom:18px;color:var(--blue);font:600 9px "DM Mono",monospace;letter-spacing:.17em}.policy h2{margin:0 0 15px;font:400 27px/1.04 "Instrument Serif",Georgia,serif}.policy div{padding:10px 0;border-top:1px solid rgba(25,24,22,.12);font-size:12px}.stamp{position:absolute;left:50%;top:49%;transform:translate(-50%,-50%) rotate(-7deg);padding:8px 17px 10px;border:6px solid var(--red);color:var(--red);font:600 clamp(43px,6vw,66px)/1 Oswald,sans-serif;text-transform:uppercase;opacity:.9}.visual-note{position:absolute;bottom:7%;left:9%;right:9%;display:grid;gap:7px;color:#eee8df;font:500 7px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase}.visual-note span{padding:8px;border:1px solid rgba(255,255,255,.09);background:#17191e;text-align:center}.visual-note span:first-child{color:#7bc9e8}.visual-note span:last-child{color:#efd171}
+.section{margin-top:42px;padding-top:30px;border-top:1px solid var(--line)}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px}.section h2{margin:0;font:400 35px "Instrument Serif",Georgia,serif;color:#171613}.tag{color:var(--blue);font:500 9px "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase}.intro{max-width:760px;margin:10px 0 0;color:var(--muted);font-size:13.5px;line-height:1.65}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:23px}.step{padding-top:15px;border-top:2px solid rgba(36,111,152,.18);color:var(--muted);font-size:13px;line-height:1.56}.step span{display:block;margin-bottom:7px;color:var(--blue);font:500 10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}.jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:23px}.job{padding:19px;border:1px solid rgba(25,24,22,.11);background:rgba(255,255,255,.28)}.job b{display:block;margin-bottom:6px}.job span{color:var(--muted);font-size:12.8px;line-height:1.54}
+.card-switch{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.chip{padding:8px 11px;border:1px solid rgba(25,24,22,.13);background:#fffaf2;font:600 10px "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase}.chip.primary-chip{background:#17191e;color:#f5efe5;border-color:#17191e}
+.card-preview{margin-top:18px;border:1px solid rgba(25,24,22,.18);background:#faf5ed;padding:clamp(18px,3vw,30px)}.card-top{text-align:center;padding-bottom:15px;border-bottom:1px solid rgba(25,24,22,.16)}.card-top strong{display:block;color:var(--gold);font:600 12px "DM Mono",monospace;letter-spacing:.18em}.card-top small{display:block;margin-top:6px;color:#6f6a63;font:500 8px "DM Mono",monospace;letter-spacing:.08em}.card-row{padding:16px 0;border-bottom:1px solid rgba(25,24,22,.12)}.card-row:last-of-type{border-bottom:0}.card-row span{display:block;margin-bottom:6px;color:var(--blue);font:600 8px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}.card-row.claim span{color:var(--red)}.card-row.verdict{background:#1a1b20;color:#f4eee6;margin:0 -10px;padding:16px 10px}.card-row.verdict span{color:#efd171}.card-row p{margin:0;font-size:13px;line-height:1.5}.earth-imprint{padding-top:18px;text-align:center;color:var(--gold);font:600 8px "DM Mono",monospace;letter-spacing:.32em;text-transform:uppercase}.two-mode{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.mode{padding:17px;border:1px solid rgba(25,24,22,.11);background:#eee5d8}.mode b{display:block;margin-bottom:6px}.mode span{color:var(--muted);font-size:12.5px;line-height:1.5}
+footer{padding:24px 12px 0;text-align:center;color:#aaa49b;font-size:12px;line-height:1.6}footer .final{display:block;margin-bottom:5px;color:#ece3d6;font:italic 23px "Instrument Serif",Georgia,serif}.hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:pre-wrap!important;border:0!important}
+@media(max-width:830px){.hero{grid-template-columns:1fr}.visual{min-height:390px}.steps{grid-template-columns:1fr}.two-mode{grid-template-columns:1fr}}
+@media(max-width:620px){.page{width:min(100% - 16px,1080px);padding-top:max(17px,env(safe-area-inset-top))}.shell{border-radius:15px}.inner{padding:27px 20px 26px}h1{font-size:clamp(66px,22vw,88px)}.promise{font-size:10.5px}.dek{font-size:16px}.section h2{font-size:30px}.tag{display:none}.jobs{grid-template-columns:1fr}.policy{width:92%}.stamp{font-size:clamp(38px,13vw,53px);border-width:5px}.card-preview{padding:18px}}
 </style>
-<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<defs>
-<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d978"/><stop offset=".45" stop-color="#cfa741"/><stop offset="1" stop-color="#e2c15d"/></linearGradient>
-<mask id="earth-drama-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><circle cx="500" cy="500" r="137" fill="#000"/></mask>
-<symbol id="earth-drama" viewBox="0 0 1000 1000">
-<g mask="url(#earth-drama-cutout)" fill="url(#gold)" stroke="#a98228" stroke-width="2">
-<path d="M500 0 535 330Q548 394 610 421L1000 500 610 579Q548 606 535 670L500 1000 465 670Q452 606 390 579L0 500 390 421Q452 394 465 330Z"/>
-<path d="M205 455A305 305 0 0 1 455 205L460 230A280 280 0 0 0 230 460Z"/>
-<path d="M545 205A305 305 0 0 1 795 455L770 460A280 280 0 0 0 540 230Z"/>
-<path d="M795 545A305 305 0 0 1 545 795L540 770A280 280 0 0 0 770 540Z"/>
-<path d="M455 795A305 305 0 0 1 205 545L230 540A280 280 0 0 0 460 770Z"/>
-</g>
-<circle cx="500" cy="500" r="145" fill="none" stroke="url(#gold)" stroke-width="16"/>
-<g fill="url(#gold)"><path d="M397 448 420 418 455 404 471 420 486 412 505 428 496 445 470 442 452 455 430 453 416 467Z"/><path d="M388 472 410 459 428 467 435 488 424 501 441 516 454 544 445 563 420 546 410 521 392 506Z"/><path d="M456 570 475 553 501 558 521 574 554 579 581 598 570 625 548 631 529 655 507 682 487 672 490 644 472 625Z"/><path d="M516 392 535 386 552 401 549 420 526 422 514 411Z"/><path d="M557 416 585 420 610 441 600 458 577 453 563 439Z"/><path d="M590 478 618 470 633 493 625 522 607 544 595 530 602 506Z"/></g>
-</symbol>
-</defs>
-</svg>
-
 <main class="page">
-<div class="top" aria-label="Earth Drama"><svg class="ed-symbol" aria-hidden="true"><use href="#earth-drama"/></svg><div class="brand">Earth Drama</div></div>
-
+<div class="top"><span class="brand-dot" aria-hidden="true"></span><div class="brand">Earth Drama</div></div>
 <article class="shell"><div class="inner">
 <section class="hero">
 <div>
 <p class="eyebrow">An Earth Drama anti-propaganda tool</p>
-<span class="built-for">Built for “No, Democrats Are Not Communists”</span>
+<span class="built">Built for “No, Democrats Are Not Communists”</span>
 <h1>THE DECODER</h1>
-<p class="promise-line">Bring the claim. Remove the label. Compare the policies. Decide for yourself.</p>
+<p class="promise">Bring the claim. Remove the label. Compare the policies. Decide for yourself.</p>
 <p class="dek">Someone says a Democratic policy is <strong>communist</strong> or <strong>socialist</strong>? Bring The Decoder the claim, headline, ad, screenshot, post, or policy.</p>
-<p class="support">It will identify what the proposal actually does, test whether the label fits, find the legitimate disagreement, and compare it with what Republicans—or the status quo—are offering instead.</p>
+<p class="support">It identifies what the proposal actually does, tests whether the label fits, finds the legitimate disagreement, and compares it with the actual alternative.</p>
 <p class="guardrail"><strong>It does not assume Democrats are right.</strong> It does not assume Republican criticism is dishonest. Its job is simpler: make the disagreement specific enough for you to judge.</p>
-<div class="hero-actions">
-<button type="button" class="primary" id="copyCompanion" aria-describedby="compatibility pasteHelp">Copy THE DECODER to Start →</button>
-<p class="compatibility" id="compatibility">Works with ChatGPT, Claude, Gemini, and other AI assistants.</p>
+<button type="button" class="primary" id="copyCompanion">Copy THE DECODER to Start →</button>
+<p class="compat">Works with ChatGPT, Claude, Gemini, and other AI assistants.</p>
 <p class="essay-choice">Need the source text by itself? <button type="button" class="essay-only" id="copyEssay">Copy the essay only.</button></p>
 <div class="status" id="copyStatus" role="status" aria-live="polite">Preparing The Decoder…</div>
 </div>
-</div>
-
-<div class="decoder-visual" aria-hidden="true">
-<div class="policy-card">
-<h2 class="policy-title">What is the policy?</h2>
-<ul class="policy-list">
-<li>Childcare assistance</li>
-<li>Public health insurance</li>
-<li>Labor protections</li>
-<li>Tax increase</li>
-<li>Environmental regulation</li>
-</ul>
-</div>
-<div class="red-word">Communism</div>
-<div class="decode-beam"></div>
-<div class="questions"><span>What does the policy actually do?</span><span>What are Republicans offering instead?</span></div>
-</div>
+<div class="visual" aria-hidden="true"><div class="policy"><h2>What is the policy?</h2><div>Childcare assistance</div><div>Public health insurance</div><div>Labor protections</div><div>Tax increase</div><div>Environmental regulation</div></div><div class="stamp">Communism</div><div class="visual-note"><span>What does the policy actually do?</span><span>What are Republicans offering instead?</span></div></div>
 </section>
 
-<section class="section reveal" aria-labelledby="startTitle">
-<div class="section-head"><h2 id="startTitle">Start in About 20 Seconds</h2><span class="section-tag">Copy · Paste · Bring a claim</span></div>
-<div class="steps">
-<div class="step"><span>01 · Copy</span>Tap “Copy THE DECODER to Start.” The tool instructions and essay are copied together.</div>
-<div class="step"><span>02 · Paste + Send</span>Open a new AI chat, paste what was copied, and send it. You do not need to edit anything first.</div>
-<div class="step"><span>03 · Bring a Claim</span>Paste a headline, screenshot, ad, policy, post, or argument—or just describe what someone said. The Decoder takes it from there.</div>
-</div>
-<p class="section-intro" id="pasteHelp"><em>On a computer: Ctrl+V (Windows) or Command+V (Mac). On a phone or tablet: tap the message box, choose Paste, then tap Send.</em></p>
-</section>
+<section class="section"><div class="section-head"><h2>Start in About 20 Seconds</h2><span class="tag">Copy · Paste · Bring a claim</span></div><div class="steps"><div class="step"><span>01 · Copy</span>Tap “Copy THE DECODER to Start.” The tool instructions and essay are copied together.</div><div class="step"><span>02 · Paste + Send</span>Open a new AI chat, paste what was copied, and send it.</div><div class="step"><span>03 · Bring a Claim</span>Paste a headline, screenshot, ad, policy, post, or argument—or just describe what someone said.</div></div><p class="intro"><em>Computer: Ctrl+V (Windows) or Command+V (Mac). Phone/tablet: tap the message box, choose Paste, then tap Send.</em></p></section>
 
-<section class="section reveal" aria-labelledby="doesTitle">
-<div class="section-head"><h2 id="doesTitle">What The Decoder Does</h2><span class="section-tag">Four jobs</span></div>
-<div class="jobs">
-<div class="job"><b>Decode It</b><span>Is “communism,” “socialism,” or another frightening label actually an accurate description of the policy?</span></div>
-<div class="job"><b>Compare It</b><span>What does the proposal do, and what are Republicans—or the current system—offering instead?</span></div>
-<div class="job"><b>Check It</b><span>What legitimate criticisms remain after the frightening label is removed?</span></div>
-<div class="job"><b>Answer It</b><span>Turn the analysis into one clear question, a calm reply, a shareable paragraph, or a Decoder Card.</span></div>
-</div>
-</section>
+<section class="section"><div class="section-head"><h2>What The Decoder Does</h2><span class="tag">Four jobs</span></div><div class="jobs"><div class="job"><b>Decode It</b><span>Is the frightening label accurate?</span></div><div class="job"><b>Compare It</b><span>What does the proposal do, and what is the real alternative?</span></div><div class="job"><b>Check It</b><span>What legitimate criticism remains after the label is removed?</span></div><div class="job"><b>Share It</b><span>Turn a completed decode into a Standard Card, Quick Card, image card, or sendable reply.</span></div></div></section>
 
-<section class="section reveal" aria-labelledby="bringTitle">
-<div class="section-head"><h2 id="bringTitle">Bring It Something Real</h2><span class="section-tag">Use it in the wild</span></div>
-<div class="bring-line">A campaign ad. A headline. A screenshot. A politician’s quote. A Facebook post. A proposed law. <strong>Something your uncle said at dinner.</strong></div>
-</section>
+<section class="section"><div class="section-head"><h2>Two Shareable Card Modes</h2><span class="tag">Understand it · Spread it</span></div><p class="intro">The Decoder now locks the factual analysis first, then turns that finished reasoning into a card. The image stage is not allowed to rewrite, omit, or invent the substance.</p><div class="two-mode"><div class="mode"><b>Standard Decoder Card</b><span>The complete argument: Claim → Actual Policy → Does the Label Fit? → Real Disagreement → Alternative → Bottom Line → Ask Them.</span></div><div class="mode"><b>Quick Decoder Card</b><span>A shorter version for maximum shareability: Claim → The Distinction → The Real Argument → Ask.</span></div></div></section>
 
-<section class="section reveal" aria-labelledby="cardTitle">
-<div class="section-head"><h2 id="cardTitle">Get a Shareable Decoder Card</h2><span class="section-tag">Built to pass around</span></div>
-<p class="section-intro">Ask The Decoder to compress a claim into something clear enough to screenshot, text, post, or send to someone—without pretending the policy has no real weaknesses.</p>
-<div class="decoder-card">
-<div class="card-cell claim"><span>The Claim</span><strong>“This healthcare proposal is communism.”</strong></div>
-<div class="card-cell"><span>What the Label Implies</span><strong>State ownership, abolition of private enterprise, authoritarian control.</strong></div>
-<div class="card-cell"><span>What the Policy Actually Does</span><strong>Plain-English description of the real proposal.</strong></div>
-<div class="card-cell"><span>What Remains Private</span><strong>Relevant businesses, property, providers, markets, and investment.</strong></div>
-<div class="card-cell"><span>The Real Disagreement</span><strong>Cost, taxes, choice, bureaucracy, incentives, authority, implementation.</strong></div>
-<div class="card-cell"><span>The Alternative</span><strong>What Republicans propose—or what continues under the status quo.</strong></div>
-<div class="card-cell bottom"><span>Bottom Line</span><strong>Does the frightening label actually describe the policy?</strong></div>
-<div class="card-cell bottom"><span>Ask Them</span><strong>What specific part of this policy is communist, and what are you proposing instead?</strong></div>
-</div>
-<p class="card-note">The point is not to replace one slogan with another. It is to restore the comparison the slogan removed.</p>
-</section>
+<section class="section"><div class="section-head"><h2>Standard Card Preview</h2><span class="tag">The visual spec</span></div><p class="intro">This is the structure image generation is now instructed to preserve. If the content will not fit legibly, The Decoder must switch to a Quick Card or a two-card set—not delete sections or shrink the type into unreadability.</p><div class="card-switch"><span class="chip primary-chip">Standard Card</span><span class="chip">Phone-first</span><span class="chip">4:5 default</span><span class="chip">Earth Drama imprint</span></div><div class="card-preview">
+<div class="card-top"><strong>THE DECODER</strong><small>REMOVE THE LABEL. COMPARE THE POLICIES.</small></div>
+<div class="card-row claim"><span>Claim</span><p>“This healthcare proposal is communism.”</p></div>
+<div class="card-row"><span>Actual Policy</span><p>Plain-English description of what the proposal actually changes.</p></div>
+<div class="card-row verdict"><span>Does the Label Fit?</span><p><strong>NO.</strong> One concise explanation of why the label does or does not fit.</p></div>
+<div class="card-row"><span>Real Disagreement</span><p>The strongest legitimate tradeoff: cost, taxes, choice, authority, incentives, implementation.</p></div>
+<div class="card-row"><span>Alternative</span><p>What Republicans, another proposal, or the status quo would actually do instead.</p></div>
+<div class="card-row"><span>Bottom Line</span><p>One clear conclusion that restores the real policy comparison.</p></div>
+<div class="card-row"><span>Ask Them</span><p>One memorable question that puts the burden back on the actual policy argument.</p></div>
+<div class="earth-imprint">EARTH DRAMA</div>
+</div></section>
 
-<p class="privacy reveal"><strong>Privacy:</strong> This page does not access your AI account or send anything automatically. The button only copies text to your clipboard. After you paste it into an AI assistant, that service’s own privacy and memory settings apply. The Decoder is instructed not to invent policy details, pressure a party preference, minimize communist repression, or treat disagreement as proof of propaganda.</p>
+<section class="section"><div class="section-head"><h2>Image Cards Should Look Like This</h2><span class="tag">Publication, not campaign ad</span></div><p class="intro">Intelligence briefing × newspaper fact-check × civic document × Earth Drama. Warm ivory/newsprint, near-black type, restrained gold, optional clarification blue, and red only when it carries actual semantic meaning. No clutter, fake 3D, oversized shaded boxes, or generic political-infographic styling.</p></section>
+
+<p class="guardrail"><strong>Built-in guardrail:</strong> The image generator is instructed to preserve the exact locked card copy. It may adjust typography and spacing, but not silently rewrite, truncate, omit, or invent facts.</p>
 </div></article>
-
 <footer><span class="final">The essay shows you the trick. The Decoder helps you catch it.</span>Earth Drama · Alexander Schoenherr</footer>
 </main>
-
-<textarea id="companionPrompt" class="hidden" aria-hidden="true"></textarea>
-<textarea id="essayText" class="hidden" aria-hidden="true"></textarea>
+<textarea id="companionPrompt" class="hidden" aria-hidden="true"></textarea><textarea id="essayText" class="hidden" aria-hidden="true"></textarea>
 <script>
-const promptUrl='companion-prompts/no-democrats-are-not-communists.txt';
-const essayUrl='essay-sources/no-democrats-are-not-communists.txt';
-const promptBox=document.getElementById('companionPrompt');
-const essayBox=document.getElementById('essayText');
-const status=document.getElementById('copyStatus');
-const buttons=[document.getElementById('copyCompanion'),document.getElementById('copyEssay')];
-buttons.forEach(button=>button.disabled=true);
-
-async function loadText(url){
-  const response=await fetch(url,{cache:'no-store'});
-  if(!response.ok)throw new Error(`Unable to load ${url}`);
-  return (await response.text()).trim();
-}
-
-const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([prompt,essay])=>{
-  promptBox.value=prompt;
-  essayBox.value=essay;
-  buttons.forEach(button=>button.disabled=false);
-  status.textContent='';
-  return {prompt,essay};
-}).catch(error=>{
-  console.error(error);
-  status.textContent='The Decoder could not load. Refresh the page and try again.';
-  throw error;
-});
-
-async function write(text){
-  if(navigator.clipboard&&window.isSecureContext){
-    await navigator.clipboard.writeText(text);
-    return;
-  }
-  const field=document.createElement('textarea');
-  try{
-    field.value=text;
-    field.setAttribute('readonly','');
-    field.style.cssText='position:fixed;opacity:0;pointer-events:none';
-    document.body.appendChild(field);
-    field.focus();
-    field.select();
-    if(!document.execCommand('copy'))throw new Error('Copy failed');
-  }finally{field.remove()}
-}
-
-function confirmCopy(button,message){
-  const original=button.dataset.original||button.textContent.trim();
-  button.dataset.original=original;
-  button.textContent='Copied ✓';
-  status.textContent=message;
-  clearTimeout(button._timer);
-  button._timer=setTimeout(()=>{
-    button.textContent=original;
-    status.textContent='';
-  },9000);
-}
-
-function fail(error){
-  console.error(error);
-  status.textContent='Copying was blocked. Open this page in your browser and try again.';
-}
-
-document.getElementById('copyCompanion').addEventListener('click',async function(){
-  try{
-    const {prompt,essay}=await ready;
-    await write(`${prompt}\n\n<essay>\n${essay}\n</essay>`);
-    confirmCopy(this,'Copied. Open a new AI chat, paste it into the message box, and send.');
-  }catch(error){fail(error)}
-});
-
-document.getElementById('copyEssay').addEventListener('click',async function(){
-  try{
-    const {essay}=await ready;
-    await write(essay);
-    confirmCopy(this,'Essay copied. Paste it into a chat, note, message, or document.');
-  }catch(error){fail(error)}
-});
-
-const observer=new IntersectionObserver(entries=>{
-  for(const entry of entries){
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  }
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));
+const promptUrl='companion-prompts/no-democrats-are-not-communists.txt',essayUrl='essay-sources/no-democrats-are-not-communists.txt';
+const promptBox=document.getElementById('companionPrompt'),essayBox=document.getElementById('essayText'),status=document.getElementById('copyStatus'),copyBtn=document.getElementById('copyCompanion'),essayBtn=document.getElementById('copyEssay');
+copyBtn.disabled=essayBtn.disabled=true;
+async function loadText(url){const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error(url);return (await r.text()).trim()}
+const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([prompt,essay])=>{promptBox.value=prompt;essayBox.value=essay;copyBtn.disabled=essayBtn.disabled=false;status.textContent='';return{prompt,essay}}).catch(e=>{console.error(e);status.textContent='The Decoder could not load. Refresh the page and try again.';throw e});
+async function write(text){if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return}const f=document.createElement('textarea');f.value=text;f.setAttribute('readonly','');f.style.cssText='position:fixed;opacity:0;pointer-events:none';document.body.appendChild(f);f.focus();f.select();if(!document.execCommand('copy'))throw new Error('Copy failed');f.remove()}
+function confirmCopy(button,message){const original=button.dataset.original||button.textContent.trim();button.dataset.original=original;button.textContent='Copied ✓';status.textContent=message;clearTimeout(button._timer);button._timer=setTimeout(()=>{button.textContent=original;status.textContent=''},9000)}
+copyBtn.addEventListener('click',async()=>{try{const{prompt,essay}=await ready;await write(`${prompt}\n\n<essay>\n${essay}\n</essay>`);confirmCopy(copyBtn,'Copied. Open a new AI chat, paste it into the message box, and send.')}catch(e){console.error(e);status.textContent='Copying was blocked. Open this page in your browser and try again.'}});
+essayBtn.addEventListener('click',async()=>{try{const{essay}=await ready;await write(essay);confirmCopy(essayBtn,'Essay copied. Paste it into a chat, note, message, or document.')}catch(e){console.error(e);status.textContent='Copying was blocked. Open this page in your browser and try again.'}});
 </script>
 </body>
 </html>
