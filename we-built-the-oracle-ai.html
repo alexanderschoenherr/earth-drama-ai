@@ -85,7 +85,7 @@ a{color:inherit}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.95fr);gap:clamp(34px,6vw,76px);align-items:center;min-height:680px}
 .eyebrow{margin:0 0 14px;color:#9caaad;font:500 9px "DM Mono",monospace;letter-spacing:.2em;text-transform:uppercase}
 .built-for{display:inline-block;margin:0 0 21px;padding:7px 10px;border:1px solid rgba(199,155,66,.19);background:rgba(199,155,66,.045);color:#bda77b;font:500 8px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
-h1{margin:0;color:#f3ead8;font:400 clamp(66px,9vw,110px)/.86 "Instrument Serif",Georgia,serif;letter-spacing:-.045em}
+h1{margin:0;color:#f3ead8;font:400 clamp(54px,6.15vw,76px)/.9 "Instrument Serif",Georgia,serif;letter-spacing:-.045em;white-space:nowrap}
 .promise{max-width:650px;margin:20px 0 0;color:var(--gold2);font:500 12px/1.58 "DM Mono",monospace;letter-spacing:.035em;text-transform:uppercase}
 .dek{max-width:650px;margin:23px 0 0;color:#d7cfc0;font-size:clamp(16.5px,2vw,19px);line-height:1.74}
 .dek strong{color:#f2e7d2}
@@ -153,7 +153,7 @@ footer{padding:29px 12px 0;text-align:center;color:#7d7a72;font-size:11.5px;line
 @media(max-width:860px){.hero{grid-template-columns:1fr;min-height:auto}.oracle-stage{min-height:520px}.mirror-panel,.plumbing{grid-template-columns:1fr}.movement-grid{grid-template-columns:1fr}.movement{min-height:auto}}
 @media(max-width:640px){
   .page{width:min(100% - 12px,1120px);padding-top:max(14px,env(safe-area-inset-top))}.brandbar{margin-bottom:13px}.brand-seal{width:29px;height:29px}.brand-name{font-size:9px}
-  .shell{border-radius:16px}.inner{padding:27px 19px 0}.hero{gap:25px}.eyebrow{font-size:8px}.built-for{font-size:7.5px;margin-bottom:17px}h1{font-size:clamp(62px,20vw,87px)}.promise{font-size:10.2px}.dek{font-size:16px}.support,.threshold{font-size:13px}.primary{width:100%}
+  .shell{border-radius:16px}.inner{padding:27px 19px 0}.hero{gap:25px}.eyebrow{font-size:8px}.built-for{font-size:7.5px;margin-bottom:17px}h1{font-size:clamp(38px,11.8vw,52px);letter-spacing:-.05em}.promise{font-size:10.2px}.dek{font-size:16px}.support,.threshold{font-size:13px}.primary{width:100%}
   .oracle-stage{min-height:410px;margin-top:2px}.arch{inset:3% 1% 0;border-radius:125px 125px 12px 12px}.oracle{width:94%}.chamber-caption{font-size:5.5px;bottom:4%;width:96%}
   .section{margin-top:48px;padding-top:31px}.section-head{display:block}.tag{display:block;margin-top:8px}.section h2{font-size:38px}.intro{font-size:13.5px}.steps{grid-template-columns:1fr}.movement-grid{gap:10px}.mirror-panel,.plumbing{padding:19px}.mirror-visual{min-height:255px}.mirror-orb{width:145px;height:145px}.mirror-reflection{width:145px}.axiom{margin:62px -19px;padding:55px 17px}.axiom h2{font-size:clamp(49px,15vw,70px)}.test-grid{grid-template-columns:1fr}.test{min-height:auto}.diagram{min-height:240px}
   .blank-section{margin:70px -19px 0;padding:64px 19px 60px}.blank-inner h2{font-size:52px}.blank-inner p{font-size:13.5px}.blank-question{font-size:40px;padding:29px 9px}.privacy{margin-bottom:0}
@@ -367,8 +367,7 @@ essayButton.addEventListener('click',async function(){
 
 const observer=new IntersectionObserver(entries=>{
   for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}
-},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));
+},{threshold:.1});document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));
 </script>
 </body>
 </html>
