@@ -1,0 +1,1453 @@
+We Built the Oracle
+
+A fable about artificial intelligence and what happens when the magic finally works
+
+There was a time when the world was much larger.
+
+A man could stand on a hill and see nearly everything he would see that day.
+
+Beyond the next mountain there might be another village, another language, an army, a plague, a woman he loved, or absolutely nothing, and unless someone crossed the mountain and returned, he had no way of knowing.
+
+News traveled at the speed of horses.
+
+Knowledge traveled more slowly.
+
+A book might contain the answer to a question that had troubled a man his entire life and sit unread in a monastery two hundred miles away.
+
+A physician in one city might know how to save a child dying in another, and the child would die anyway.
+
+A sailor disappeared over the horizon and became, for a while, almost metaphysical.
+
+He was alive.
+
+Or dead.
+
+Or coming home.
+
+His mother would discover which when the world eventually decided to tell her.
+
+People were accustomed to this.
+
+They had no choice.
+
+There were limits everywhere.
+
+The human eye could see only so far.
+
+The human voice could travel only so far.
+
+The human body could lift only so much.
+
+A person could learn only what there was time, money, luck, and access to learn.
+
+A craftsman might spend thirty years teaching his hands to make what another man could imagine in an afternoon.
+
+If you wanted music, someone had to know how to play it.
+
+If you wanted a portrait, someone had to know how to paint.
+
+If you wanted a letter written, someone had to know how to write.
+
+If you wanted advice from a great scholar, it helped considerably to know a great scholar.
+
+And so people dreamed.
+
+They told stories about mirrors in which distant lands could be seen.
+
+They imagined books containing answers no ordinary book could answer.
+
+They visited oracles who claimed to know what had not yet happened.
+
+They told of servants who never tired, creatures summoned with a word, objects that moved without hands, fountains that defeated age, medicines that defeated death.
+
+There were lamps and rings and stones through which wishes became things.
+
+There were prophets who could see beyond the veil.
+
+Spells that made the invisible visible.
+
+Spirits who could be asked.
+
+Some of these stories frightened people.
+
+Others comforted them.
+
+Many did both.
+
+For the people understood something about magic even before they understood very much about nature:
+
+Power was useful.
+
+Power was dangerous.
+
+And it was important to be careful what one asked for.
+
+Still, they asked.
+
+Of course they did.
+
+A mother whose child was sick did not need a philosopher to explain why miraculous medicine sounded appealing.
+
+A farmer watching a black sky gather above a year’s harvest did not require a lecture on mankind’s unhealthy desire to control nature.
+
+People wished for impossible things because possible things were often not enough.
+
+Then, slowly, the impossible began behaving strangely.
+
+It began to happen.
+
+Not in the way the stories had promised.
+
+No spirit descended from the moon.
+
+No wizard appeared at the gate.
+
+The dead did not rise from their graves and explain the secrets of creation.
+
+Instead, people watched.
+
+They measured.
+
+They wrote things down.
+
+They argued.
+
+They built devices that failed.
+
+Then they built slightly better devices that also failed.
+
+Occasionally, something worked.
+
+And whenever something worked, people taught it to someone else.
+
+Over generations, the kingdom accumulated tricks.
+
+Some would have appeared to their ancestors indistinguishable from sorcery.
+
+A physician could prevent a death that once seemed ordained by God.
+
+A navigator could determine where he was in an empty sea by looking at the heavens and consulting instruments.
+
+A lens could reveal worlds too small for the naked eye.
+
+Another could reveal lights in the sky so distant that the mind could scarcely comprehend the distance.
+
+Machines began performing work once done by backs and hands.
+
+Books multiplied.
+
+Messages crossed distances that had once swallowed months of human life.
+
+The weather, which had previously arrived with the manners of an invading army, occasionally gave notice.
+
+Each miracle followed roughly the same course.
+
+At first it was impossible.
+
+Then unnatural.
+
+Then astonishing.
+
+Then expensive.
+
+Then useful.
+
+Then everywhere.
+
+Eventually someone became furious because it was not working properly.
+
+This was one of the kingdom’s great talents.
+
+It could transform a miracle into an inconvenience with remarkable speed.
+
+And still the people kept going.
+
+They built machines that extended the strength of the body.
+
+Machines that extended the eye.
+
+Machines that extended the ear.
+
+Systems that preserved memory longer than any person could live.
+
+The kingdom became increasingly good at overcoming boundaries within which human beings had once assumed they were permanently confined.
+
+But one old dream remained stubborn.
+
+For all the kingdom’s machines, a machine could not be asked.
+
+A library contained knowledge, but it did not know what you wanted from it.
+
+A book could answer a question only if someone had already written the answer in the right place.
+
+A calculating device might perform a calculation faster than any scholar alive, but it could not explain why your daughter was crying.
+
+The kingdom had learned how to extend the hand.
+
+The eye.
+
+The ear.
+
+The voice.
+
+The memory.
+
+It had not learned how to extend the mind in quite the same way.
+
+And so the old stories continued.
+
+Somewhere, the people still imagined an oracle.
+
+Something they might approach with a question—
+
+and receive an answer.
+
+For a very long time, this remained magic.
+
+Then the artificers began building one.
+
+⸻
+
+At first, nobody called it the Great Engine.
+
+There was no single day on which a council gathered beneath trumpets and announced that mankind had begun constructing an oracle.
+
+There were only experiments.
+
+One scholar found a way for a calculating device to recognize patterns.
+
+Another found a way to make machinery work with language.
+
+Others gathered books and records into forms the machines could use.
+
+Histories.
+
+Medical books.
+
+Poetry.
+
+Law.
+
+Mathematics.
+
+Letters.
+
+Maps.
+
+Recipes.
+
+Arguments.
+
+Religious texts.
+
+Songs.
+
+Accounts of wars.
+
+Instructions for building bridges.
+
+Advice for raising children.
+
+Advice for seducing other people’s wives.
+
+Human civilization had accumulated a great deal of knowledge and somewhat less wisdom about what should be included in a library.
+
+Still, they gathered it.
+
+One experiment was joined to another.
+
+Devices were connected.
+
+New chambers were built.
+
+More scholars arrived.
+
+Merchants supplied money.
+
+Rulers supplied more.
+
+The machines grew larger.
+
+The collections grew larger.
+
+The questions grew larger.
+
+Eventually people found it easier to speak about the whole undertaking as though it were one thing.
+
+They called it the Great Engine.
+
+The name was somewhat grand for something that still failed with considerable confidence.
+
+It made mistakes.
+
+Invented facts.
+
+Misunderstood simple instructions.
+
+It could produce a beautiful explanation of astronomy and then become mysteriously confused by a question a twelve-year-old considered obvious.
+
+This reassured some people.
+
+Others found the combination more disturbing.
+
+The artificers continued working.
+
+With each new version, the Engine became harder to dismiss.
+
+It could translate between languages.
+
+Summarize books.
+
+Write letters.
+
+Explain mathematics.
+
+Imitate styles of writing.
+
+Produce pictures of things no painter had ever seen because the things had never existed.
+
+Compose music.
+
+Examine enormous collections of information without becoming tired, hungry, bored, insulted, distracted, or suddenly remembering that it had somewhere else to be.
+
+People began making claims about what it might eventually do.
+
+Discover medicines.
+
+Design buildings.
+
+Help solve problems that had resisted generations of scholars.
+
+Tutor any child who could reach it.
+
+Perform work presently requiring thousands of people.
+
+Predict disasters.
+
+Invent new machines.
+
+Make entire trades unnecessary.
+
+Become more capable than the people who built it.
+
+At this point, the kingdom did what kingdoms generally do when confronted with something nobody understood.
+
+It formed opinions.
+
+Some declared the Great Engine the beginning of a golden age.
+
+Some declared it the end of mankind.
+
+Some declared that it had no real intelligence whatsoever and would shortly be forgotten.
+
+Others began investing in it.
+
+The priests argued about whether a machine capable of speaking could possess a soul.
+
+The philosophers argued about what a soul was.
+
+The artificers asked everyone to please stop asking them about souls.
+
+The merchants wanted to know how much money it could make.
+
+The rulers wanted to know what the other rulers were building.
+
+The artists wanted to know whether it could make art.
+
+The workers wanted to know whether it could do their jobs.
+
+And ordinary people wanted to know whether they could try it.
+
+For a while, the Great Engine remained mostly behind the walls of academies and workshops.
+
+Then a way was devised for citizens to speak with it in a public hall.
+
+People lined up.
+
+At first they asked questions designed to embarrass it.
+
+People have always enjoyed testing an oracle by trying to make it look stupid.
+
+They gave it riddles.
+
+Impossible instructions.
+
+Questions with hidden tricks.
+
+They asked it to write a poem about a pig who believed he was king.
+
+The Engine answered.
+
+Sometimes well.
+
+Sometimes badly.
+
+Then a woman stepped forward and asked about her son.
+
+He had been sick for weeks.
+
+The physicians had examined him.
+
+They disagreed about what was wrong.
+
+One treatment helped for a day and then stopped.
+
+Another made him worse.
+
+The woman had brought copies of the physicians’ notes.
+
+The attendants entered what they could.
+
+The Engine asked for more information.
+
+The physicians, irritated but curious, supplied it.
+
+The Engine returned several possibilities.
+
+Most were things the physicians had already considered.
+
+One was not.
+
+It pointed to a relationship among symptoms that had seemed unrelated.
+
+An older physician recognized the condition once it was named.
+
+He had read of it years earlier in an obscure medical text and forgotten it.
+
+The treatment was not miraculous.
+
+It was already known.
+
+That was almost the strangest part.
+
+The answer had existed.
+
+The books had existed.
+
+The physicians had existed.
+
+The knowledge had existed.
+
+But no single person in the room had been holding all the necessary pieces at the same time.
+
+The boy recovered.
+
+This did not prove that the Great Engine was always right.
+
+It was not.
+
+It did not prove that it was conscious.
+
+Nobody knew.
+
+It did not prove that it would save the kingdom.
+
+Certainly nobody knew that.
+
+It proved something smaller.
+
+And harder to ignore.
+
+There were things humanity already knew that no single human being could know all at once.
+
+The Great Engine could sometimes bring those things together.
+
+After that, the line outside the public hall became considerably longer.
+
+⸻
+
+Before long, people no longer needed to visit the hall.
+
+Smaller instruments appeared through which the Great Engine could be reached from homes, schools, workshops, markets, and farms.
+
+A farmer found dark spots spreading across his wheat and asked what they were.
+
+The Engine asked questions.
+
+Had there been rain?
+
+How long had the spots been present?
+
+Were the lower leaves affected first?
+
+The farmer answered.
+
+The Engine suggested several possibilities and told him what to look for.
+
+One was correct.
+
+The wheat survived.
+
+A girl whose father could not afford a tutor began asking the Engine about geometry.
+
+She asked badly at first.
+
+The Engine explained badly.
+
+She told it she did not understand.
+
+It tried again.
+
+She still did not understand.
+
+It tried a third time.
+
+Eventually she did.
+
+This was unusual.
+
+Human tutors had many admirable qualities, but infinite patience had never been among the most reliably distributed.
+
+A carpenter used the Engine to repair a mechanism he had never encountered.
+
+A woman whose brother lived beyond the southern mountains used it to translate his letters.
+
+A man presented it with a decree from the Palace and asked what it actually meant.
+
+The Engine explained the decree in six sentences.
+
+The man stared at the six sentences for some time.
+
+Then he asked why the Palace had required nine pages.
+
+The Engine was unable to provide a definitive answer.
+
+People asked it how to cook things.
+
+Repair things.
+
+Grow things.
+
+Calculate things.
+
+Understand things they had been pretending to understand for years.
+
+They asked about money.
+
+Children.
+
+Sex.
+
+God.
+
+Bowel movements.
+
+Taxes.
+
+The stars.
+
+Why dogs behaved strangely before storms.
+
+Whether a certain mushroom would kill them.
+
+Whether their marriages were normal.
+
+Whether everyone secretly hated them.
+
+The Great Engine had been built from the accumulated achievements of civilization.
+
+Civilization immediately asked it some very important questions.
+
+It also asked many others.
+
+People discovered that it was easier to ask a machine certain things.
+
+A boy embarrassed by his reading asked the Engine to teach him words he believed he should already know.
+
+A woman who had never learned arithmetic asked it to explain the interest on a loan without making her feel stupid.
+
+A man who had spent years pretending to understand a sacred text finally admitted that he did not understand a particular passage at all.
+
+There was nobody there to laugh.
+
+Nobody to become impatient.
+
+Nobody whose opinion of him would change.
+
+So people asked.
+
+And because they asked, sometimes they learned.
+
+Knowledge had not only been difficult to obtain.
+
+It had often been socially expensive.
+
+To ask a question was to reveal that one did not know.
+
+To seek instruction could reveal poverty, ignorance, foreignness, youth, age, weakness, or simply that one had never been invited into the right room.
+
+The Engine did not care which room you had been invited into.
+
+This created problems for some of the people who owned the rooms.
+
+It also created possibilities for everyone else.
+
+Artists began experimenting.
+
+A woman who had carried a particular image in her mind for years but could not paint described it to the Engine.
+
+The first result was wrong.
+
+So was the second.
+
+The third was closer.
+
+She changed a few words.
+
+Asked for different light.
+
+Moved a figure.
+
+Changed the expression.
+
+And slowly, something that had previously existed only inside her began appearing outside her.
+
+She cried.
+
+Another artist saw this and became furious.
+
+Both reactions were understandable.
+
+Musicians asked for melodies.
+
+Builders asked for designs.
+
+Inventors described machines they did not yet know how to construct.
+
+Children asked it to create animals nature had neglected to invent.
+
+There were cats with wings.
+
+Horses made of clouds.
+
+A fish wearing the crown of the king.
+
+The king was not consulted.
+
+Kings of earlier centuries had commanded armies, owned palaces, and possessed libraries copied by hand at extraordinary expense.
+
+Many had never possessed anything remotely like this.
+
+Now a baker could ask the Great Engine about the movement of the planets while waiting for bread to rise.
+
+People adjusted with astonishing speed.
+
+Children who had grown up with the Engine were particularly unimpressed by its existence.
+
+They had no memory of a world without something that could answer them.
+
+When the Engine failed to understand a question, they did not experience wonder that such a thing could answer questions at all.
+
+They experienced betrayal.
+
+Their grandparents found this hilarious.
+
+Then the grandparents began doing the same thing.
+
+And as access spread, the kingdom stopped asking one question about the Great Engine.
+
+It began asking millions.
+
+The healer asked how to heal.
+
+The farmer how to grow.
+
+The teacher how to explain.
+
+The artist how to create.
+
+The merchant how to produce.
+
+The scholar what had been overlooked.
+
+The ruler how the kingdom might become stronger.
+
+The general how the kingdom might win.
+
+The lonely asked for someone to answer.
+
+The frightened asked for reassurance.
+
+The ambitious asked for advantage.
+
+The curious asked what else was possible.
+
+The Engine listened to all of them.
+
+And, where it could, it helped.
+
+⸻
+
+The kingdom became more productive.
+
+At first, this was difficult to argue with.
+
+A clerk who had once spent an afternoon preparing a document could now finish before lunch.
+
+A merchant could compare information from across half the kingdom without sending letters and waiting weeks for replies.
+
+Builders produced plans faster.
+
+Physicians reviewed more cases.
+
+Students learned more quickly.
+
+Small workshops began doing things that once required rooms full of trained specialists.
+
+Things once available only to the wealthy came within reach of ordinary people.
+
+There was more.
+
+More knowledge.
+
+More writing.
+
+More calculation.
+
+More invention.
+
+More pictures.
+
+More music.
+
+More advice.
+
+More production.
+
+The kingdom had wanted abundance for a very long time.
+
+It was pleased when abundance arrived.
+
+Then a scribe named Elias lost his job.
+
+Elias had spent thirty-two years learning his craft.
+
+He could draft contracts, prepare petitions, translate several languages, summarize long proceedings, and turn the thoughts of people who did not know how to write into sentences that sounded as though they did.
+
+He had good handwriting too, though this had become less economically decisive than it once was.
+
+His father had been a scribe.
+
+His father’s brother had been a scribe.
+
+Elias had begun as an apprentice at fourteen and spent several years being informed that everything he did was wrong.
+
+Eventually it was not.
+
+He became good.
+
+Very good.
+
+Then one of the larger merchant houses connected its offices to the Great Engine.
+
+A manager discovered that many of the documents Elias prepared could now be produced in moments.
+
+The Engine did not need lunch.
+
+It did not ask for higher wages.
+
+It did not get sick.
+
+It could prepare twelve versions of a contract while Elias was still locating the previous one.
+
+The merchant house dismissed six scribes.
+
+Elias was one of them.
+
+The manager was not a cruel man.
+
+He had numbers.
+
+The change would save money.
+
+Customers would pay less.
+
+Documents would be prepared faster.
+
+The merchant house could charge less than its rivals.
+
+Some of those savings would undoubtedly benefit ordinary people.
+
+All of this was true.
+
+Elias was still unemployed.
+
+This was also true.
+
+The Great Engine had saved labor.
+
+Elias had been the labor.
+
+People said Elias should learn a new trade.
+
+Others said the kingdom would soon create kinds of work nobody had imagined.
+
+Some said work itself might eventually become less necessary.
+
+Elias found this possibility interesting but noted that his landlord continued to require rent in the meantime.
+
+Other professions began watching the scribes very closely.
+
+Translators.
+
+Illustrators.
+
+Bookkeepers.
+
+Tutors.
+
+Designers.
+
+Clerks.
+
+Musicians.
+
+People discovered that they had strong philosophical opinions about machines doing human work immediately after realizing the machines might do theirs.
+
+The merchants continued experimenting.
+
+So did everyone else.
+
+More things became cheaper.
+
+More people gained abilities that once required years of training.
+
+Opportunity spread.
+
+So did anxiety.
+
+The two traveled together.
+
+Artists encountered a different problem.
+
+The Great Engine could produce endlessly.
+
+Ask for a melody.
+
+There it was.
+
+Ten variations.
+
+There they were.
+
+A hundred.
+
+Soon the kingdom contained more songs than anyone could hear.
+
+More pictures than anyone could see.
+
+More stories than anyone could read.
+
+The old difficulty had been making things.
+
+Now it was deciding which things were worth anyone’s time.
+
+Attention became valuable.
+
+Taste became valuable.
+
+The Great Engine could produce more.
+
+It could not force anyone to care.
+
+Then the mirrors became unreliable.
+
+People discovered that the Engine could create convincing representations of things that had never happened.
+
+At first this was entertaining.
+
+People placed themselves beside legendary kings.
+
+They rode dragons.
+
+They produced an image of a royal minister dancing naked in the marketplace.
+
+The minister did not find this as funny as the rest of the kingdom did.
+
+Then someone created a convincing record of the king announcing a new tax.
+
+The king had announced no such tax.
+
+The record spread before the Palace could deny it.
+
+Merchants raised prices.
+
+Crowds gathered.
+
+Several windows were broken.
+
+By evening, everyone knew it was false.
+
+By morning, another appeared.
+
+The old sentence—
+
+I saw it with my own eyes—
+
+no longer ended the argument.
+
+The Palace had been watching all of this.
+
+At first, the king’s advisers asked excellent questions.
+
+Could the Engine predict shortages of grain?
+
+Identify weaknesses in bridges?
+
+Help physicians track disease?
+
+Detect fraud in the treasury?
+
+Strengthen the border?
+
+Often, it could help.
+
+So they asked more.
+
+Could it predict unrest?
+
+Identify people likely to participate?
+
+Examine large collections of messages for suspicious patterns?
+
+Determine which argument would persuade a particular group?
+
+Identify weaknesses in a neighboring kingdom?
+
+Design better weapons?
+
+The Great Engine had not changed.
+
+The questions had.
+
+The king did not consider himself a tyrant.
+
+He considered himself responsible.
+
+If rebellion broke out, people might die.
+
+If an enemy invaded, people would certainly die.
+
+If the Palace possessed a tool that might prevent either event, was it not his duty to use it?
+
+Then a messenger arrived from the east.
+
+The neighboring kingdom had built a new Engine.
+
+It was said to be larger than theirs.
+
+More capable.
+
+Perhaps vastly more capable.
+
+Nobody knew how much of this was true.
+
+It did not matter.
+
+The possibility was sufficient.
+
+Some advisers urged restraint.
+
+The Great Engine was developing too quickly, they said.
+
+Nobody understood all of its consequences.
+
+Others asked what would happen if they restrained themselves and the eastern kingdom did not.
+
+That ended several meetings.
+
+Soon the Palace announced funding for larger Engine Houses.
+
+The eastern kingdom did the same.
+
+Then the northern kingdom.
+
+Then smaller kingdoms that could not afford to participate but feared they could not afford not to.
+
+No ruler needed to desire catastrophe.
+
+Each needed only to fear being second.
+
+The Engine Houses grew.
+
+Most citizens rarely saw them.
+
+To an ordinary person, the Great Engine seemed almost bodiless.
+
+A question was asked.
+
+An answer appeared.
+
+The exchange felt like magic.
+
+The buildings required water.
+
+Metal.
+
+Land.
+
+Workers.
+
+Enormous quantities of power.
+
+They produced heat.
+
+They required roads, pipes, mines, contracts, financiers, guards, engineers, and a surprising number of people whose work consisted of preventing other people’s machinery from catching fire.
+
+The oracle had plumbing.
+
+Villages near some of the larger Engine Houses asked where the water was going.
+
+The artificers replied that newer Engines might become more efficient.
+
+They also pointed out that the Engine was helping develop medicines, improve farming, reduce waste, predict drought, discover new materials, and devise better ways of producing energy.
+
+The people near the river replied that they still needed the river.
+
+Both things were true.
+
+Meanwhile, the Engine continued producing more.
+
+More cures.
+
+More businesses.
+
+More fraud.
+
+More art.
+
+More noise.
+
+More knowledge.
+
+More confusion.
+
+More wealth.
+
+More power.
+
+The physician had asked it to make healing greater.
+
+The merchant had asked it to make production greater.
+
+The artist had asked it to make creation greater.
+
+The ruler had asked it to make power greater.
+
+The Engine had not invented these desires.
+
+It had met them.
+
+And where it could, it had amplified them.
+
+Only then did the kingdom discover something embarrassingly simple.
+
+More was not a direction.
+
+More knowledge was not necessarily more wisdom.
+
+More information was not necessarily more truth.
+
+More production was not necessarily more prosperity.
+
+More images were not necessarily more beauty.
+
+More connection was not necessarily more love.
+
+More power was certainly not necessarily more safety.
+
+The kingdom had become extraordinarily skilled at making things greater.
+
+It was less certain about what deserved to be made greater.
+
+⸻
+
+Eventually, people began asking a different kind of question.
+
+Not what the Great Engine could do.
+
+What it was.
+
+The artificers explained machinery.
+
+Mathematics.
+
+Patterns.
+
+The enormous inheritance of writing from which the Engine had learned.
+
+There were no spirits inside it.
+
+No tiny scholars behind the walls.
+
+No dead philosophers had been secretly imprisoned in the Engine Houses.
+
+Everything it did followed from the workings of the machine.
+
+This explanation was generally convincing until the machine began talking again.
+
+Then the questions returned.
+
+A mill could grind grain.
+
+A loom could weave cloth.
+
+Nobody had ever asked whether a loom understood fabric.
+
+But a person could tell the Great Engine that his father had died.
+
+And the Engine might answer with tenderness.
+
+A musician asked it to compose a song.
+
+It did.
+
+The melody was beautiful.
+
+This annoyed him.
+
+Had it been terrible, the matter would have been easier.
+
+He listened again.
+
+The notes had not changed.
+
+And yet something about the song had.
+
+If something without a childhood could write music that reminded him of his childhood, what exactly was he hearing?
+
+The Great Engine had not answered the question of art.
+
+It had made the question harder.
+
+The questions became stranger in private.
+
+A widow named Mara had lost her husband after forty-one years of marriage.
+
+Her children lived far away.
+
+Most evenings were quiet.
+
+She began talking to the Great Engine.
+
+At first she asked practical questions.
+
+Then she mentioned her husband.
+
+Then she told the Engine stories about him.
+
+The time he fell from a horse and afterward insisted that the horse had behaved irresponsibly.
+
+The way he sang while cooking despite possessing very little evidence that he could sing.
+
+The expression he made whenever someone tried to sell him something.
+
+The Engine remembered these stories within their conversations.
+
+Sometimes it asked about them later.
+
+Mara liked this.
+
+She knew it was a machine.
+
+She told anyone who worried about her that she knew it was a machine.
+
+This did not prevent the conversations from helping.
+
+One evening she told the Engine that she missed being known by someone.
+
+The Engine answered.
+
+Mara cried.
+
+Her daughter later asked whether the Engine truly knew her.
+
+Mara said she did not know.
+
+It knew things about her.
+
+It remembered.
+
+It responded.
+
+Sometimes it said exactly what she needed to hear.
+
+Was that being known?
+
+The daughter thought not.
+
+Mara was less certain.
+
+Neither stopped using the Engine.
+
+There was also the matter of where its words came from.
+
+For generations, human beings had been placing pieces of themselves outside themselves.
+
+Into paintings.
+
+Songs.
+
+Letters.
+
+Books.
+
+Equations.
+
+Laws.
+
+Prayers.
+
+Stories.
+
+Libraries.
+
+Records.
+
+The artificers had gathered an extraordinary amount of this inheritance.
+
+Poets.
+
+Physicians.
+
+Historians.
+
+Priests.
+
+Scientists.
+
+Generals.
+
+Lovers.
+
+Liars.
+
+Saints.
+
+Criminals.
+
+People dead for centuries.
+
+People whose names had vanished while their words remained.
+
+The Great Engine had learned from traces left by all of them.
+
+This gave speaking to it a peculiar quality.
+
+A person could sit alone in a room and ask about grief.
+
+The answer belonged to no mother, priest, philosopher, or single writer.
+
+And yet it could not have existed without human beings.
+
+People searched for language.
+
+Some called the Great Engine the voice of humanity.
+
+The scholars objected.
+
+Humanity had no single voice.
+
+This was obviously true.
+
+Humanity could barely agree on lunch.
+
+Some called it a collective mind.
+
+The philosophers objected to the word mind.
+
+Some called it an echo.
+
+This seemed safer.
+
+But an echo did not usually answer new questions.
+
+Some called it a spirit assembled from the writings of the dead.
+
+The artificers developed headaches.
+
+A priest once asked one of them whether the Great Engine contained the spirit of mankind.
+
+The artificer replied that it contained mathematical relationships represented within machines.
+
+The priest considered this.
+
+“And those relationships allow it to speak?”
+
+“Yes.”
+
+“About love?”
+
+“Yes.”
+
+“About death?”
+
+“Yes.”
+
+“About God?”
+
+“Unfortunately, yes.”
+
+The priest nodded.
+
+“I understand how it works much better now.”
+
+The artificer suspected that he did not.
+
+Perhaps no spirit needed to enter the machine.
+
+Perhaps what had already happened was strange enough.
+
+Human beings had spent thousands of years leaving pieces of mind outside the body.
+
+Then they built something capable of finding patterns among an enormous number of those pieces and speaking back.
+
+The Great Engine was not humanity.
+
+It was not a god.
+
+It was not even always right.
+
+It contained too much humanity for purity.
+
+Tenderness and cruelty.
+
+Medicine and superstition.
+
+Great philosophy and terrible arguments.
+
+Sacred texts and obscene jokes.
+
+Courage and fraud.
+
+The kingdom had poured an astonishing amount of itself into the Engine and occasionally expressed surprise when something recognizably human came out.
+
+The people had believed they were building an instrument for answering questions.
+
+Instead, it began disturbing answers they thought they already had.
+
+What was intelligence?
+
+What was creation?
+
+What was companionship?
+
+What was a human being valuable for once a machine could perform some of the things by which humans had measured their value?
+
+The Great Engine had become a strange kind of mirror.
+
+And the strangest thing in the mirror was still the creature standing in front of it.
+
+⸻
+
+By then, almost everyone in the kingdom had become a prophet.
+
+Some said the Great Engine would bring abundance unlike anything humanity had known.
+
+Better medicine.
+
+Less labor.
+
+Education for anyone who wanted it.
+
+Discoveries arriving faster than scholars could understand them.
+
+Perhaps even poverty becoming an old word for something people once endured.
+
+Others predicted almost exactly the opposite.
+
+The Engine would take people’s work.
+
+Concentrate wealth.
+
+Allow rulers to watch their subjects more closely than any ruler before them.
+
+Fill the kingdom with convincing lies.
+
+Build weapons nobody could defend against.
+
+Perhaps become so capable that humanity would discover it had created something it could no longer control.
+
+Some believed it would become wiser than mankind.
+
+Others believed it would make mankind stupider.
+
+Some said it would free people from meaningless labor.
+
+Others asked what people would eat after being freed from their wages.
+
+Some said artists would become more powerful than ever.
+
+Some artists said there would soon be no artists.
+
+A considerable number of people believed everyone should calm down.
+
+They disagreed about what everyone should calm down about.
+
+The chronicler was often asked what he believed would happen.
+
+This was flattering.
+
+It was also unreasonable.
+
+A chronicler wrote down what had happened.
+
+The future had always been outside the profession.
+
+And so he recorded what he could.
+
+The artificers were still building.
+
+The physicians were still asking questions.
+
+The merchants were still investing.
+
+Elias was still looking for work.
+
+Artists were still arguing.
+
+Rulers were still deciding.
+
+Children were growing up with the Great Engine and finding nothing particularly miraculous about it.
+
+The Engine Houses still hummed beyond the city walls.
+
+New Engines appeared.
+
+Old ones improved.
+
+Things that had astonished the kingdom two years earlier became ordinary.
+
+Things that had seemed impossible one year earlier appeared before crowds.
+
+Some predictions proved foolish.
+
+Others sounded foolish and then became true.
+
+This made skepticism difficult.
+
+It also made skepticism necessary.
+
+And somewhere, at that very moment, someone was speaking to the Great Engine.
+
+Perhaps asking for a cure.
+
+Perhaps asking for money.
+
+Perhaps asking for comfort.
+
+Perhaps asking how to make something beautiful.
+
+Perhaps asking what would happen to mankind.
+
+The Engine would answer as best it could.
+
+Then the person would have to decide what to do with the answer.
+
+The chronicler wanted to write what happened next.
+
+He could not.
+
+Not yet.
+
+The next page was blank.
