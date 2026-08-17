@@ -188,7 +188,7 @@ footer{padding:29px 12px 0;text-align:center;color:#777873;font-size:11.5px;line
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto}.return-stage{min-height:540px}.gap-wrap,.speed-panel{grid-template-columns:1fr}.development-flow{grid-template-columns:1fr}.dev-step{min-height:auto}.dev-step:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-14px;transform:translate(-50%,50%)}}
 @media(max-width:640px){
   .page{width:min(100% - 12px,1160px);padding-top:max(13px,env(safe-area-inset-top))}.brandbar{margin-bottom:13px}.brand-seal{width:29px;height:29px}.brand-name{font-size:9px}.shell{border-radius:16px}.inner{padding:27px 19px 0}
-  .hero{gap:24px}.eyebrow{font-size:8px}.built-for{font-size:7.5px;margin-bottom:17px}h1{font-size:clamp(36px,12.2vw,54px);letter-spacing:-.06em}.hero-question{font-size:clamp(37px,11vw,50px);margin-top:18px}.promise{font-size:9.6px}.dek{font-size:16px}.threshold{font-size:13px}.primary{width:100%}
+  .hero{gap:24px}.eyebrow{font-size:8px}.built-for{font-size:7.5px;margin-bottom:17px}h1{font-size:60px;letter-spacing:-.06em}.hero-question{font-size:clamp(37px,11vw,50px);margin-top:18px}.promise{font-size:9.6px}.dek{font-size:16px}.threshold{font-size:13px}.primary{width:100%}
   .return-stage{min-height:410px;margin-top:4px}.return-svg{width:108%;max-width:none}.stage-labels{gap:8px;font-size:5.4px;bottom:1%}
   .section{margin-top:50px;padding-top:31px}.section-head{display:block}.tag{display:block;margin-top:8px}.section h2{font-size:39px}.intro{font-size:13.5px}.steps,.loop-grid{grid-template-columns:1fr}.loop-statement{font-size:20px}
   .axiom{margin:66px -19px;padding:58px 18px}.axiom h2{font-size:clamp(47px,14.5vw,67px)}.scarcity-grid{grid-template-columns:1fr;margin-top:34px}.scarcity{padding:17px}.axiom-question{font-size:9px}
@@ -214,7 +214,7 @@ footer{padding:29px 12px 0;text-align:center;color:#777873;font-size:11.5px;line
         <div>
           <p class="eyebrow">An Earth Drama experience</p>
           <span class="built-for">Built for “Human. Artificial. Human.”</span>
-          <h1>THE HUMAN TEST</h1>
+          <h1 id="heroTitle">THE HUMAN TEST</h1>
           <div class="hero-question">Are we capable of being this capable?</div>
           <p class="promise">Bring me a new power. Find out what it demands from us.</p>
           <p class="dek">Human beings are becoming capable of things our judgment, institutions, and systems of coordination were never built to handle.</p>
@@ -388,8 +388,24 @@ const status=document.getElementById('copyStatus');
 const topButton=document.getElementById('copyCompanion');
 const bottomButton=document.getElementById('copyCompanionBottom');
 const essayButton=document.getElementById('copyEssay');
+const heroTitle=document.getElementById('heroTitle');
 const buttons=[topButton,bottomButton,essayButton];
 buttons.forEach(button=>button.disabled=true);
+
+function fitHeroTitle(){
+  if(!heroTitle)return;
+  if(!window.matchMedia('(max-width:640px)').matches){heroTitle.style.fontSize='';heroTitle.style.width='';return;}
+  const available=heroTitle.parentElement.clientWidth;
+  heroTitle.style.fontSize='100px';
+  heroTitle.style.width='max-content';
+  const naturalWidth=heroTitle.getBoundingClientRect().width;
+  const fitted=Math.floor((100*available/naturalWidth)*.995*10)/10;
+  heroTitle.style.width='100%';
+  heroTitle.style.fontSize=`${fitted}px`;
+}
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fitHeroTitle)}else{window.addEventListener('load',fitHeroTitle,{once:true})}
+window.addEventListener('resize',fitHeroTitle);
+window.addEventListener('orientationchange',()=>setTimeout(fitHeroTitle,100));
 
 async function loadText(url){
   const response=await fetch(url,{cache:'no-store'});
