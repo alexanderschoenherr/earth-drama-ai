@@ -4,386 +4,59 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#070b12">
-<meta name="description" content="THE NEXT PAGE is an Earth Drama AI experience built from We Built the Oracle. Ask what AI can make greater—and what deserves to become greater.">
+<meta name="description" content="The Next Page is an Earth Drama AI experience built from We Built the Oracle. Ask what AI can make greater—and what deserves to become greater.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="THE NEXT PAGE — Earth Drama">
+<meta property="og:title" content="The Next Page — Earth Drama">
 <meta property="og:description" content="You built the oracle. Now decide what to ask of it—and what deserves to become greater.">
 <meta property="og:url" content="https://alexanderschoenherr.github.io/earth-drama-ai/we-built-the-oracle-ai.html">
-<meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://alexanderschoenherr.github.io/earth-drama-ai/we-built-the-oracle-ai.html">
-<title>THE NEXT PAGE — Earth Drama</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>The Next Page — Earth Drama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/companion-system.css">
 <style>
-:root{
-  --night:#070b12;
-  --night2:#0d1420;
-  --night3:#142034;
-  --stone:#171817;
-  --paper:#f0e8d8;
-  --paper2:#e3d7c3;
-  --ink:#171814;
-  --muted:#80786d;
-  --gold:#c79b42;
-  --gold2:#efd17b;
-  --gold3:#8d6928;
-  --moon:#d9e7ed;
-  --blue:#7da4b7;
-  --line:rgba(199,155,66,.22);
-  --shadow:rgba(0,0,0,.48);
-}
-*{box-sizing:border-box}
-html{background:var(--night);scroll-behavior:smooth}
-body{
-  min-height:100vh;
-  margin:0;
-  color:var(--paper);
-  font-family:Lora,Georgia,serif;
-  background:
-    radial-gradient(circle at 50% -15%,rgba(199,155,66,.10),transparent 34rem),
-    radial-gradient(circle at 76% 12%,rgba(98,140,166,.10),transparent 30rem),
-    linear-gradient(180deg,#05080d,#0a1018 34%,#0b1017 67%,#0d1116);
-  overflow-x:hidden;
-}
-body:before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-3;
-  pointer-events:none;
-  opacity:.19;
-  background-image:
-    radial-gradient(circle at 20% 14%,rgba(255,255,255,.45) .45px,transparent .8px),
-    radial-gradient(circle at 73% 22%,rgba(255,255,255,.32) .5px,transparent .9px),
-    radial-gradient(circle at 43% 67%,rgba(255,255,255,.26) .45px,transparent .8px);
-  background-size:31px 31px,43px 43px,57px 57px;
-  mask-image:linear-gradient(to bottom,black 0%,black 45%,transparent 90%);
-}
-body:after{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-2;
-  pointer-events:none;
-  background:linear-gradient(90deg,rgba(255,255,255,.012) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.009) 1px,transparent 1px);
-  background-size:72px 72px;
-  mask-image:linear-gradient(to bottom,black,transparent 75%);
-}
-a{color:inherit}
-.page{width:min(100% - 24px,1120px);margin:auto;padding:max(22px,env(safe-area-inset-top)) 0 max(60px,env(safe-area-inset-bottom))}
-.brandbar{display:flex;justify-content:center;align-items:center;gap:11px;margin:2px 0 19px;color:#e8ddc8}
-.brand-seal{width:34px;height:34px;position:relative;display:grid;place-items:center}
-.brand-seal:before,.brand-seal:after{content:"";position:absolute;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.brand-seal:before{width:31px;height:1px}.brand-seal:after{height:31px;width:1px}
-.brand-ring{position:absolute;width:22px;height:22px;border:1px solid rgba(239,209,123,.62);border-radius:50%}
-.brand-dot{width:4px;height:4px;border-radius:50%;background:var(--gold2);box-shadow:0 0 12px rgba(239,209,123,.7)}
-.brand-name{font:500 10px "DM Mono",monospace;letter-spacing:.25em;text-transform:uppercase}
-.shell{position:relative;overflow:hidden;border:1px solid rgba(239,209,123,.16);border-radius:24px;background:linear-gradient(180deg,rgba(17,19,19,.97),rgba(14,16,16,.98));box-shadow:0 44px 130px rgba(0,0,0,.58),inset 0 0 0 1px rgba(255,255,255,.025)}
-.shell:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 2%,rgba(239,209,123,.065),transparent 38rem)}
-.inner{padding:clamp(25px,5vw,62px)}
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.95fr);gap:clamp(34px,6vw,76px);align-items:center;min-height:680px}
-.eyebrow{margin:0 0 14px;color:#9caaad;font:500 9px "DM Mono",monospace;letter-spacing:.2em;text-transform:uppercase}
-.built-for{display:inline-block;margin:0 0 21px;padding:7px 10px;border:1px solid rgba(199,155,66,.19);background:rgba(199,155,66,.045);color:#bda77b;font:500 8px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
-h1{margin:0;color:#f3ead8;font:400 clamp(54px,6.15vw,76px)/.9 "Instrument Serif",Georgia,serif;letter-spacing:-.045em;white-space:nowrap}
-.promise{max-width:650px;margin:20px 0 0;color:var(--gold2);font:500 12px/1.58 "DM Mono",monospace;letter-spacing:.035em;text-transform:uppercase}
-.dek{max-width:650px;margin:23px 0 0;color:#d7cfc0;font-size:clamp(16.5px,2vw,19px);line-height:1.74}
-.dek strong{color:#f2e7d2}
-.support{max-width:650px;margin:15px 0 0;color:#a9a397;font-size:13.8px;line-height:1.74}
-.threshold{margin:22px 0 0;padding:15px 17px;border-left:2px solid var(--gold);background:linear-gradient(90deg,rgba(199,155,66,.08),transparent);color:#c9bfaf;font-size:13.5px;line-height:1.68}
-.actions{margin-top:26px}
-.primary{width:min(100%,490px);min-height:59px;padding:15px 22px;border:1px solid rgba(239,209,123,.38);border-radius:12px;color:#11120f;background:linear-gradient(135deg,#efd17b,#c79b42);box-shadow:0 14px 34px rgba(199,155,66,.18),inset 0 1px rgba(255,255,255,.3);font:600 14.5px Lora,Georgia,serif;cursor:pointer;transition:transform .18s,box-shadow .18s;-webkit-tap-highlight-color:transparent}
-.primary:disabled{opacity:.5;cursor:wait}.primary:active{transform:scale(.99)}
-.primary:focus-visible,.essay-only:focus-visible{outline:3px solid rgba(239,209,123,.28);outline-offset:3px}
-.compat{margin:10px 0 0;color:#8d897f;font-size:11.5px}
-.secondary{margin:13px 0 0;color:#8d897f;font-size:11.5px}
-.essay-only{border:0;padding:0;background:none;color:#bdab81;font:600 11.5px Lora,Georgia,serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-.status{margin:10px 0 0;color:#cdb779;font-size:12.3px;line-height:1.45}.status:empty{display:none}
-.oracle-stage{position:relative;min-height:560px;display:grid;place-items:center;isolation:isolate}
-.arch{position:absolute;inset:5% 5% 1%;z-index:-4;border:1px solid rgba(199,155,66,.10);border-bottom:0;border-radius:180px 180px 16px 16px;background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.006));box-shadow:inset 0 0 60px rgba(0,0,0,.6)}
-.arch:before{content:"";position:absolute;inset:9% 9% 0;border:1px solid rgba(199,155,66,.07);border-bottom:0;border-radius:150px 150px 12px 12px}
-.oracle-glow{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(239,209,123,.17),rgba(84,129,155,.07) 37%,transparent 67%);filter:blur(2px);animation:breathe 7.5s ease-in-out infinite}
-.oracle{width:min(92%,490px);aspect-ratio:1;filter:drop-shadow(0 28px 36px rgba(0,0,0,.54));overflow:visible}
-.ring-a{transform-origin:50% 50%;animation:spin 44s linear infinite}.ring-b{transform-origin:50% 50%;animation:spinReverse 59s linear infinite}.ring-c{transform-origin:50% 50%;animation:spin 78s linear infinite}.orbital{transform-origin:50% 50%;animation:tiltPulse 8s ease-in-out infinite}
-.chamber-caption{position:absolute;bottom:7%;left:50%;transform:translateX(-50%);width:86%;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;color:#a99a78;font:500 7px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
-.chamber-caption span{padding:8px 7px;border-top:1px solid rgba(199,155,66,.15);text-align:center}
-.section{margin-top:clamp(44px,7vw,82px);padding-top:clamp(31px,5vw,50px);border-top:1px solid rgba(199,155,66,.13)}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px}
-.section h2{margin:0;color:#eee4d2;font:400 clamp(36px,5vw,54px)/1 "Instrument Serif",Georgia,serif;letter-spacing:-.025em}
-.tag{color:#9a8d72;font:500 8px "DM Mono",monospace;letter-spacing:.17em;text-transform:uppercase}
-.intro{max-width:810px;margin:13px 0 0;color:#aaa398;font-size:14.5px;line-height:1.74}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:27px}
-.step{position:relative;padding:19px 18px 18px;border:1px solid rgba(199,155,66,.13);background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.006));color:#a9a196;font-size:13px;line-height:1.58}
-.step:before{content:"";position:absolute;left:14px;right:14px;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold3),transparent)}
-.step span{display:block;margin-bottom:7px;color:#d5b568;font:500 9px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
-.movement-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:26px}
-.movement{min-height:220px;padding:22px 20px;border:1px solid rgba(199,155,66,.14);background:linear-gradient(180deg,rgba(239,209,123,.025),rgba(255,255,255,.008));position:relative;overflow:hidden}
-.movement:after{content:"";position:absolute;width:100px;height:100px;border:1px solid rgba(199,155,66,.08);border-radius:50%;right:-40px;bottom:-42px}
-.movement .num{color:#b99a5c;font:500 8px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
-.movement h3{margin:13px 0 8px;color:#eee3cf;font:400 29px/1.02 "Instrument Serif",Georgia,serif}.movement p{margin:0;color:#9f998e;font-size:12.8px;line-height:1.62}
-.inscriptions{display:flex;flex-wrap:wrap;gap:8px;margin-top:23px}
-.inscriptions span{padding:7px 10px;border:1px solid rgba(199,155,66,.12);color:#b5a379;font:500 8px "DM Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
-.mirror-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.9fr);gap:34px;align-items:center;margin-top:25px;padding:27px;border:1px solid rgba(125,164,183,.12);background:linear-gradient(135deg,rgba(104,139,157,.045),rgba(199,155,66,.025));overflow:hidden}
-.mirror-copy p{margin:0 0 13px;color:#aaa398;font-size:13.5px;line-height:1.68}.mirror-copy strong{color:#e2d6c1}
-.mirror-visual{position:relative;min-height:320px;display:grid;place-items:center}
-.mirror-line{position:absolute;left:12%;right:12%;top:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(125,164,183,.35),transparent)}
-.mirror-orb{width:180px;height:180px;border-radius:50%;border:1px solid rgba(199,155,66,.4);box-shadow:0 0 0 15px rgba(199,155,66,.025),0 0 50px rgba(125,164,183,.08);background:radial-gradient(circle at 38% 35%,rgba(239,209,123,.24),rgba(35,46,54,.35) 46%,rgba(8,12,17,.75) 72%)}
-.mirror-reflection{position:absolute;top:54%;width:180px;height:110px;transform:scaleY(-1);opacity:.18;filter:blur(1.2px);border-radius:50% 50% 20% 20%;background:radial-gradient(circle at 50% 20%,rgba(239,209,123,.6),transparent 68%);mask-image:linear-gradient(to bottom,black,transparent)}
-.axiom{margin:clamp(70px,10vw,115px) auto;padding:clamp(50px,8vw,90px) 16px;text-align:center;border-top:1px solid rgba(199,155,66,.10);border-bottom:1px solid rgba(199,155,66,.10);background:radial-gradient(circle at 50% 50%,rgba(199,155,66,.055),transparent 55%)}
-.axiom .over{color:#9b927f;font:500 8px "DM Mono",monospace;letter-spacing:.2em;text-transform:uppercase}
-.axiom h2{margin:12px 0 18px;color:#f0e5d1;font:400 clamp(52px,8vw,92px)/.9 "Instrument Serif",Georgia,serif;letter-spacing:-.035em}
-.axiom p{max-width:690px;margin:0 auto;color:#9f998e;font-size:13.5px;line-height:1.7}.axiom p strong{display:block;margin-top:15px;color:#d8bd76;font:500 10px "DM Mono",monospace;letter-spacing:.09em;text-transform:uppercase}
-.test-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:27px;border:1px solid rgba(199,155,66,.15);background:rgba(199,155,66,.13)}
-.test{min-height:126px;padding:18px 18px;background:#121619}.test span{display:block;margin-bottom:8px;color:#c7a65f;font:500 8px "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase}.test strong{color:#d9d0c1;font-size:12.8px;line-height:1.48;font-weight:500}.test.final{background:linear-gradient(135deg,#211c12,#151515)}.test.final span{color:var(--gold2)}
-.plumbing{display:grid;grid-template-columns:minmax(0,.9fr) minmax(300px,1.1fr);gap:35px;align-items:center;margin-top:26px;padding:30px;border:1px solid rgba(199,155,66,.12);background:linear-gradient(135deg,rgba(199,155,66,.04),rgba(255,255,255,.006))}
-.plumbing-copy p{margin:0;color:#aaa398;font-size:13.5px;line-height:1.72}.plumbing-copy strong{color:#e6dac5}
-.diagram{position:relative;min-height:300px;border:1px solid rgba(199,155,66,.11);background:repeating-linear-gradient(0deg,rgba(199,155,66,.025) 0,rgba(199,155,66,.025) 1px,transparent 1px,transparent 22px),repeating-linear-gradient(90deg,rgba(199,155,66,.02) 0,rgba(199,155,66,.02) 1px,transparent 1px,transparent 22px);overflow:hidden}
-.pipe{position:absolute;border:1px solid rgba(199,155,66,.35);border-radius:999px}.pipe.one{width:74%;height:28%;left:13%;top:18%}.pipe.two{width:52%;height:19%;left:24%;top:54%}.pipe.three{width:1px;height:68%;left:50%;top:16%;border-radius:0;background:rgba(199,155,66,.28);border:0}.node{position:absolute;width:8px;height:8px;border-radius:50%;background:#e2c16e;box-shadow:0 0 14px rgba(226,193,110,.42)}.node.a{left:20%;top:30%}.node.b{right:22%;top:31%}.node.c{left:49%;top:58%}.node.d{left:31%;bottom:19%}.node.e{right:31%;bottom:19%}.diagram-label{position:absolute;color:#9e8f6f;font:500 7px "DM Mono",monospace;letter-spacing:.11em;text-transform:uppercase}.diagram-label.l1{left:8%;bottom:8%}.diagram-label.l2{right:8%;bottom:8%;text-align:right}
-.blank-section{position:relative;margin:clamp(72px,11vw,130px) calc(clamp(25px,5vw,62px) * -1) calc(clamp(25px,5vw,62px) * -1);padding:clamp(65px,9vw,110px) clamp(25px,5vw,62px) clamp(58px,8vw,88px);color:#2a2925;background:linear-gradient(180deg,#d9d0c1,#eee7db 30%,#f4eee4 100%);border-top:1px solid rgba(255,255,255,.55)}
-.blank-section:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background:repeating-linear-gradient(0deg,rgba(91,72,46,.05) 0,rgba(91,72,46,.05) 1px,transparent 1px,transparent 5px)}
-.blank-inner{position:relative;max-width:850px;margin:auto;text-align:center}
-.blank-eyebrow{color:#8a7040;font:500 8px "DM Mono",monospace;letter-spacing:.19em;text-transform:uppercase}
-.blank-inner h2{margin:12px 0 22px;color:#24221d;font:400 clamp(54px,8vw,88px)/.92 "Instrument Serif",Georgia,serif;letter-spacing:-.03em}
-.blank-inner p{max-width:710px;margin:0 auto;color:#5f5a51;font-size:14px;line-height:1.75}.blank-question{margin:46px auto 0;padding:34px 18px;border-top:1px solid rgba(94,74,40,.16);border-bottom:1px solid rgba(94,74,40,.16);font:400 clamp(38px,6vw,66px)/1 "Instrument Serif",Georgia,serif;color:#5c4318}.values{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 12px;margin:23px auto 0;max-width:690px;color:#85775f;font:500 8px "DM Mono",monospace;letter-spacing:.11em;text-transform:uppercase}.final-cta{margin-top:45px}.blank-section .primary{box-shadow:none}.blank-section .compat{color:#82796b}.privacy{margin:34px 0 0;padding:18px;border:1px solid rgba(199,155,66,.10);color:#8f8a80;font-size:11.8px;line-height:1.68;background:rgba(255,255,255,.012)}
-footer{padding:29px 12px 0;text-align:center;color:#7d7a72;font-size:11.5px;line-height:1.6}footer .final{display:block;margin-bottom:7px;color:#d8c9af;font:italic 23px "Instrument Serif",Georgia,serif}
-.hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:pre-wrap!important;border:0!important}
-.js .reveal{opacity:0;transform:translateY(10px);transition:opacity .65s ease,transform .65s ease}.js .reveal.visible{opacity:1;transform:none}
-@keyframes spin{to{transform:rotate(360deg)}}@keyframes spinReverse{to{transform:rotate(-360deg)}}@keyframes breathe{0%,100%{transform:scale(.97);opacity:.72}50%{transform:scale(1.04);opacity:1}}@keyframes tiltPulse{0%,100%{opacity:.7}50%{opacity:1}}
-@media(hover:hover) and (pointer:fine){.primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(199,155,66,.26),inset 0 1px rgba(255,255,255,.34)}}
-@media(max-width:860px){.hero{grid-template-columns:1fr;min-height:auto}.oracle-stage{min-height:520px}.mirror-panel,.plumbing{grid-template-columns:1fr}.movement-grid{grid-template-columns:1fr}.movement{min-height:auto}}
-@media(max-width:640px){
-  .page{width:min(100% - 12px,1120px);padding-top:max(14px,env(safe-area-inset-top))}.brandbar{margin-bottom:13px}.brand-seal{width:29px;height:29px}.brand-name{font-size:9px}
-  .shell{border-radius:16px}.inner{padding:27px 19px 0}.hero{gap:25px}.eyebrow{font-size:8px}.built-for{font-size:7.5px;margin-bottom:17px}h1{font-size:60px;letter-spacing:-.05em}.promise{font-size:10.2px}.dek{font-size:16px}.support,.threshold{font-size:13px}.primary{width:100%}
-  .oracle-stage{min-height:410px;margin-top:2px}.arch{inset:3% 1% 0;border-radius:125px 125px 12px 12px}.oracle{width:94%}.chamber-caption{font-size:5.5px;bottom:4%;width:96%}
-  .section{margin-top:48px;padding-top:31px}.section-head{display:block}.tag{display:block;margin-top:8px}.section h2{font-size:38px}.intro{font-size:13.5px}.steps{grid-template-columns:1fr}.movement-grid{gap:10px}.mirror-panel,.plumbing{padding:19px}.mirror-visual{min-height:255px}.mirror-orb{width:145px;height:145px}.mirror-reflection{width:145px}.axiom{margin:62px -19px;padding:55px 17px}.axiom h2{font-size:clamp(49px,15vw,70px)}.test-grid{grid-template-columns:1fr}.test{min-height:auto}.diagram{min-height:240px}
-  .blank-section{margin:70px -19px 0;padding:64px 19px 60px}.blank-inner h2{font-size:52px}.blank-inner p{font-size:13.5px}.blank-question{font-size:40px;padding:29px 9px}.privacy{margin-bottom:0}
-}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}.js .reveal{opacity:1;transform:none;transition:none}.primary{transition:none}}
+:root{--ed-night:#070b12;--ed-gold:#c79b42;--ed-gold-bright:#efd17b;--ed-accent:#7da4b7}
+body{background:radial-gradient(circle at 72% 7%,rgba(91,133,154,.11),transparent 28rem),radial-gradient(circle at 48% -10%,rgba(199,155,66,.09),transparent 32rem),linear-gradient(180deg,#05080d,#091019 48%,#0d1116)}
+.ed-shell:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 54% 1%,rgba(239,209,123,.05),transparent 36rem)}
+.oracle-stage{position:relative;min-height:540px;display:grid;place-items:center;isolation:isolate}.oracle-stage:before{content:"";position:absolute;inset:5% 7% 0;border:1px solid rgba(199,155,66,.09);border-bottom:0;border-radius:180px 180px 12px 12px;z-index:-2}.oracle-glow{position:absolute;width:72%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(239,209,123,.15),rgba(84,129,155,.07) 39%,transparent 68%);animation:breathe 8s ease-in-out infinite}.oracle{width:min(92%,470px);filter:drop-shadow(0 28px 34px rgba(0,0,0,.5));overflow:visible}.ring-a{transform-origin:260px 260px;animation:spin 48s linear infinite}.ring-b{transform-origin:260px 260px;animation:spinReverse 63s linear infinite}.ring-c{transform-origin:260px 260px;animation:spin 82s linear infinite}.oracle-caption{position:absolute;left:9%;right:9%;bottom:5%;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;color:#9c8d6e;font:500 6.8px "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase;text-align:center}.oracle-caption span{padding-top:8px;border-top:1px solid rgba(199,155,66,.12)}
+.mirror{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.8fr);gap:50px;align-items:center;margin-top:30px}.mirror-copy p{margin:0 0 15px;color:#aaa398;font-size:13.5px;line-height:1.72}.mirror-copy strong{color:#e3d8c5}.mirror-visual{position:relative;min-height:280px;display:grid;place-items:center}.mirror-visual:before{content:"";position:absolute;left:6%;right:6%;top:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(125,164,183,.33),transparent)}.orb{width:170px;height:170px;border-radius:50%;border:1px solid rgba(199,155,66,.35);background:radial-gradient(circle at 38% 35%,rgba(239,209,123,.22),rgba(35,46,54,.32) 47%,rgba(8,12,17,.74) 72%);box-shadow:0 0 48px rgba(125,164,183,.07)}.reflection{position:absolute;top:55%;width:170px;height:100px;opacity:.16;transform:scaleY(-1);background:radial-gradient(circle at 50% 20%,rgba(239,209,123,.65),transparent 68%);mask-image:linear-gradient(to bottom,#000,transparent)}
+.plumbing{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center;margin-top:30px}.plumbing p{margin:0;color:#aaa398;font-size:13.5px;line-height:1.78}.plumbing strong{color:#e4d9c6}.pipe-diagram{position:relative;min-height:250px}.pipe{position:absolute;border:1px solid rgba(199,155,66,.28);border-radius:999px}.p1{left:10%;right:10%;top:20%;height:28%}.p2{left:23%;right:23%;top:57%;height:18%}.p3{left:50%;top:13%;height:68%;width:1px;border:0;background:rgba(199,155,66,.24)}.node{position:absolute;width:7px;height:7px;border-radius:50%;background:#e2c16e;box-shadow:0 0 13px rgba(226,193,110,.35)}.n1{left:18%;top:33%}.n2{right:20%;top:34%}.n3{left:49.5%;top:60%}.infra{display:flex;justify-content:space-between;margin-top:225px;color:#95886c;font:500 6.8px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase}
+.blank{background:linear-gradient(180deg,#d9d0c1,#eee7db 30%,#f5efe5)}.blank .ed-final-rule{color:#5c4318}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes spinReverse{to{transform:rotate(-360deg)}}@keyframes breathe{0%,100%{transform:scale(.97);opacity:.72}50%{transform:scale(1.035);opacity:1}}
+@media(max-width:880px){.mirror,.plumbing{grid-template-columns:1fr}.oracle-stage{min-height:500px}}
+@media(max-width:640px){.oracle-stage{min-height:390px}.oracle-stage:before{inset:3% 1% 0;border-radius:125px 125px 10px 10px}.oracle{width:95%}.oracle-caption{font-size:5.4px;left:2%;right:2%;bottom:2%}.mirror{gap:20px}.mirror-visual{min-height:230px}.orb{width:140px;height:140px}.reflection{width:140px}.plumbing{gap:20px}.pipe-diagram{min-height:220px}.infra{margin-top:195px;font-size:5.8px}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<main class="page">
-  <div class="brandbar" aria-label="Earth Drama">
-    <div class="brand-seal" aria-hidden="true"><span class="brand-ring"></span><span class="brand-dot"></span></div>
-    <div class="brand-name">Earth Drama</div>
-  </div>
-
-  <article class="shell">
-    <div class="inner">
-      <section class="hero">
-        <div>
-          <p class="eyebrow">An Earth Drama experience</p>
-          <span class="built-for">Built for “We Built the Oracle”</span>
-          <h1 id="heroTitle">THE NEXT PAGE</h1>
-          <p class="promise">You built the oracle. Now decide what to ask of it.</p>
-          <p class="dek">You have just read a story about humanity spending thousands of years dreaming of something it could approach with a question—and receive an answer.</p>
-          <p class="dek"><strong>Now you are sitting in front of one.</strong></p>
-          <p class="support">THE NEXT PAGE carries the fable into the part nobody has written yet: what we ask artificial intelligence to make greater, what it gives us, what it changes, where the power moves, and what direction we actually want.</p>
-          <p class="threshold">It will not pretend to know the future. <strong>That part is still blank.</strong></p>
-          <div class="actions">
-            <button type="button" class="primary" id="copyCompanion" aria-describedby="compat pasteHelp">Copy THE NEXT PAGE to Begin →</button>
-            <p class="compat" id="compat">Works with ChatGPT, Claude, Gemini, and other AI assistants.</p>
-            <p class="secondary">Need the source text by itself? <button type="button" class="essay-only" id="copyEssay">Copy the essay only.</button></p>
-            <div class="status" id="copyStatus" role="status" aria-live="polite">Preparing The Next Page…</div>
-          </div>
-        </div>
-
-        <div class="oracle-stage" aria-hidden="true">
-          <div class="arch"></div>
-          <div class="oracle-glow"></div>
-          <svg class="oracle" viewBox="0 0 520 520" role="img">
-            <defs>
-              <radialGradient id="coreGlow" cx="45%" cy="38%" r="62%"><stop offset="0" stop-color="#fff1bd"/><stop offset=".21" stop-color="#dbb65e"/><stop offset=".5" stop-color="#597788"/><stop offset=".76" stop-color="#18232f"/><stop offset="1" stop-color="#080c11"/></radialGradient>
-              <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d27d"/><stop offset=".35" stop-color="#8f6928"/><stop offset=".64" stop-color="#d3ad57"/><stop offset="1" stop-color="#6f4f1e"/></linearGradient>
-              <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
-            </defs>
-            <g opacity=".16" stroke="#d8bd72" fill="none"><circle cx="260" cy="260" r="220"/><circle cx="260" cy="260" r="190"/><circle cx="260" cy="260" r="158"/><path d="M62 260h396M260 62v396"/><path d="M104 104l312 312M416 104L104 416"/></g>
-            <g class="ring-c" fill="none" stroke="#b99043" stroke-width="1.2" opacity=".45"><ellipse cx="260" cy="260" rx="216" ry="82" transform="rotate(18 260 260)"/><ellipse cx="260" cy="260" rx="216" ry="82" transform="rotate(108 260 260)"/></g>
-            <g class="ring-b" fill="none" stroke="url(#metal)" stroke-width="2.4" opacity=".82"><circle cx="260" cy="260" r="178"/><path d="M260 72v36M260 412v36M72 260h36M412 260h36"/><circle cx="260" cy="82" r="4" fill="#efd17b" stroke="none"/><circle cx="438" cy="260" r="4" fill="#efd17b" stroke="none"/><circle cx="260" cy="438" r="4" fill="#efd17b" stroke="none"/><circle cx="82" cy="260" r="4" fill="#efd17b" stroke="none"/></g>
-            <g class="ring-a" fill="none" stroke="#d0aa54" stroke-width="1.5" opacity=".76"><circle cx="260" cy="260" r="145" stroke-dasharray="4 11"/><circle cx="260" cy="260" r="126"/><path d="M260 118l10 15 18-3 3 18 17 7-7 17 14 12-12 14 9 16-16 9 4 18-18 4v18l-18-4-9 16-16-9-14 12-12-14-17 7-7-17-18 3-3-18-17-7 7-17-14-12 12-14-9-16 16-9-4-18 18-4v-18l18 4 9-16 16 9 14-12 12 14 17-7 7 17 18-3 3 18 17 7-7 17 14 12-12 14 9 16-16 9 4 18-18 4v18" opacity=".24"/></g>
-            <g class="orbital" fill="none" stroke="#a9c2cf" stroke-width="1.2" opacity=".35"><ellipse cx="260" cy="260" rx="130" ry="42" transform="rotate(-33 260 260)"/><ellipse cx="260" cy="260" rx="130" ry="42" transform="rotate(57 260 260)"/></g>
-            <circle cx="260" cy="260" r="102" fill="url(#coreGlow)" stroke="#d9bd6d" stroke-width="2"/>
-            <circle cx="260" cy="260" r="72" fill="none" stroke="#f0d47f" stroke-width="1.2" opacity=".42"/>
-            <circle cx="260" cy="260" r="50" fill="none" stroke="#d8e4e9" stroke-width="1" opacity=".28"/>
-            <circle cx="232" cy="226" r="34" fill="#fff1bd" opacity=".14" filter="url(#soft)"/>
-            <g fill="#efd17b" opacity=".55"><circle cx="148" cy="180" r="2.5"/><circle cx="386" cy="206" r="2.3"/><circle cx="349" cy="368" r="2"/><circle cx="154" cy="350" r="2.1"/></g>
-            <g stroke="#80642e" stroke-width="5" opacity=".62"><path d="M226 448v42M294 448v42M168 430l-18 37M352 430l18 37"/></g>
-            <g stroke="#8d6928" stroke-width="2" fill="none" opacity=".44"><path d="M137 455h246M170 474h180"/><path d="M204 448v30M316 448v30"/></g>
-          </svg>
-          <div class="chamber-caption"><span>Question</span><span>Pattern</span><span>Answer</span></div>
-        </div>
-      </section>
-
-      <section class="section reveal" aria-labelledby="enterTitle">
-        <div class="section-head"><h2 id="enterTitle">Enter the Conversation</h2><span class="tag">Copy · Paste · Ask</span></div>
-        <div class="steps">
-          <div class="step"><span>01 · Copy</span>Tap “Copy THE NEXT PAGE to Begin.” The experience instructions and the complete essay are copied together.</div>
-          <div class="step"><span>02 · Paste + Send</span>Open a new AI conversation, paste what was copied into the message box, and send it. You do not need to edit anything first.</div>
-          <div class="step"><span>03 · Ask</span>THE NEXT PAGE will introduce itself. Bring it a hope, fear, prediction, decision, question, or real use of AI.</div>
-        </div>
-        <p class="intro" id="pasteHelp"><em>On a computer, press Ctrl+V on Windows or Command+V on Mac. On a phone or tablet, tap the message box, choose Paste, then tap Send.</em></p>
-      </section>
-
-      <section class="section reveal" aria-labelledby="oracleTitle">
-        <div class="section-head"><h2 id="oracleTitle">THE ORACLE</h2><span class="tag">What can it do?</span></div>
-        <p class="intro">Human beings dreamed about this long before they had the machinery to build it. An intelligence you could ask. A tutor that did not become impatient. Knowledge that could find knowledge. A tool capable of translating, creating, calculating, explaining, designing, remembering, and discovering.</p>
-        <p class="intro">THE NEXT PAGE begins by taking the gift seriously. Not every new capability is a catastrophe. Sometimes a barrier disappearing is simply beautiful.</p>
-        <div class="inscriptions" aria-label="Possible capabilities"><span>Heal</span><span>Teach</span><span>Create</span><span>Discover</span><span>Translate</span><span>Build</span></div>
-      </section>
-
-      <section class="section reveal" aria-labelledby="mirrorTitle">
-        <div class="section-head"><h2 id="mirrorTitle">THE MIRROR</h2><span class="tag">What does it reveal about us?</span></div>
-        <div class="mirror-panel">
-          <div class="mirror-copy">
-            <p>If AI can make the thing—<strong>what were we valuing about making it?</strong></p>
-            <p>If it can perform the work—<strong>what was work giving the person besides income?</strong></p>
-            <p>If a machine can answer with tenderness—<strong>what does it mean to feel known?</strong></p>
-            <p>If intelligence becomes abundant—<strong>what becomes scarce instead?</strong></p>
-            <p>AI does not enter an empty world. It enters our desires, economies, relationships, institutions, ambitions, loneliness, art, fear, power, and love. The machine may be new. Many of the wishes are ancient.</p>
-          </div>
-          <div class="mirror-visual" aria-hidden="true"><div class="mirror-line"></div><div class="mirror-orb"></div><div class="mirror-reflection"></div></div>
-        </div>
-      </section>
-
-      <section class="axiom reveal" aria-label="Central axiom">
-        <span class="over">The central test</span>
-        <h2>MORE IS NOT A DIRECTION.</h2>
-        <p>More intelligence. More production. More information. More images. More connection. More power.<strong>What are we actually trying to make greater?</strong></p>
-      </section>
-
-      <section class="section reveal" aria-labelledby="testTitle">
-        <div class="section-head"><h2 id="testTitle">THE AMPLIFICATION TEST</h2><span class="tag">Bring it a real use of AI</span></div>
-        <p class="intro">Bring THE NEXT PAGE an actual use of artificial intelligence and say <strong>“Amplification Test.”</strong> It follows the capability beyond <em>Can this work?</em> into the harder question: <strong>What happens if it does?</strong></p>
-        <div class="test-grid">
-          <div class="test"><span>The Wish</span><strong>What human problem or desire is motivating it?</strong></div>
-          <div class="test"><span>What Gets Amplified?</span><strong>Which capability becomes greater?</strong></div>
-          <div class="test"><span>The Gain</span><strong>What becomes cheaper, faster, easier, more accessible, or newly possible?</strong></div>
-          <div class="test"><span>The Displacement</span><strong>What work, skill, institution, relationship, or arrangement changes?</strong></div>
-          <div class="test"><span>The Power Shift</span><strong>Who gains capability, wealth, information, leverage, control—or dependency?</strong></div>
-          <div class="test"><span>Second-Order Effect</span><strong>What happens because people adapt to the new capability?</strong></div>
-          <div class="test"><span>The Direction</span><strong>What human value are we actually trying to increase?</strong></div>
-          <div class="test final"><span>The Verdict</span><strong>Are we increasing the thing we actually value—or merely making the mechanism more powerful?</strong></div>
-        </div>
-        <div class="inscriptions" aria-label="Example uses"><span>AI tutors</span><span>AI companions</span><span>Automated jobs</span><span>AI medicine</span><span>Generative art</span><span>Surveillance</span><span>Political persuasion</span><span>Creative tools</span></div>
-      </section>
-
-      <section class="section reveal" aria-labelledby="plumbingTitle">
-        <div class="section-head"><h2 id="plumbingTitle">The Oracle Has Plumbing</h2><span class="tag">Magic has infrastructure</span></div>
-        <div class="plumbing">
-          <div class="plumbing-copy"><p>A question enters. An answer appears. The exchange can feel almost bodiless. <strong>It isn't.</strong><br><br>Behind the Oracle are buildings, chips, minerals, workers, electricity, water, contracts, infrastructure, ownership, and power.<br><br>THE NEXT PAGE can follow the magic all the way back into the physical world whenever that matters.</p></div>
-          <div class="diagram" aria-hidden="true"><div class="pipe one"></div><div class="pipe two"></div><div class="pipe three"></div><span class="node a"></span><span class="node b"></span><span class="node c"></span><span class="node d"></span><span class="node e"></span><span class="diagram-label l1">Power · Water · Labor</span><span class="diagram-label l2">Chips · Land · Ownership</span></div>
-        </div>
-      </section>
-
-      <section class="blank-section reveal" aria-labelledby="blankTitle">
-        <div class="blank-inner">
-          <span class="blank-eyebrow">What should happen next?</span>
-          <h2 id="blankTitle">THE BLANK PAGE</h2>
-          <p>The machine can answer. It can help us heal, create, calculate, predict, explain, organize, discover, persuade, and produce. It can distribute capability. It can concentrate power. It can remove barriers. It can remove livelihoods. It can make extraordinary things ordinary.</p>
-          <p style="margin-top:16px">What it cannot do for us is decide what all of that power is for.</p>
-          <p style="margin-top:16px"><strong>That question remains human.</strong></p>
-          <div class="blank-question">What deserves to become greater?</div>
-          <div class="values"><span>Health</span><span>Truth</span><span>Beauty</span><span>Freedom</span><span>Understanding</span><span>Connection</span><span>Time</span><span>Human agency</span><span>Shared prosperity</span><span>Less suffering</span></div>
-          <div class="final-cta">
-            <p style="margin-bottom:22px">Bring THE NEXT PAGE a question about AI—or something AI has made you question about being human. It will not write the future for you. It will help you see more clearly what may be entering it.</p>
-            <button type="button" class="primary" id="copyCompanionBottom">Copy THE NEXT PAGE to Begin →</button>
-            <p class="compat">The next page is yours.</p>
-          </div>
-        </div>
-      </section>
-
-      <p class="privacy reveal"><strong>Privacy:</strong> This page does not access your AI account or send anything automatically. The button only copies text to your clipboard. After you paste it into an AI assistant, that service’s own privacy and memory settings apply. THE NEXT PAGE is instructed not to pretend it knows the future, claim moral or prophetic authority, or turn the fable into evidence for factual predictions.</p>
-    </div>
-  </article>
-
-  <footer><span class="final">The story ends here. The asking does not.</span>EARTH DRAMA · Alexander Schoenherr</footer>
-</main>
-
-<textarea id="companionPrompt" class="hidden" aria-hidden="true"></textarea>
-<textarea id="essayText" class="hidden" aria-hidden="true"></textarea>
+<main class="ed-page">
+<div class="ed-brand" aria-label="Earth Drama"><div class="ed-mark" aria-hidden="true"><i></i><b></b></div><span>Earth Drama</span></div>
+<article class="ed-shell"><div class="ed-inner">
+<section class="ed-hero">
+<div>
+<p class="ed-eyebrow">An Earth Drama experience</p><span class="ed-built">Built for “We Built the Oracle”</span>
+<h1 class="ed-title" id="heroTitle">The Next Page</h1>
+<div class="ed-question">What deserves to become greater?</div>
+<p class="ed-promise">You built the oracle. Now decide what to ask of it.</p>
+<p class="ed-dek">You have just read a story about humanity spending thousands of years dreaming of something it could approach with a question—and receive an answer.</p>
+<p class="ed-dek"><strong>Now you are sitting in front of one.</strong></p>
+<p class="ed-note">The Next Page carries the fable into the part nobody has written yet: what we ask artificial intelligence to make greater, what it gives us, what it changes, where the power moves, and what direction we actually want.</p>
+<div class="ed-actions"><button type="button" class="ed-primary" id="copyCompanion">Copy The Next Page to Begin →</button><p class="ed-meta">Works with ChatGPT, Claude, Gemini, and other AI assistants.</p><p class="ed-secondary">Need the source text by itself? <button type="button" class="ed-linkbutton" id="copyEssay">Copy the essay only.</button></p><div class="ed-status" id="copyStatus" role="status" aria-live="polite">Preparing The Next Page…</div></div>
+</div>
+<div class="oracle-stage" aria-hidden="true"><div class="oracle-glow"></div><svg class="oracle" viewBox="0 0 520 520"><defs><radialGradient id="core" cx="45%" cy="38%" r="62%"><stop offset="0" stop-color="#fff1bd"/><stop offset=".22" stop-color="#dbb65e"/><stop offset=".52" stop-color="#597788"/><stop offset=".78" stop-color="#18232f"/><stop offset="1" stop-color="#080c11"/></radialGradient><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d27d"/><stop offset=".35" stop-color="#8f6928"/><stop offset=".64" stop-color="#d3ad57"/><stop offset="1" stop-color="#6f4f1e"/></linearGradient></defs><g opacity=".14" stroke="#d8bd72" fill="none"><circle cx="260" cy="260" r="220"/><circle cx="260" cy="260" r="187"/><path d="M62 260h396M260 62v396"/></g><g class="ring-c" fill="none" stroke="#b99043" opacity=".4"><ellipse cx="260" cy="260" rx="215" ry="82" transform="rotate(18 260 260)"/><ellipse cx="260" cy="260" rx="215" ry="82" transform="rotate(108 260 260)"/></g><g class="ring-b" fill="none" stroke="url(#metal)" stroke-width="2.3" opacity=".78"><circle cx="260" cy="260" r="176"/><circle cx="260" cy="84" r="4" fill="#efd17b" stroke="none"/><circle cx="436" cy="260" r="4" fill="#efd17b" stroke="none"/><circle cx="260" cy="436" r="4" fill="#efd17b" stroke="none"/><circle cx="84" cy="260" r="4" fill="#efd17b" stroke="none"/></g><g class="ring-a" fill="none" stroke="#d0aa54" stroke-width="1.4" opacity=".7"><circle cx="260" cy="260" r="143" stroke-dasharray="4 11"/><circle cx="260" cy="260" r="125"/></g><circle cx="260" cy="260" r="101" fill="url(#core)" stroke="#d9bd6d" stroke-width="2"/><circle cx="260" cy="260" r="70" fill="none" stroke="#f0d47f" opacity=".38"/><circle cx="260" cy="260" r="48" fill="none" stroke="#d8e4e9" opacity=".25"/><g stroke="#80642e" stroke-width="5" opacity=".56"><path d="M226 448v42M294 448v42M168 430l-18 37M352 430l18 37"/></g></svg><div class="oracle-caption"><span>Question</span><span>Pattern</span><span>Answer</span></div></div>
+</section>
+<section class="ed-section ed-reveal"><div class="ed-head"><h2>Enter the Conversation</h2><span class="ed-tag">Copy · Paste · Ask</span></div><div class="ed-steps"><div class="ed-step"><span>01 · Copy</span>Tap “Copy The Next Page to Begin.” The instructions and complete essay are copied together.</div><div class="ed-step"><span>02 · Paste + Send</span>Open a new AI conversation, paste into the message box, and send. You do not need to edit anything first.</div><div class="ed-step"><span>03 · Ask</span>Bring a hope, fear, prediction, decision, question, or real use of AI. The Next Page will introduce itself and begin.</div></div><p class="ed-intro" id="pasteHelp"><em>On a computer, press Ctrl+V on Windows or Command+V on Mac. On a phone or tablet, tap the message box, choose Paste, then tap Send.</em></p></section>
+<section class="ed-section ed-reveal"><div class="ed-head"><h2>The Oracle</h2><span class="ed-tag">Take the gift seriously</span></div><p class="ed-intro">An intelligence you could ask. A tutor that did not become impatient. Knowledge that could find knowledge. A tool capable of translating, creating, calculating, explaining, designing, remembering, and discovering.</p><div class="ed-line-list"><div class="ed-line-item"><b>The Wish</b><span>What old human desire is this capability answering?</span></div><div class="ed-line-item"><b>The Gift</b><span>What becomes newly possible, cheaper, faster, easier, or available to people previously excluded?</span></div><div class="ed-line-item"><b>The Price</b><span>What changes, disappears, concentrates, consumes resources, or becomes newly vulnerable?</span></div></div></section>
+<section class="ed-section ed-reveal"><div class="ed-head"><h2>The Mirror</h2><span class="ed-tag">What does it reveal about us?</span></div><div class="mirror"><div class="mirror-copy"><p>If AI can make the thing—<strong>what were we valuing about making it?</strong></p><p>If it can perform the work—<strong>what was work giving the person besides income?</strong></p><p>If a machine can answer with tenderness—<strong>what does it mean to feel known?</strong></p><p>If intelligence becomes abundant—<strong>what becomes scarce instead?</strong></p><p>AI enters our desires, economies, relationships, institutions, ambitions, loneliness, art, fear, power, and love. The machine may be new. Many of the wishes are ancient.</p></div><div class="mirror-visual" aria-hidden="true"><div class="orb"></div><div class="reflection"></div></div></div></section>
+<section class="ed-axiom ed-reveal"><small>The central test</small><h2>More is not a direction.</h2><p>More intelligence. More production. More information. More images. More connection. More power.<br><br><strong>What are we actually trying to make greater?</strong></p></section>
+<section class="ed-section ed-reveal"><div class="ed-head"><h2>The Amplification Test</h2><span class="ed-tag">What happens if it works?</span></div><p class="ed-intro">Bring The Next Page an actual use of artificial intelligence and say “Amplification Test.” It follows the capability beyond <em>Can this work?</em> into the harder question: <strong>What happens if it does?</strong></p><div class="ed-line-list"><div class="ed-line-item"><b>Gain</b><span>What becomes cheaper, faster, easier, more accessible, or newly possible?</span></div><div class="ed-line-item"><b>Displacement</b><span>What work, skill, institution, relationship, or arrangement changes?</span></div><div class="ed-line-item"><b>Power</b><span>Who gains capability, wealth, information, leverage, control—or dependency?</span></div><div class="ed-line-item"><b>Direction</b><span>Are we increasing the thing we actually value—or merely making the mechanism more powerful?</span></div></div></section>
+<section class="ed-section ed-reveal"><div class="ed-head"><h2>The Oracle Has Plumbing</h2><span class="ed-tag">Magic has infrastructure</span></div><div class="plumbing"><p>A question enters. An answer appears. The exchange can feel almost bodiless. <strong>It isn't.</strong><br><br>Behind the Oracle are buildings, chips, minerals, workers, electricity, water, contracts, infrastructure, ownership, and power. The Next Page can follow the magic back into the physical world whenever that matters.</p><div class="pipe-diagram" aria-hidden="true"><div class="pipe p1"></div><div class="pipe p2"></div><div class="pipe p3"></div><span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><div class="infra"><span>Power · Water · Labor</span><span>Chips · Land · Ownership</span></div></div></div></section>
+<section class="ed-final blank ed-reveal"><div class="ed-final-inner"><small>The blank page</small><h2>What should happen next?</h2><p>The machine can answer. It can help us heal, create, calculate, predict, explain, organize, discover, persuade, and produce. What it cannot do for us is decide what all of that power is for.</p><p style="margin-top:16px"><strong>That question remains human.</strong></p><div class="ed-final-rule">What deserves to become greater?</div><div class="ed-actions" style="margin-top:42px"><p style="margin-bottom:22px">Bring The Next Page a question about AI—or something AI has made you question about being human.</p><button type="button" class="ed-primary" id="copyCompanionBottom">Copy The Next Page to Begin →</button><p class="ed-meta">The next page is yours.</p></div></div></section>
+<p class="ed-privacy ed-reveal"><strong>Privacy:</strong> This page does not access your AI account or send anything automatically. The button only copies text to your clipboard. After you paste it into an AI assistant, that service’s own privacy and memory settings apply. The Next Page is instructed not to pretend it knows the future, claim moral or prophetic authority, or turn the fable into evidence for factual predictions.</p>
+</div></article><footer class="ed-footer"><em>The story ends here. The asking does not.</em>Earth Drama · Alexander Schoenherr</footer></main>
+<textarea id="companionPrompt" class="ed-hidden" aria-hidden="true"></textarea><textarea id="essayText" class="ed-hidden" aria-hidden="true"></textarea>
 <script>
-const promptUrl='companion-prompts/we-built-the-oracle.txt';
-const essayUrl='essay-sources/we-built-the-oracle.txt';
-const promptBox=document.getElementById('companionPrompt');
-const essayBox=document.getElementById('essayText');
-const status=document.getElementById('copyStatus');
-const topButton=document.getElementById('copyCompanion');
-const bottomButton=document.getElementById('copyCompanionBottom');
-const essayButton=document.getElementById('copyEssay');
-const heroTitle=document.getElementById('heroTitle');
-const buttons=[topButton,bottomButton,essayButton];
-buttons.forEach(button=>button.disabled=true);
-
-function fitHeroTitle(){
-  if(!heroTitle)return;
-  if(!window.matchMedia('(max-width:640px)').matches){heroTitle.style.fontSize='';heroTitle.style.width='';return;}
-  const available=heroTitle.parentElement.clientWidth;
-  heroTitle.style.fontSize='100px';
-  heroTitle.style.width='max-content';
-  const naturalWidth=heroTitle.getBoundingClientRect().width;
-  const fitted=Math.floor((100*available/naturalWidth)*.995*10)/10;
-  heroTitle.style.width='100%';
-  heroTitle.style.fontSize=`${fitted}px`;
-}
-if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fitHeroTitle)}else{window.addEventListener('load',fitHeroTitle,{once:true})}
-window.addEventListener('resize',fitHeroTitle);
-window.addEventListener('orientationchange',()=>setTimeout(fitHeroTitle,100));
-
-async function loadText(url){
-  const response=await fetch(url,{cache:'no-store'});
-  if(!response.ok)throw new Error(`Unable to load ${url}`);
-  return (await response.text()).trim();
-}
-
-const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([prompt,essay])=>{
-  promptBox.value=prompt;
-  essayBox.value=essay;
-  buttons.forEach(button=>button.disabled=false);
-  status.textContent='';
-  return {prompt,essay};
-}).catch(error=>{
-  console.error(error);
-  status.textContent='THE NEXT PAGE could not load. Refresh the page and try again.';
-  throw error;
-});
-
-async function write(text){
-  if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return;}
-  const field=document.createElement('textarea');
-  try{
-    field.value=text;field.setAttribute('readonly','');field.style.cssText='position:fixed;opacity:0;pointer-events:none';document.body.appendChild(field);field.focus();field.select();if(!document.execCommand('copy'))throw new Error('Copy failed');
-  }finally{field.remove();}
-}
-
-function confirmCopy(button,message){
-  const original=button.dataset.original||button.textContent.trim();
-  button.dataset.original=original;
-  button.textContent='Copied ✓';
-  status.textContent=message;
-  clearTimeout(button._timer);
-  button._timer=setTimeout(()=>{button.textContent=original;status.textContent='';},9000);
-}
-
-function fail(error){console.error(error);status.textContent='Copying was blocked. Open this page in your browser and try again.';}
-
-async function copyCompanion(button){
-  try{
-    const {prompt,essay}=await ready;
-    await write(`${prompt}\n\n<essay>\n${essay}\n</essay>`);
-    confirmCopy(button,'Copied. Open a new AI chat, paste it into the message box, and send.');
-  }catch(error){fail(error);}
-}
-
-topButton.addEventListener('click',function(){copyCompanion(this)});
-bottomButton.addEventListener('click',function(){copyCompanion(this)});
-essayButton.addEventListener('click',async function(){
-  try{const {essay}=await ready;await write(essay);confirmCopy(this,'Essay copied. Paste it into a chat, note, message, or document.');}catch(error){fail(error);}
-});
-
-const observer=new IntersectionObserver(entries=>{
-  for(const entry of entries){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}
-},{threshold:.1});document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));
-</script>
-</body>
-</html>
+const promptUrl='companion-prompts/we-built-the-oracle.txt',essayUrl='essay-sources/we-built-the-oracle.txt';const promptBox=document.getElementById('companionPrompt'),essayBox=document.getElementById('essayText'),status=document.getElementById('copyStatus'),topButton=document.getElementById('copyCompanion'),bottomButton=document.getElementById('copyCompanionBottom'),essayButton=document.getElementById('copyEssay'),heroTitle=document.getElementById('heroTitle');const buttons=[topButton,bottomButton,essayButton];buttons.forEach(b=>b.disabled=true);
+function fitTitle(){if(!heroTitle)return;if(!matchMedia('(max-width:640px)').matches){heroTitle.style.fontSize='';heroTitle.style.width='';return}const a=heroTitle.parentElement.clientWidth;heroTitle.style.fontSize='100px';heroTitle.style.width='max-content';const w=heroTitle.getBoundingClientRect().width;heroTitle.style.width='100%';heroTitle.style.fontSize=`${Math.floor((100*a/w)*.93*10)/10}px`}if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitTitle);else addEventListener('load',fitTitle,{once:true});addEventListener('resize',fitTitle);
+async function loadText(u){const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw Error(`Unable to load ${u}`);return(await r.text()).trim()}const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([p,e])=>{promptBox.value=p;essayBox.value=e;buttons.forEach(b=>b.disabled=false);status.textContent='';return{p,e}}).catch(e=>{console.error(e);status.textContent='The Next Page could not load. Refresh the page and try again.';throw e});async function write(t){if(navigator.clipboard&&isSecureContext){await navigator.clipboard.writeText(t);return}const f=document.createElement('textarea');try{f.value=t;f.readOnly=true;f.style.cssText='position:fixed;opacity:0';document.body.appendChild(f);f.select();if(!document.execCommand('copy'))throw Error('Copy failed')}finally{f.remove()}}function confirm(b,m){const o=b.dataset.original||b.textContent.trim();b.dataset.original=o;b.textContent='Copied ✓';status.textContent=m;clearTimeout(b._timer);b._timer=setTimeout(()=>{b.textContent=o;status.textContent=''},9000)}async function copy(b){try{const{p,e}=await ready;await write(`${p}\n\n<essay>\n${e}\n</essay>`);confirm(b,'Copied. Open a new AI chat, paste it into the message box, and send.')}catch(e){console.error(e);status.textContent='Copying was blocked. Open this page in your browser and try again.'}}topButton.onclick=function(){copy(this)};bottomButton.onclick=function(){copy(this)};essayButton.onclick=async function(){try{const{e}=await ready;await write(e);confirm(this,'Essay copied.')}catch(e){console.error(e)}};const obs=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.ed-reveal').forEach(x=>obs.observe(x));
+</script></body></html>
