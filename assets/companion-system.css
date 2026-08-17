@@ -40,19 +40,34 @@ a{color:inherit}
 .oracle-stage:after,.return-stage:after,.path-stage:after,.rule-stage:after,.room-visual:after{content:"";position:absolute;inset:-28%;z-index:-1;pointer-events:none;background:linear-gradient(115deg,transparent 35%,color-mix(in srgb,var(--ed-gold-bright) 10%,transparent) 47%,color-mix(in srgb,var(--ed-accent) 8%,transparent) 53%,transparent 65%);transform:translateX(-42%) rotate(4deg);animation:edLightSweep 4.8s ease-in-out infinite}
 .oracle-stage svg,.return-stage svg,.path-stage svg,.rule-stage svg{filter:drop-shadow(0 24px 42px rgba(0,0,0,.36)) drop-shadow(0 0 24px color-mix(in srgb,var(--ed-accent) 8%,transparent));animation:edSceneBreathe 3.4s ease-in-out infinite}
 .oracle-stage:before,.return-stage:before,.path-stage:before,.rule-stage:before{animation:edGlowBreathe 2.8s ease-in-out infinite!important}
-.room-visual{background:radial-gradient(circle at 76% 46%,color-mix(in srgb,var(--ed-gold-bright) 8%,transparent),transparent 32%),linear-gradient(180deg,rgba(255,255,255,.012),rgba(0,0,0,.08))!important;box-shadow:inset 0 -42px 80px rgba(0,0,0,.18)}
-.room-visual .paper{animation:edPaperDrift 2.6s ease-in-out infinite alternate}.room-visual .paper:nth-of-type(2){animation-delay:-.6s}.room-visual .paper:nth-of-type(3){animation-delay:-1.2s}.room-visual .paper.good{animation:edChosenPaper 2.4s ease-in-out infinite}
+
+/* Make symbolic diagrams feel like scenes */
+.oracle-stage{background:radial-gradient(ellipse at 50% 72%,rgba(199,155,66,.10),transparent 38%),linear-gradient(180deg,rgba(8,12,17,.1),rgba(3,6,9,.35));border-radius:46% 46% 10px 10px;box-shadow:inset 0 -54px 90px rgba(0,0,0,.3)}
+.oracle-stage:before{box-shadow:0 0 70px color-mix(in srgb,var(--ed-gold-bright) 10%,transparent)}
+.return-stage{background:radial-gradient(circle at 18% 50%,rgba(232,223,207,.045),transparent 22%),radial-gradient(circle at 50% 48%,rgba(159,196,212,.08),transparent 28%),radial-gradient(circle at 82% 50%,rgba(234,209,139,.075),transparent 24%)}
+.path-stage{background:radial-gradient(ellipse at 50% 15%,rgba(236,210,127,.08),transparent 28%),radial-gradient(ellipse at 50% 84%,rgba(169,152,116,.075),transparent 34%)}
+.rule-stage{background:linear-gradient(90deg,rgba(159,95,88,.035),transparent 42%,transparent 58%,rgba(98,127,152,.04)),radial-gradient(ellipse at 50% 58%,rgba(214,193,139,.045),transparent 38%)}
+.room-visual{background:radial-gradient(circle at 76% 46%,color-mix(in srgb,var(--ed-gold-bright) 9%,transparent),transparent 31%),linear-gradient(180deg,rgba(255,255,255,.012),rgba(0,0,0,.12))!important;box-shadow:inset 0 -55px 95px rgba(0,0,0,.24),inset 0 0 90px rgba(0,0,0,.12)}
+.room-visual .room-door{filter:drop-shadow(0 0 12px color-mix(in srgb,var(--ed-gold) 9%,transparent))}
+.room-visual .small-table{filter:drop-shadow(0 4px 12px rgba(0,0,0,.3))}
+.room-visual .paper{box-shadow:0 5px 14px rgba(0,0,0,.16);animation:edPaperDrift 2.6s ease-in-out infinite alternate}.room-visual .paper:nth-of-type(2){animation-delay:-.6s}.room-visual .paper:nth-of-type(3){animation-delay:-1.2s}.room-visual .paper.good{animation:edChosenPaper 2.4s ease-in-out infinite}
+.basket{filter:drop-shadow(0 18px 18px rgba(72,54,28,.12));animation:edBasketSettle 3.2s ease-in-out infinite}.basket .apple{box-shadow:inset -8px -8px 12px rgba(80,30,20,.14),0 4px 9px rgba(70,45,30,.12)}.basket .onion{box-shadow:inset -7px -8px 10px rgba(90,70,32,.12)}.basket .bread{box-shadow:inset -8px -7px 10px rgba(100,70,25,.12)}.basket .item{animation:edProduceLife 2.5s ease-in-out infinite alternate}.basket .onion{animation-delay:-.5s}.basket .bread{animation-delay:-1s}.basket .missing{animation:edMissingPulse 1.9s ease-in-out infinite}
+
+/* Faster, obvious movement */
 .rule-stage .moving{animation-duration:3.2s!important;stroke-dasharray:12 8!important}
 .path-stage .road{animation-duration:3.4s!important;stroke-dasharray:12 7!important;stroke-width:2.6!important}
 .return-stage .return-path{animation-duration:3.8s!important;stroke-dasharray:12 7!important;stroke-width:2.5!important}
 .oracle-stage [class*="ring"]{animation-duration:12s!important}.oracle-stage .ring-b{animation-duration:16s!important}.oracle-stage .ring-c{animation-duration:20s!important}.oracle-stage .oracle-glow{animation-duration:2.6s!important}
 .js .ed-reveal{opacity:0;transform:translateY(22px) scale(.992);filter:blur(2px);transition:opacity .42s ease,transform .52s cubic-bezier(.2,.8,.2,1),filter .42s ease}.js .ed-reveal.visible{opacity:1;transform:none;filter:none}
 .ed-section.visible .ed-head h2{animation:edTitleSettle .55s cubic-bezier(.2,.8,.2,1) both}.ed-section.visible .ed-line-item,.ed-section.visible .ed-step{animation:edItemRise .48s ease both}.ed-section.visible .ed-line-item:nth-child(2),.ed-section.visible .ed-step:nth-child(2){animation-delay:.06s}.ed-section.visible .ed-line-item:nth-child(3),.ed-section.visible .ed-step:nth-child(3){animation-delay:.12s}
-@keyframes edLightSweep{0%,18%{transform:translateX(-45%) rotate(4deg);opacity:.22}48%{opacity:.75}82%,100%{transform:translateX(45%) rotate(4deg);opacity:.18}}
-@keyframes edSceneBreathe{0%,100%{transform:translateY(0) scale(1);filter:brightness(.96)}50%{transform:translateY(-3px) scale(1.008);filter:brightness(1.08)}}
+@keyframes edLightSweep{0%,18%{transform:translateX(-45%) rotate(4deg);opacity:.22}48%{opacity:.78}82%,100%{transform:translateX(45%) rotate(4deg);opacity:.18}}
+@keyframes edSceneBreathe{0%,100%{transform:translateY(0) scale(1);filter:brightness(.96)}50%{transform:translateY(-3px) scale(1.008);filter:brightness(1.09)}}
 @keyframes edGlowBreathe{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:1;transform:scale(1.06)}}
 @keyframes edPaperDrift{from{transform:translate(0,0) rotate(-1deg)}to{transform:translate(7px,-4px) rotate(1.5deg)}}
-@keyframes edChosenPaper{0%,100%{transform:translateX(0);opacity:.6}45%{transform:translateX(-10px);opacity:1}70%{transform:translateX(0);opacity:1}}
+@keyframes edChosenPaper{0%,100%{transform:translateX(0);opacity:.62}42%{transform:translateX(-11px);opacity:1}68%{transform:translateX(0);opacity:1}}
+@keyframes edBasketSettle{0%,100%{transform:perspective(240px) rotateX(-5deg) translateY(0)}50%{transform:perspective(240px) rotateX(-5deg) translateY(-3px)}}
+@keyframes edProduceLife{from{transform:translateY(1px)}to{transform:translateY(-3px)}}
+@keyframes edMissingPulse{0%,100%{opacity:.38;transform:scale(.97)}50%{opacity:.92;transform:scale(1.04)}}
 @keyframes edTitleSettle{from{opacity:.45;transform:translateY(13px)}to{opacity:1;transform:none}}
 @keyframes edItemRise{from{opacity:.4;transform:translateY(10px)}to{opacity:1;transform:none}}
 
