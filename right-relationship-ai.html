@@ -1,151 +1,103 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#090b0f">
-  <meta name="description" content="The Right Relationship Test is an Earth Drama AI companion. Bring something that feels out of balance and see what may be missing.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="The Right Relationship Test — Earth Drama">
-  <meta property="og:description" content="What does a good thing become when it stands alone?">
-  <meta property="og:url" content="https://alexanderschoenherr.github.io/earth-drama-ai/right-relationship-ai.html">
-  <link rel="canonical" href="https://alexanderschoenherr.github.io/earth-drama-ai/right-relationship-ai.html">
-  <title>The Right Relationship Test — Earth Drama</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/companion-system.css">
-  <style>
-    :root{--ed-night:#080b11;--ed-gold:#d0b269;--ed-gold-bright:#f4dda0;--ed-accent:#6e8ca3}
-    body{background:radial-gradient(circle at 50% 8%,rgba(208,178,105,.09),transparent 30rem),radial-gradient(circle at 14% 42%,rgba(59,97,128,.08),transparent 28rem),linear-gradient(180deg,#06080c,#0b1018 48%,#111923)}
-
-    .ed-brand{gap:11px}
-    .ed-seal{width:37px;height:37px;object-fit:contain;display:block;opacity:0;transition:opacity .2s ease;filter:drop-shadow(0 0 9px rgba(208,178,105,.16))}
-    .ed-seal.loaded{opacity:1}
-
-    .ed-hero{min-height:570px;grid-template-columns:minmax(0,1.04fr) minmax(350px,.96fr);gap:clamp(30px,5vw,58px)}
-    .ed-title{white-space:normal;max-width:650px}
-    .ed-question{max-width:620px}
-    .ed-dek{max-width:610px;margin-top:20px}
-    .ed-note{max-width:610px;margin-top:14px}
-
-    .relationship-stage{position:relative;aspect-ratio:1.18/1;overflow:hidden;border-radius:18px;background:radial-gradient(circle at 50% 50%,rgba(244,221,160,.12),transparent 18%),radial-gradient(ellipse at 50% 100%,rgba(73,105,131,.15),transparent 54%),linear-gradient(180deg,#111722,#070a0f 72%);box-shadow:inset 0 0 100px rgba(0,0,0,.7),0 26px 52px rgba(0,0,0,.3);isolation:isolate}
-    .relationship-stage:before{content:"";position:absolute;inset:8%;border:1px solid rgba(244,221,160,.11);border-radius:50%;box-shadow:0 0 0 32px rgba(244,221,160,.018),0 0 0 78px rgba(244,221,160,.012);animation:ringBreathe 4.8s ease-in-out infinite}
-    .relationship-stage:after{content:"";position:absolute;inset:-30%;background:linear-gradient(112deg,transparent 43%,rgba(244,221,160,.09) 49%,transparent 56%);animation:lightSweep 8s linear infinite}
-    .axis-v,.axis-h{position:absolute;z-index:4;filter:drop-shadow(0 0 8px rgba(244,221,160,.32))}
-    .axis-v{top:8%;bottom:8%;left:50%;width:2px;transform:translateX(-50%);background:linear-gradient(180deg,transparent,rgba(244,221,160,.5),#fff3c2,rgba(244,221,160,.5),transparent);animation:axisV 4.8s ease-in-out infinite}
-    .axis-h{left:8%;right:8%;top:50%;height:2px;transform:translateY(-50%);background:linear-gradient(90deg,transparent,rgba(244,221,160,.48),#fff3c2,rgba(244,221,160,.48),transparent);animation:axisH 4.8s ease-in-out infinite}
-    .axis-core{position:absolute;z-index:7;left:50%;top:50%;width:78px;height:78px;border-radius:50%;transform:translate(-50%,-50%);display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#fff7cf 0 5%,#e5c875 19%,rgba(208,178,105,.16) 55%,transparent 72%);color:#1b1710;font:500 6.3px/1.3 "DM Mono",monospace;letter-spacing:.09em;text-transform:uppercase;box-shadow:0 0 22px rgba(244,221,160,.58),0 0 62px rgba(208,178,105,.3);animation:corePulse 3.2s ease-in-out infinite}
-    .axis-label{position:absolute;z-index:8;color:#d8ccb0;font:500 6.2px/1.35 "DM Mono",monospace;letter-spacing:.11em;text-transform:uppercase;text-shadow:0 2px 8px #000}
-    .axis-label.top{top:5%;left:50%;transform:translateX(-50%);text-align:center}.axis-label.bottom{bottom:5%;left:50%;transform:translateX(-50%);text-align:center}.axis-label.left{left:5%;top:50%;transform:translateY(-50%)}.axis-label.right{right:5%;top:50%;transform:translateY(-50%);text-align:right}
-
-    .compact-section{margin-top:clamp(44px,6vw,70px);padding-top:clamp(26px,3vw,34px);border-top:1px solid var(--ed-line)}
-    .compact-section h2{margin:0;color:#eee7dc;font:400 clamp(34px,4.4vw,48px)/1 "Instrument Serif",Georgia,serif;letter-spacing:-.02em}
-    .quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
-    .quick-card{padding:18px 18px 17px;border:1px solid rgba(238,233,223,.09);border-radius:13px;background:rgba(255,255,255,.014)}
-    .quick-card small{display:block;color:#b89a59;font:500 7px "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase}
-    .quick-card strong{display:block;margin-top:8px;color:#e7dfd2;font:400 25px/1.05 "Instrument Serif",Georgia,serif}
-    .quick-card p{margin:8px 0 0;color:#a9a49c;font-size:12.5px;line-height:1.58}
-    .compact-note{margin:18px 0 0;color:#918d86;font-size:12.5px;line-height:1.6}
-
-    .compact-final{margin:clamp(54px,7vw,82px) calc(var(--ed-inner) * -1) calc(var(--ed-inner) * -1);padding:clamp(52px,7vw,72px) var(--ed-inner);text-align:center;background:radial-gradient(circle at 50% 0,rgba(208,178,105,.18),transparent 34%),linear-gradient(180deg,#d9d6cf,#efebe3 42%,#f3efe8);color:#282720}
-    .compact-final small{color:#776a4c;font:500 7.5px "DM Mono",monospace;letter-spacing:.17em;text-transform:uppercase}
-    .compact-final h2{max-width:850px;margin:13px auto 0;color:#29261f;font:400 clamp(42px,6vw,66px)/.99 "Instrument Serif",Georgia,serif;letter-spacing:-.025em}
-    .compact-final p{max-width:660px;margin:18px auto 0;color:#69645b;font-size:13.5px;line-height:1.68}
-    .compact-final .ed-actions{margin-top:28px}
-    .compact-final .ed-primary{box-shadow:none}
-    .compact-final .ed-meta{color:#7e786d}
-
-    @keyframes ringBreathe{0%,100%{opacity:.55;transform:scale(.97)}50%{opacity:1;transform:scale(1.02)}}
-    @keyframes lightSweep{0%,72%{transform:translateX(-34%);opacity:0}76%{opacity:1}91%{transform:translateX(34%);opacity:1}95%,100%{opacity:0}}
-    @keyframes axisV{0%,100%{opacity:.55;transform:translateX(-50%) scaleY(.93)}50%{opacity:1;transform:translateX(-50%) scaleY(1)}}
-    @keyframes axisH{0%,100%{opacity:.55;transform:translateY(-50%) scaleX(.93)}50%{opacity:1;transform:translateY(-50%) scaleX(1)}}
-    @keyframes corePulse{0%,100%{transform:translate(-50%,-50%) scale(.92)}50%{transform:translate(-50%,-50%) scale(1.06)}}
-
-    @media(max-width:880px){.ed-hero{grid-template-columns:1fr;min-height:auto}.relationship-stage{aspect-ratio:1.42/1}.quick-grid{grid-template-columns:1fr}}
-    @media(max-width:640px){
-      .ed-brand{margin-bottom:12px}.ed-seal{width:34px;height:34px}.ed-title{font-size:44px;line-height:.98}.ed-question{font-size:clamp(34px,9.8vw,45px);line-height:1.02}.ed-promise{margin-top:16px}.ed-dek{margin-top:17px;line-height:1.62}.ed-note{line-height:1.55}.relationship-stage{aspect-ratio:1.2/1}.axis-core{width:66px;height:66px;font-size:5.2px}.axis-label{font-size:5px}.compact-section{margin-top:44px;padding-top:26px}.quick-grid{gap:12px}.quick-card{padding:16px}.compact-final{margin:52px -19px 0;padding:50px 19px 48px}.compact-final h2{font-size:42px}.compact-final p{font-size:13px}
-    }
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
-  </style>
-  <script>document.documentElement.classList.add('js')</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b0f">
+<meta name="description" content="The Right Relationship Test is an Earth Drama AI companion. Bring something that feels off and see what may be missing.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Right Relationship Test — Earth Drama">
+<meta property="og:description" content="What does a good thing become when it stands alone?">
+<meta property="og:url" content="https://alexanderschoenherr.github.io/earth-drama-ai/right-relationship-ai.html">
+<link rel="canonical" href="https://alexanderschoenherr.github.io/earth-drama-ai/right-relationship-ai.html">
+<title>The Right Relationship Test — Earth Drama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/companion-system.css">
+<style>
+:root{--ed-night:#080b11;--ed-gold:#d0b269;--ed-gold-bright:#f4dda0;--ed-accent:#6e8ca3}
+body{background:radial-gradient(circle at 50% 8%,rgba(208,178,105,.09),transparent 30rem),radial-gradient(circle at 14% 42%,rgba(59,97,128,.08),transparent 28rem),linear-gradient(180deg,#06080c,#0b1018 48%,#111923)}
+.ed-brand{gap:11px}.ed-seal{width:38px;height:38px;display:block;overflow:visible;filter:drop-shadow(0 0 8px rgba(212,173,53,.18))}.ed-seal .gold{fill:#d4ad35}.ed-seal .gold-stroke{fill:none;stroke:#d4ad35;stroke-width:3.4;stroke-linecap:round}
+.ed-hero{min-height:0;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:clamp(30px,5vw,54px);padding:6px 0 4px}.ed-title{white-space:normal;max-width:650px}.ed-question{max-width:600px;margin-top:15px;font-size:clamp(27px,3vw,38px);line-height:1.05}.ed-dek{max-width:590px;margin-top:18px;line-height:1.62}.ed-actions{margin-top:21px}.ed-meta{max-width:520px}
+.relationship-stage{position:relative;aspect-ratio:1.22/1;overflow:hidden;border-radius:17px;background:radial-gradient(circle at 50% 50%,rgba(244,221,160,.12),transparent 18%),radial-gradient(ellipse at 50% 100%,rgba(73,105,131,.15),transparent 54%),linear-gradient(180deg,#111722,#070a0f 72%);box-shadow:inset 0 0 95px rgba(0,0,0,.7),0 24px 48px rgba(0,0,0,.28);isolation:isolate}.relationship-stage:before{content:"";position:absolute;inset:8%;border:1px solid rgba(244,221,160,.11);border-radius:50%;box-shadow:0 0 0 31px rgba(244,221,160,.018),0 0 0 76px rgba(244,221,160,.012)}.axis-v,.axis-h{position:absolute;z-index:4;filter:drop-shadow(0 0 8px rgba(244,221,160,.32))}.axis-v{top:8%;bottom:8%;left:50%;width:2px;transform:translateX(-50%);background:linear-gradient(180deg,transparent,rgba(244,221,160,.5),#fff3c2,rgba(244,221,160,.5),transparent)}.axis-h{left:8%;right:8%;top:50%;height:2px;transform:translateY(-50%);background:linear-gradient(90deg,transparent,rgba(244,221,160,.48),#fff3c2,rgba(244,221,160,.48),transparent)}.axis-core{position:absolute;z-index:7;left:50%;top:50%;width:74px;height:74px;border-radius:50%;transform:translate(-50%,-50%);display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#fff7cf 0 5%,#e5c875 19%,rgba(208,178,105,.16) 55%,transparent 72%);color:#1b1710;font:500 6px/1.3 "DM Mono",monospace;letter-spacing:.09em;text-transform:uppercase;box-shadow:0 0 22px rgba(244,221,160,.58),0 0 58px rgba(208,178,105,.28)}.axis-label{position:absolute;z-index:8;color:#d8ccb0;font:500 6px/1.35 "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;text-shadow:0 2px 8px #000}.axis-label.top{top:5%;left:50%;transform:translateX(-50%);text-align:center}.axis-label.bottom{bottom:5%;left:50%;transform:translateX(-50%);text-align:center}.axis-label.left{left:5%;top:50%;transform:translateY(-50%)}.axis-label.right{right:5%;top:50%;transform:translateY(-50%);text-align:right}
+.compact-section{margin-top:clamp(42px,6vw,62px);padding-top:clamp(24px,3vw,30px);border-top:1px solid var(--ed-line)}.compact-section h2{margin:0;color:#eee7dc;font:400 clamp(32px,4vw,44px)/1 "Instrument Serif",Georgia,serif;letter-spacing:-.02em}.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.quick-card{padding:16px;border:1px solid rgba(238,233,223,.09);border-radius:12px;background:rgba(255,255,255,.013)}.quick-card small{display:block;color:#b89a59;font:500 7px "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase}.quick-card strong{display:block;margin-top:7px;color:#e7dfd2;font:400 23px/1.05 "Instrument Serif",Georgia,serif}.quick-card p{margin:7px 0 0;color:#a9a49c;font-size:12px;line-height:1.52}
+.compact-final{margin:clamp(48px,6vw,70px) calc(var(--ed-inner) * -1) calc(var(--ed-inner) * -1);padding:clamp(46px,6vw,62px) var(--ed-inner);text-align:center;background:radial-gradient(circle at 50% 0,rgba(208,178,105,.18),transparent 34%),linear-gradient(180deg,#d9d6cf,#efebe3 42%,#f3efe8);color:#282720}.compact-final small{color:#776a4c;font:500 7.5px "DM Mono",monospace;letter-spacing:.17em;text-transform:uppercase}.compact-final h2{max-width:800px;margin:12px auto 0;color:#29261f;font:400 clamp(39px,5.5vw,60px)/1 "Instrument Serif",Georgia,serif;letter-spacing:-.025em}.compact-final .ed-actions{margin-top:26px}.compact-final .ed-primary{box-shadow:none}.compact-final .ed-meta{color:#7e786d}
+@media(max-width:880px){.ed-hero{grid-template-columns:1fr}.relationship-stage{aspect-ratio:1.42/1}.quick-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.ed-brand{margin-bottom:10px}.ed-seal{width:35px;height:35px}.ed-inner{padding-top:24px}.ed-title{font-size:43px;line-height:.98}.ed-question{font-size:28px;line-height:1.04}.ed-dek{font-size:15.5px;line-height:1.57}.ed-primary{min-height:56px}.relationship-stage{aspect-ratio:1.22/1}.axis-core{width:64px;height:64px;font-size:5px}.axis-label{font-size:4.9px}.compact-section{margin-top:40px}.quick-grid{gap:10px}.compact-final{margin:46px -19px 0;padding:46px 19px 44px}.compact-final h2{font-size:39px}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <main class="ed-page">
-  <div class="ed-brand" aria-label="Earth Drama"><img id="earthDramaSeal" class="ed-seal" alt="" aria-hidden="true"><span>Earth Drama</span></div>
+<div class="ed-brand" aria-label="Earth Drama">
+  <svg class="ed-seal" viewBox="0 0 120 120" aria-hidden="true">
+    <path class="gold-stroke" d="M68 18 A44 44 0 0 1 102 52 M102 68 A44 44 0 0 1 68 102 M52 102 A44 44 0 0 1 18 68 M18 52 A44 44 0 0 1 52 18"/>
+    <path class="gold" d="M60 0 C58 18 58 31 54 40 C51 47 46 51 39 54 L81 54 C74 51 69 47 66 40 C62 31 62 18 60 0Z"/>
+    <path class="gold" d="M60 120 C58 102 58 89 54 80 C51 73 46 69 39 66 L81 66 C74 69 69 73 66 80 C62 89 62 102 60 120Z"/>
+    <path class="gold" d="M0 60 C18 58 31 58 40 54 C47 51 51 46 54 39 L54 81 C51 74 47 69 40 66 C31 62 18 62 0 60Z"/>
+    <path class="gold" d="M120 60 C102 58 89 58 80 54 C73 51 69 46 66 39 L66 81 C69 74 73 69 80 66 C89 62 102 62 120 60Z"/>
+    <circle cx="60" cy="60" r="17.5" fill="#080b11" stroke="#d4ad35" stroke-width="3"/>
+    <path class="gold" d="M49 50l4-4 6 1 3 4-2 3-5 1-2 4-4-2-2-4zM61 48l5-2 5 3 2 5-4 2-1 5-4-1-2-4-3-3zM56 61l5 2 3 5-1 7-4 5-3-4 1-5-3-4zM45 61l5-1 4 3-1 5-4 2-3-3z"/>
+  </svg>
+  <span>Earth Drama</span>
+</div>
 
-  <article class="ed-shell"><div class="ed-inner">
-    <section class="ed-hero">
-      <div>
-        <p class="ed-eyebrow">An Earth Drama experience</p>
-        <span class="ed-built">Built for “Right Relationship”</span>
-        <h1 class="ed-title">The Right Relationship Test</h1>
-        <div class="ed-question">What does a good thing become when it stands alone?</div>
-        <p class="ed-promise">Bring something that feels off.</p>
-        <p class="ed-dek">A decision. A relationship. An ambition. A technology. The Test looks for what is valuable, what has become distorted, and what may be missing.</p>
-        <p class="ed-note">Sometimes the answer is not balance. The Test is allowed to say the framework does not fit.</p>
-        <div class="ed-actions">
-          <button type="button" class="ed-primary" id="copyCompanion">Begin The Right Relationship Test →</button>
-          <p class="ed-meta">Copies the test and essay. Paste into ChatGPT, Claude, Gemini, or another AI assistant.</p>
-          <p class="ed-secondary"><button type="button" class="ed-linkbutton" id="copyEssay">Copy the essay only.</button></p>
-          <div class="ed-status" id="copyStatus" role="status" aria-live="polite">Preparing the Test…</div>
-        </div>
-      </div>
+<article class="ed-shell"><div class="ed-inner">
+<section class="ed-hero">
+  <div>
+    <span class="ed-built">Companion to “Right Relationship”</span>
+    <h1 class="ed-title">The Right Relationship Test</h1>
+    <div class="ed-question">What does a good thing become when it stands alone?</div>
+    <p class="ed-dek">Bring something that feels off. The Test looks for what is valuable, what has become distorted, and what may be missing.</p>
+    <div class="ed-actions">
+      <button type="button" class="ed-primary" id="copyCompanion">Begin The Right Relationship Test →</button>
+      <p class="ed-meta">Copies the Test and essay. Paste into ChatGPT, Claude, Gemini, or another AI assistant.</p>
+      <p class="ed-secondary"><button type="button" class="ed-linkbutton" id="copyEssay">Copy the essay only.</button></p>
+      <div class="ed-status" id="copyStatus" role="status" aria-live="polite">Preparing the Test…</div>
+    </div>
+  </div>
+  <div class="relationship-stage" aria-hidden="true">
+    <div class="axis-v"></div><div class="axis-h"></div><div class="axis-core">Right<br>Relationship</div>
+    <div class="axis-label top">Wisdom · Conscience · Love</div>
+    <div class="axis-label bottom">What should this serve?</div>
+    <div class="axis-label left">Power · Skill · Capability</div>
+    <div class="axis-label right">What can we do?</div>
+  </div>
+</section>
 
-      <div class="relationship-stage" aria-hidden="true">
-        <div class="axis-v"></div><div class="axis-h"></div><div class="axis-core">Right<br>Relationship</div>
-        <div class="axis-label top">Wisdom · Conscience · Love</div>
-        <div class="axis-label bottom">What should this serve?</div>
-        <div class="axis-label left">Power · Skill · Capability</div>
-        <div class="axis-label right">What can we do?</div>
-      </div>
-    </section>
+<section class="compact-section ed-reveal">
+  <h2>It looks for three things</h2>
+  <div class="quick-grid">
+    <article class="quick-card"><small>01</small><strong>The good</strong><p>What is worth preserving?</p></article>
+    <article class="quick-card"><small>02</small><strong>The distortion</strong><p>What happens when it stands alone?</p></article>
+    <article class="quick-card"><small>03</small><strong>What is missing</strong><p>What would help it find its right place?</p></article>
+  </div>
+</section>
 
-    <section class="compact-section ed-reveal">
-      <h2>What it checks</h2>
-      <div class="quick-grid">
-        <article class="quick-card"><small>01</small><strong>The good</strong><p>What here is actually worth preserving?</p></article>
-        <article class="quick-card"><small>02</small><strong>The distortion</strong><p>What happens when that good stands alone?</p></article>
-        <article class="quick-card"><small>03</small><strong>What is missing</strong><p>What would help it find its right place?</p></article>
-      </div>
-      <p class="compact-note">The point is not to manufacture a beautiful pairing. It is to see the situation more clearly.</p>
-    </section>
-
-    <section class="compact-final ed-reveal">
-      <small>The central question</small>
-      <h2>What belongs here, now, in what proportion, and in service of what?</h2>
-      <p>Bring something real. See what changes when the parts are put back into relationship.</p>
-      <div class="ed-actions">
-        <button type="button" class="ed-primary" id="copyCompanionBottom">Begin The Test →</button>
-        <p class="ed-meta">Depth must become capable. Capability must become conscious.</p>
-      </div>
-    </section>
-  </div></article>
-
-  <footer class="ed-footer">Earth Drama · Alexander Schoenherr</footer>
+<section class="compact-final ed-reveal">
+  <small>The central question</small>
+  <h2>What belongs here, now, in what proportion, and in service of what?</h2>
+  <div class="ed-actions">
+    <button type="button" class="ed-primary" id="copyCompanionBottom">Begin The Test →</button>
+    <p class="ed-meta">The point is clarity, not balance for its own sake.</p>
+  </div>
+</section>
+</div></article>
+<footer class="ed-footer">Earth Drama · Alexander Schoenherr</footer>
 </main>
-
 <textarea id="companionPrompt" class="ed-hidden" aria-hidden="true"></textarea>
 <textarea id="essayText" class="ed-hidden" aria-hidden="true"></textarea>
-
 <script>
-const seal=document.getElementById('earthDramaSeal');
-fetch('assets/earth-drama-seal-256.webp.b64',{cache:'force-cache'})
-  .then(r=>{if(!r.ok)throw Error('Seal unavailable');return r.text()})
-  .then(b64=>{seal.src='data:image/webp;base64,'+b64.trim();seal.classList.add('loaded')})
-  .catch(e=>console.error(e));
-
 const promptUrl='companion-prompts/right-relationship.txt',essayUrl='essay-sources/right-relationship.txt';
 const promptBox=document.getElementById('companionPrompt'),essayBox=document.getElementById('essayText'),status=document.getElementById('copyStatus'),topButton=document.getElementById('copyCompanion'),bottomButton=document.getElementById('copyCompanionBottom'),essayButton=document.getElementById('copyEssay');
 const buttons=[topButton,bottomButton,essayButton];buttons.forEach(b=>b.disabled=true);
 async function loadText(u){const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw Error(`Unable to load ${u}`);return(await r.text()).trim()}
 const ready=Promise.all([loadText(promptUrl),loadText(essayUrl)]).then(([p,e])=>{promptBox.value=p;essayBox.value=e;buttons.forEach(b=>b.disabled=false);status.textContent='';return{p,e}}).catch(e=>{console.error(e);status.textContent='The Right Relationship Test could not load. Refresh the page and try again.';throw e});
 async function write(t){if(navigator.clipboard&&isSecureContext){await navigator.clipboard.writeText(t);return}const f=document.createElement('textarea');try{f.value=t;f.readOnly=true;f.style.cssText='position:fixed;opacity:0';document.body.appendChild(f);f.select();if(!document.execCommand('copy'))throw Error('Copy failed')}finally{f.remove()}}
-function confirm(b,m){const o=b.dataset.original||b.textContent.trim();b.dataset.original=o;b.textContent='Copied ✓';status.textContent=m;clearTimeout(b._timer);b._timer=setTimeout(()=>{b.textContent=o;status.textContent=''},7000)}
-async function copy(b){try{const{p,e}=await ready;await write(`${p}\n\n<essay>\n${e}\n</essay>`);confirm(b,'Copied. Paste it into a new AI chat and send.')}catch(e){console.error(e);status.textContent='Copying was blocked. Open this page in your browser and try again.'}}
-topButton.onclick=function(){copy(this)};
-bottomButton.onclick=function(){copy(this)};
-essayButton.onclick=async function(){try{const{e}=await ready;await write(e);confirm(this,'Essay copied.')}catch(e){console.error(e)}};
+function confirm(b,m){const o=b.dataset.original||b.textContent.trim();b.dataset.original=o;b.textContent='Copied ✓';status.textContent=m;clearTimeout(b._timer);b._timer=setTimeout(()=>{b.textContent=o;status.textContent=''},6500)}
+async function copy(b){try{const{p,e}=await ready;await write(`${p}\n\n<essay>\n${e}\n</essay>`);confirm(b,'Copied. Paste into a new AI chat and send.')}catch(e){console.error(e);status.textContent='Copying was blocked. Refresh the page and try again.'}}
+topButton.onclick=function(){copy(this)};bottomButton.onclick=function(){copy(this)};essayButton.onclick=async function(){try{const{e}=await ready;await write(e);confirm(this,'Essay copied.')}catch(e){console.error(e)}};
 const obs=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.1});document.querySelectorAll('.ed-reveal').forEach(x=>obs.observe(x));
 </script>
 </body>
