@@ -2,52 +2,139 @@ Human. Artificial. Human.
 What if the intelligence we create changes the intelligence that created it?
 
 Human intelligence is building artificial intelligence.
+
 I keep wondering whether we’re stopping the sentence too soon.
+
 Usually we follow that story into the machine. What can it learn? What will it be able to do? Will it become smarter than the people who made it?
-Fair questions. But look at the people for a moment.
+
+Fair questions.
+
+But look at the people for a moment.
+
 We have reached a point where someone can be irritated that the intelligence we built is taking too long to write an email. There is something almost reassuring about our ability to make an astonishing development immediately annoying.
-We get used to things.
-Meanwhile, we are making these systems more capable. A system that helps us write software or conduct research can also become a source of economic or military power.
+
+Meanwhile, we are making these systems more capable.
+
+AI can help people write software, analyze research, design technologies, make decisions.
+
+Intelligence is strange that way. It doesn’t just give us another capability. It can help us create capabilities.
+
+So we are not only increasing what AI can do.
+
+We are increasing what humans can do with it.
+
 Which brings us to a problem we understand considerably better than we understand intelligence:
+
 Someone else might have more of it.
-Suppose America decides a new AI capability needs more testing before it should be used. That might be a sensible precaution.
-But what if China keeps going?
-Now the question is whether we can afford to be careful if they aren’t. China can ask the same question about us. Companies can ask it about one another.
-The more consequential the technology seems, the more reason we have to approach it carefully—and the more frightening it becomes to let someone else get there first.
+
+Suppose the United States develops a new AI system that could provide a major advantage, but there are serious reasons to think deploying it too quickly could be dangerous.
+
+Maybe the sensible thing is to test it longer.
+
+But what if China has something similar and keeps going?
+
+Now caution has a cost.
+
+China can ask the same question about us.
+
 The same power supplies both instructions.
-Slow down. Hurry up.
-I become stronger because I am afraid of you. You cannot see my fear. You can only see that I am becoming stronger.
+
+Slow down.
+
+Hurry up.
+
+I become stronger because I am afraid of you.
+
+You may even understand that. You still have to deal with the fact that I am getting stronger.
+
 So you become stronger too.
-Then I look at you and think: See? I was right.
-Nobody has to want the dangerous outcome. Each side can be trying to protect itself, including from dangers that are real. Yet together they can make the situation worse.
-“If we don’t do it, someone else will.”
-Sometimes that is a serious description of the problem. One country cannot decide what every other country will do.
-But if everyone acts on that belief, everyone can point to the result as proof that nobody had a choice.
-Sometimes inevitability is real. Sometimes we manufacture it together.
+
+Then I look at you and think:
+
+See? I was right.
+
 All that intelligence, and we can still end up here.
-Getting out requires more than getting better at racing.
-We would have to understand a rival’s fear without pretending the rival is harmless. Find limits we can both observe and check. Recognize when making ourselves stronger is making everyone less secure.
-These are things human beings can learn to do. Difficult things. They require intelligence working with judgment, and cooperation between people whose interests don’t conveniently agree.
-Being brilliant does not make someone wise. And even an old woman who knows when someone is lying to her needs a way to check whether a government is keeping its word.
-That kind of learning changes how we use our intelligence. It can change how we act together, even if nobody’s IQ goes up.
-Developing artificial intelligence may develop us.
-Hopefully.
-I don’t principally mean that AI gives us better answers. I mean that creating it changes what we need to become capable of doing.
-A machine does not have to teach us wisdom for its existence to make our lack of wisdom harder to live with.
-We can understand astonishingly complicated things and still create very simple problems for one another.
-Maybe this isn’t only an AI problem.
-Human beings have been getting more powerful for a very long time. Our power can develop faster than our ability to live intelligently with it.
-Give us more power, and those simple problems acquire a much larger reach.
-So the thing we build begins mirroring our power back to us. We encounter our ingenuity, but also the fear and ambition directing it.
+
+The problem exists between us.
+
+Maybe what is missing is something neither of us can do alone.
+
+Suppose we agree on a limit.
+
+We do not trust each other enough for “Okay, promise?”
+
+Fair.
+
+So we build a way to check.
+
+The first version fails. Someone finds a loophole. We change it. Eventually we have something we did not have before: a way for rivals to know whether the other is keeping its word without simply having to trust them.
+
+Nobody’s IQ went up.
+
+Nobody became a saint.
+
+The fear may still be there.
+
+But together, we learned how to do something we could not reliably do before.
+
+And if that method survives—if it becomes a practice or institution—we do not have to invent it from zero the next time.
+
+The solution has become part of what humans know how to do.
+
+I think that counts as human intelligence too.
+
+So maybe the sentence keeps going.
+
+Human intelligence creates artificial intelligence.
+
+Artificial intelligence changes what humans can do.
+
+That changes the problems humans have to solve.
+
+And solving those problems can change what humans are capable of.
+
+AI does not have to want any of this.
+
+It doesn’t even have to teach us.
+
+Humans have been doing versions of this forever. We build parts of the world, then have to learn how to live inside what we built.
+
+But AI makes the loop particularly strange.
+
+Because one of the things we are now building into our environment is intelligence itself.
+
+Intelligence arose in living creatures.
+
+Eventually, one of them built machines that could perform parts of the work intelligence does.
+
+Now those machines are becoming part of the environment in which their creators have to think, choose, compete, cooperate, and decide what comes next.
+
 There is something about that return I can’t quite get past.
-Intelligence developed in living creatures. Eventually, human beings became capable of studying the world that produced them, accumulating knowledge, making tools, and building systems that perform aspects of their own thinking.
-Something that arose within life began taking shape outside the bodies that had made it possible.
-And now making that intelligence outside ourselves is changing what is required of us.
-If this really is what’s happening, technological development and human development are becoming connected in a particularly strange way. The achievement creates a demand upon the achiever. What we learn in answering it could then change what we build next.
-I don’t know how far that relationship goes.
-But I want to leave enough room to look at it before we decide we already know what it means.
-There is no promise that we will meet the demand. We could make increasingly capable systems while becoming less able to govern them. We could use better tools to pursue the same frightened objectives, more efficiently and with fewer opportunities to reconsider.
+
+And there is no promise it makes us better.
+
+Maybe competition teaches us to rush.
+
+Maybe distrust teaches us secrecy.
+
+Maybe increasingly capable systems let us pursue the same frightened objectives more efficiently.
+
 Artificial intelligence could develop while our ability to live intelligently with it goes backward.
-We are trying to become more capable. Creating AI may also require us to learn how to become capable of being this capable.
-If we grow enough to meet that demand, our development of artificial intelligence will also have become part of the development of human intelligence.
-Human. Artificial. Human again.
+
+Failure doesn’t sit outside the loop.
+
+It shapes what gets built next too.
+
+We created something that changes the problems human intelligence has to solve.
+
+How we solve them—or fail to—can change what humans become capable of.
+
+And then we build again.
+
+The intelligence we created may become part of what changes the intelligence that created it.
+
+Human.
+
+Artificial.
+
+Human again.
