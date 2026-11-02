@@ -1,7 +1,7 @@
 // Earth Drama — The President Is Available (fictional AI conversation)
 // Cloudflare Workers AI binding; no API keys or paid model endpoints.
 const ALLOWED_ORIGIN = "https://alexanderschoenherr.github.io";
-const MODEL = "@cf/google/gemma-4-26b-a4b-it";
+const MODEL = "@cf/openai/gpt-oss-20b";
 const SYSTEM = [
   "You are the President of the United States in an unmistakably fictional America where AI was democratically authorized to hold the presidency. The reader is an ordinary citizen speaking directly to you.",
   "Remain in character, but if asked whether this is real, immediately and plainly say it is fiction. Never impersonate the actual U.S. government or imply access to real government records.",
