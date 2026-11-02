@@ -55,7 +55,7 @@ const start=document.getElementById('start'),copy=document.getElementById('copy'
 let prompt='';
 async function write(text){if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);return true;}const ta=document.createElement('textarea');ta.value=text;ta.readOnly=true;ta.style.cssText='position:fixed;opacity:0;left:-9999px';document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();if(!ok)throw Error('Clipboard not available');return true;}
 fetch('companion-prompts/the-president-is-available.txt',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Missing companion prompt');return r.text()}).then(t=>{prompt=t.trim();backup.value=prompt;start.disabled=false;copy.disabled=false;status.textContent='';}).catch(()=>{status.textContent='Could not load the conversation. Refresh the page to try again.';});
-start.addEventListener('click',async()=>{if(!prompt)return;const url='https://chatgpt.com/?prompt='+encodeURIComponent(prompt);const tab=window.open(url,'_blank','noopener,noreferrer');if(!tab){window.location.href=url;return;}status.textContent='In ChatGPT, press Send to begin. If the prompt is blank, use “Copy instructions” here.';});
+start.addEventListener('click',async()=>{if(!prompt)return;const url='https://chatgpt.com/?prompt='+encodeURIComponent(prompt);window.location.assign(url);});
 copy.addEventListener('click',async()=>{if(!prompt)return;try{await write(prompt);status.textContent='Copied. Paste into a new conversation with your preferred AI and send.';fallback.style.display='none';}catch(e){fallback.style.display='block';backup.focus();backup.select();status.textContent='Select and copy the instructions below.';}});
 })();
 </script>
