@@ -119,7 +119,9 @@ export default {
         temperature: 0.75
       });
       const answer = result?.choices?.[0]?.message?.content ?? result?.response;
-      if (typeof answer !== "string" || !answer.trim()) throw new Error("empty model response");
+      if (typeof answer !== "string" || !answer.trim()) {
+        return json({ error: "empty_ai_reply", message: "The AI returned an empty reply. Please try again." }, 503, origin);
+      }
       return json({ reply: answer.trim().slice(0, 1800) }, 200, origin);
     } catch (error) {
       const fallback = classifyAIError(error);
