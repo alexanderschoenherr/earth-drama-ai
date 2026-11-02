@@ -160,7 +160,7 @@ form.addEventListener("submit", async e => {
   const message = field.value.trim();
   if (!endpoint || !message || busy) return;
   const messages = contextFor(message);
-  turn("user", message);
+  const submittedTurn = turn("user", message);
   field.value = "";
   busy = true;
   readyState();
