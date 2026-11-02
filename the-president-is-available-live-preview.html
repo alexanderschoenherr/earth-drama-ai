@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b10">
+<meta name="description" content="Talk directly to the fictional AI President. An interactive Earth Drama companion.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The President Is Available — Earth Drama">
+<meta property="og:description" content="The President isn't human. You can ask anything.">
+<meta name="twitter:card" content="summary">
+<title>The President Is Available — Live Chat Preview · Earth Drama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--night:#090b10;--panel:#111720;--paper:#eee8dc;--gold:#d5b571;--muted:#aaa7a0;--line:rgba(235,229,214,.14)}
+*{box-sizing:border-box}
+html{min-height:100%;background:var(--night)}
+body{margin:0;min-height:100svh;display:grid;place-items:center;padding:22px 14px 34px;color:var(--paper);font-family:Lora,Georgia,serif;background:radial-gradient(ellipse at 50% 8%,rgba(46,64,82,.48),transparent 48%),var(--night)}
+.app{width:min(100%,700px)}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 17px;color:var(--gold);font:500 10px "DM Mono",monospace;letter-spacing:.18em;text-transform:uppercase}
+.brand-mark{font-size:25px;line-height:1}
+.shell{overflow:hidden;border:1px solid var(--line);border-radius:19px;background:linear-gradient(155deg,#18202b,#0f131a 80%);box-shadow:0 22px 90px rgba(0,0,0,.35)}
+.heading{padding:26px clamp(20px,5vw,37px) 19px;border-bottom:1px solid var(--line)}
+.kicker{margin:0 0 8px;color:var(--gold);font:500 10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
+h1{margin:0;font:400 clamp(39px,6vw,59px)/.98 "Instrument Serif",Georgia,serif;letter-spacing:-.025em}
+.sub{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
+.chat{height:clamp(245px,44vh,440px);min-height:245px;overflow-y:auto;padding:24px clamp(16px,4vw,30px);display:flex;flex-direction:column;gap:19px;scroll-behavior:smooth;overscroll-behavior:contain}
+.turn{max-width:90%;align-self:flex-start}.turn.user{align-self:flex-end;max-width:83%}
+.who{font:500 10px "DM Mono",monospace;letter-spacing:.04em;color:var(--gold);margin:0 0 7px}.turn.user .who{text-align:right;color:var(--muted)}
+.bubble{padding:14px 17px;border-radius:4px 14px 14px 14px;border:1px solid rgba(235,229,214,.12);background:rgba(250,247,239,.045);white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.63}
+.turn.user .bubble{background:#27313e;border-color:#3a4959;border-radius:14px 4px 14px 14px}
+.composer{padding:18px clamp(16px,4vw,30px) 24px;border-top:1px solid var(--line)}
+label{display:block;color:var(--muted);font-size:12px;margin-bottom:9px}
+textarea{width:100%;min-height:77px;max-height:145px;resize:vertical;border:1px solid rgba(235,229,214,.25);border-radius:10px;padding:13px 14px;color:var(--paper);background:#0c1016;font:15px/1.45 Lora,Georgia,serif}
+textarea::placeholder{color:#888f95}textarea:focus-visible{outline:2px solid rgba(213,181,113,.6);outline-offset:2px}textarea:disabled{opacity:.55}
+.actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}
+.reset{border:0;background:none;padding:8px 0;color:#c5b58f;text-decoration:underline;text-underline-offset:3px;font:12px Lora,Georgia,serif;cursor:pointer}
+.send{min-height:42px;min-width:110px;padding:11px 18px;border:1px solid #ecd299;border-radius:9px;background:linear-gradient(125deg,#f1dbab,#ccab64);color:#231e15;font:600 13px Lora,Georgia,serif;cursor:pointer}
+.send:disabled{opacity:.45;cursor:not-allowed}
+.send:focus-visible,.reset:focus-visible{outline:2px solid white;outline-offset:3px}
+#status{min-height:1.4em;margin:12px 0 0;color:#d7bf8a;font-size:12px;line-height:1.55}
+footer{text-align:center;color:#99968e;font-size:11px;line-height:1.6;margin:18px 0 0}
+a{color:#d6bf8d}
+@media(max-width:500px){body{display:block;padding:12px 10px 24px}.heading{padding:20px 18px 17px}.brand{margin-bottom:12px}.chat{height:45svh;min-height:260px}.bubble{font-size:14px}.turn{max-width:94%}}
+@media(prefers-reduced-motion:reduce){.chat{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main class="app">
+<div class="brand"><span class="brand-mark" aria-hidden="true">✦</span> Earth Drama</div>
+<section class="shell" aria-labelledby="title">
+<header class="heading">
+<p class="kicker">An interactive fiction</p>
+<h1 id="title">The President Is Available</h1>
+<p class="sub">A direct line to the artificial intelligence serving as President of a fictional United States.</p>
+</header>
+<div id="chat" class="chat" role="log" aria-label="Conversation with the fictional President" aria-live="polite" aria-relevant="additions text">
+<div class="turn"><div class="who">The President</div><div class="bubble">Hello. I'm the President of the United States.
+
+What's on your mind?</div></div>
+</div>
+<form id="form" class="composer">
+<label for="message">Your message to the President</label>
+<textarea id="message" maxlength="700" placeholder="Say anything…" disabled required></textarea>
+<div class="actions"><button type="button" id="reset" class="reset">New conversation</button><button id="send" class="send" type="submit" disabled>Send ↗</button></div>
+<p id="status" role="status" aria-live="polite">This preview is not connected yet.</p>
+</form>
+</section>
+<footer>Earth Drama · Alexander Schoenherr · Fiction, not a real government service.<br>Messages are processed by Cloudflare AI. Don't share sensitive personal information. Conversation history stays in this browser tab.</footer>
+</main>
+<script>
+(() => {
+"use strict";
+const chat = document.getElementById("chat");
+const form = document.getElementById("form");
+const field = document.getElementById("message");
+const send = document.getElementById("send");
+const reset = document.getElementById("reset");
+const status = document.getElementById("status");
+const firstTurn = chat.firstElementChild.cloneNode(true);
+const history = [];
+let endpoint = "";
+let busy = false;
+
+function turn(role, text) {
+  const node = document.createElement("div");
+  node.className = "turn " + (role === "user" ? "user" : "");
+  const who = document.createElement("div");
+  who.className = "who";
+  who.textContent = role === "user" ? "You" : "The President";
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.textContent = text;
+  node.append(who, bubble);
+  chat.append(node);
+  chat.scrollTop = chat.scrollHeight;
+  return node;
+}
+function statusText(message) { status.textContent = message; }
+function usableURL(value) {
+  if (typeof value !== "string") return "";
+  try {
+    const u = new URL(value);
+    return u.protocol === "https:" && u.hostname.endsWith(".workers.dev") && u.pathname.replaceAll("/", "") === "" && !u.search && !u.hash ? u.origin : "";
+  } catch { return ""; }
+}
+function contextFor(nextMessage) {
+  const all = [...history, {role:"user",content:nextMessage}];
+  const result = [];
+  let chars = 0;
+  for (let i=all.length-1; i>=0 && result.length<8; i--) {
+    const entry = all[i];
+    if (chars + entry.content.length > 4000) break;
+    result.unshift(entry);
+    chars += entry.content.length;
+  }
+  return result;
+}
+function readyState() {
+  field.disabled = !endpoint || busy;
+  send.disabled = !endpoint || busy || !field.value.trim();
+}
+fetch("companion-config/president-live.json", {cache:"no-store"})
+  .then(r => {if (!r.ok) throw new Error("missing config"); return r.json();})
+  .then(async config => {
+    endpoint = usableURL(config.workerEndpoint);
+    if (!endpoint || config.status !== "active") {
+      statusText("Preview only. The free AI connection hasn't been activated yet.");
+      readyState(); return;
+    }
+    const health = await fetch(endpoint + "/health", {cache:"no-store"});
+    if (!health.ok) throw new Error("health check failed");
+    const data = await health.json();
+    if (data.status !== "configured") throw new Error("backend not ready");
+    statusText("Connected. You're speaking to a fictional president.");
+    readyState();
+  })
+  .catch(() => {
+    endpoint = "";
+    statusText("AI service isn't connected yet. Please return later.");
+    readyState();
+  });
+field.addEventListener("input", readyState);
+field.addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); if (!send.disabled) form.requestSubmit(); }
+});
+reset.addEventListener("click", () => {
+  if (busy) return;
+  history.length = 0;
+  chat.replaceChildren(firstTurn.cloneNode(true));
+  field.value = "";
+  statusText(endpoint ? "New conversation ready." : "Preview only. AI not connected yet.");
+  readyState();
+  field.focus();
+});
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const message = field.value.trim();
+  if (!endpoint || !message || busy) return;
+  const messages = contextFor(message);
+  turn("user", message);
+  field.value = "";
+  busy = true;
+  readyState();
+  statusText("The President is replying…");
+  const placeholder = turn("assistant", "…");
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 30000);
+    let response;
+    try {
+      response = await fetch(endpoint + "/chat", {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({messages}),
+        cache:"no-store",
+        signal:controller.signal
+      });
+    } finally { clearTimeout(timer); }
+    const data = await response.json();
+    if (!response.ok || typeof data.reply !== "string") throw new Error(data.message || "The conversation is unavailable. Please try again.");
+    placeholder.querySelector(".bubble").textContent = data.reply;
+    history.push({role:"user",content:message},{role:"assistant",content:data.reply});
+    statusText("");
+  } catch (error) {
+    placeholder.remove();
+    statusText(error.name === "AbortError" ? "That reply took too long. Try again." : (error.message || "Connection failed. Try again."));
+  } finally {
+    busy = false;
+    readyState();
+    field.focus();
+  }
+});
+})();
+</script>
+</body>
+</html>
