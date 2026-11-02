@@ -186,6 +186,8 @@ form.addEventListener("submit", async e => {
     statusText("");
   } catch (error) {
     placeholder.remove();
+    submittedTurn.remove();
+    field.value = message;
     statusText(error.name === "AbortError" ? "That reply took too long. Try again." : (error.message || "Connection failed. Try again."));
   } finally {
     busy = false;
