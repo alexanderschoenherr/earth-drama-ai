@@ -1,0 +1,29 @@
+name: President voice sample check
+on:
+  push:
+    paths:
+      - '.github/workflows/president-voice-sample.yml'
+  workflow_dispatch:
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check public fictional president reply
+        shell: bash
+        run: |
+          node <<'NODE'
+          (async () => {
+            const endpoint = "https://earth-drama-president.alex-schoenherr.workers.dev/chat";
+            const response = await fetch(endpoint, {
+              method: "POST",
+              headers: { "Origin": "https://alexanderschoenherr.github.io", "Content-Type": "application/json" },
+              body: JSON.stringify({ messages: [{ role: "user", content: "i need money" }] }),
+              signal: AbortSignal.timeout(75000)
+            });
+            const data = await response.json();
+            console.log("HTTP", response.status);
+            console.log("SAMPLE_REPLY", JSON.stringify(data.reply ?? null));
+            if (!response.ok || !data.reply) throw Error("Could not generate reply: " + (data.error ?? response.status));
+          })().catch(error => { console.error(error.message); process.exitCode = 1; });
+          NODE
