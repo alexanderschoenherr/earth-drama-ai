@@ -107,7 +107,8 @@ export default {
     try {
       const result = await env.AI.run(MODEL, {
         messages: [{ role: "system", content: SYSTEM }, ...messages],
-        max_completion_tokens: 220,
+        chat_template_kwargs: { enable_thinking: false },
+        max_completion_tokens: 320,
         temperature: 0.75
       });
       const answer = result?.choices?.[0]?.message?.content ?? result?.response;
