@@ -1,0 +1,34 @@
+name: President live smoke check
+on:
+  push:
+    paths:
+      - '.github/workflows/president-live-smoke.yml'
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Probe deployed Worker and real AI response
+        shell: bash
+        run: |
+          node <<'NODE'
+          const endpoint = 'https://earth-drama-president.alex-schoenherr.workers.dev';
+          const origin = 'https://alexanderschoenherr.github.io';
+          (async () => {
+            const health = await fetch(endpoint + '/health', {headers:{Origin:origin},signal:AbortSignal.timeout(20000)});
+            const h = await health.json();
+            console.log('HEALTH_HTTP',health.status,'STATUS',h.status,'VERSION',h.version,'BINDINGS',JSON.stringify(h.bindings ?? {}));
+            if (!health.ok || h.status !== 'configured') throw Error('Worker health failed');
+            const chat = await fetch(endpoint + '/chat', {
+              method:'POST',
+              headers:{Origin:origin,'Content-Type':'application/json'},
+              body:JSON.stringify({messages:[{role:'user',content:'Good morning, President. Reply briefly in one sentence.'}]}),
+              signal:AbortSignal.timeout(75000)
+            });
+            const body = await chat.json();
+            console.log('CHAT_HTTP',chat.status,'ERROR_CODE',body.error ?? 'none','MESSAGE',body.message ?? 'none','REPLY_LENGTH',body.reply?.length ?? 0);
+            if (!chat.ok || !body.reply) throw Error('Live chat inference failed: '+String(body.error ?? chat.status));
+            console.log('LIVE_AI_REPLY_VERIFIED');
+          })().catch(err=>{console.error('SMOKE_TEST_FAILED',err.message);process.exitCode=1;});
+          NODE
