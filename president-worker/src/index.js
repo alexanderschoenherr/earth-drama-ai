@@ -33,7 +33,7 @@ function sanitizeMessages(value) {
   for (const item of value) {
     if (!item || typeof item !== "object" || (item.role !== "user" && item.role !== "assistant") || typeof item.content !== "string") return null;
     const content = item.content.trim();
-    const max = item.role === "user" ? 700 : 900;
+    const max = item.role === "user" ? 700 : 1800;
     if (!content || content.length > max) return null;
     total += content.length;
     if (total > 4200) return null;
