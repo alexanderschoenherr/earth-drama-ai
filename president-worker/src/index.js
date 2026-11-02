@@ -62,7 +62,11 @@ export default {
     const url = new URL(request.url);
     const origin = request.headers.get("Origin");
     if (url.pathname === "/health" && request.method === "GET") {
-      return json({ status: "configured", version: 1 }, 200, origin);
+      const ai = typeof env?.AI?.run === "function";
+      const visitorLimit = typeof env?.VISITOR_LIMIT?.limit === "function";
+      const globalLimit = typeof env?.GLOBAL_LIMIT?.limit === "function";
+      const ready = ai && visitorLimit && globalLimit;
+      return json({ status: ready ? "configured" : "incomplete", version: 2, bindings: { ai, visitorLimit, globalLimit } }, ready ? 200 : 503, origin);
     }
     if (url.pathname !== "/chat") return json({ error: "not_found" }, 404, origin);
     if (origin !== ALLOWED_ORIGIN) return json({ error: "forbidden" }, 403, null);
