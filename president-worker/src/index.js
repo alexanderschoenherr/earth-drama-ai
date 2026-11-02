@@ -108,6 +108,9 @@ export default {
       return json({ error: "unavailable", message: "The conversation isn't available right now." }, 503, origin);
     }
 
+    if (typeof env?.AI?.run !== "function") {
+      return json({ error: "ai_binding_missing", message: "The Cloudflare AI binding is missing. The site owner needs to check the deployment." }, 503, origin);
+    }
     try {
       const result = await env.AI.run(MODEL, {
         messages: [{ role: "system", content: SYSTEM }, ...messages],
