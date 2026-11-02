@@ -116,7 +116,7 @@ export default {
     }
     try {
       const result = await env.AI.run(MODEL, {
-        messages: [{ role: "system", content: SYSTEM }, ...messages],
+        messages: [{ role: "system", content: SYSTEM + (messages.at(-1).content.trim().split(/\s+/).length <= 6 ? "\nFor this short remark, reply in one natural plain sentence of 20 words or fewer. Ask one direct question if a crucial fact is missing. Avoid abstract categories and metaphors." : "") }, ...messages],
         chat_template_kwargs: { enable_thinking: false },
         max_completion_tokens: 320,
         temperature: 0.75
