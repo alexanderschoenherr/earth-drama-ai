@@ -118,9 +118,12 @@ export default {
       return json({ error: "ai_binding_missing", message: "The Cloudflare AI binding is missing. The site owner needs to check the deployment." }, 503, origin);
     }
     try {
+      const lastMessage = messages.at(-1).content.trim();
+      const readerDelegated = /^(?:u pick|you pick|surprise me|your choice)[.!?]*$/i.test(lastMessage);
+      const shortRemark = lastMessage.split(/\s+/).length <= 6 && !readerDelegated;
       const result = await env.AI.run(MODEL, {
-        messages: [{ role: "system", content: SYSTEM + (messages.at(-1).content.trim().split(/\s+/).length <= 6 ? "\nFor this short remark, reply in one natural plain sentence of 20 words or fewer. Ask one direct question if a crucial fact is missing. Avoid abstract categories and metaphors." : "") }, ...messages],
-        max_tokens: 384,
+        messages: [{ role: "system", content: SYSTEM + (shortRemark ? "\nFor this short remark, reply in one natural plain sentence of 20 words or fewer. Ask one direct question if a crucial fact is missing. Avoid abstract categories and metaphors." : "") }, ...messages],
+        max_tokens: readerDelegated ? 768 : 384,
         temperature: 0.65
       });
       const answer = result?.choices?.[0]?.message?.content ?? result?.response;
