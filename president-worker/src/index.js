@@ -54,7 +54,9 @@ function classifyAIError(error) {
   if (message.includes("3040") || message.includes("out of capacity") || message.includes("capacity temporarily")) {
     return { code: "busy", message: "The President is receiving too many calls right now. Please try again shortly." };
   }
-  return { code: "unavailable", message: "The conversation isn't available right now. Please try again later." };
+  if (message.includes("5035") || message.includes("requires workers paid")) return { code: "model_not_free", message: "This model is not available on Cloudflare Free. The site owner must select a supported free model." };
+  if (message.includes("5007") || message.includes("3042") || message.includes("no such model")) return { code: "model_not_found", message: "The AI model is not recognized by Cloudflare. The site owner must check the configuration." };
+  return { code: "model_error", message: "The AI service failed to generate a reply. Please try again shortly." };
 }
 
 export default {
