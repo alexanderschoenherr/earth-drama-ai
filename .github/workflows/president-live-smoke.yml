@@ -30,5 +30,21 @@ jobs:
             console.log('CHAT_HTTP',chat.status,'ERROR_CODE',body.error ?? 'none','MESSAGE',body.message ?? 'none','REPLY_LENGTH',body.reply?.length ?? 0);
             if (!chat.ok || !body.reply) throw Error('Live chat inference failed: '+String(body.error ?? chat.status));
             console.log('LIVE_AI_REPLY_VERIFIED');
+            const page = await fetch(origin + '/earth-drama-ai/the-president-is-available-live-preview.html', {signal:AbortSignal.timeout(20000)});
+            const html = await page.text();
+            console.log('PAGE_HTTP',page.status,'HAS_LATEST_RETRY_FIX',html.includes('submittedTurn.remove();'));
+            if (!page.ok || !html.includes('submittedTurn.remove();')) throw Error('Published GitHub Pages HTML is outdated');
+            const configResponse = await fetch(origin + '/earth-drama-ai/companion-config/president-live.json', {signal:AbortSignal.timeout(20000)});
+            const config = await configResponse.json();
+            console.log('CONFIG_HTTP',configResponse.status,'STATUS',config.status,'ENDPOINT_MATCH',config.workerEndpoint === endpoint);
+            if (!configResponse.ok || config.status !== 'active' || config.workerEndpoint !== endpoint) throw Error('Published Pages config invalid');
+            const preflight = await fetch(endpoint + '/chat', {
+              method:'OPTIONS',
+              headers:{Origin:origin,'Access-Control-Request-Method':'POST','Access-Control-Request-Headers':'content-type'},
+              signal:AbortSignal.timeout(20000)
+            });
+            console.log('CORS_PREFLIGHT',preflight.status,'ORIGIN_OK',preflight.headers.get('Access-Control-Allow-Origin') === origin);
+            if (preflight.status !== 204 || preflight.headers.get('Access-Control-Allow-Origin') !== origin) throw Error('Browser CORS preflight failed');
+            console.log('END_TO_END_BROWSER_PATH_VERIFIED');
           })().catch(err=>{console.error('SMOKE_TEST_FAILED',err.message);process.exitCode=1;});
           NODE
