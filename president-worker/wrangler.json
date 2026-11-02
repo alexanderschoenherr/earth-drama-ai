@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "earth-drama-president",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-20",
+  "workers_dev": true,
+  "ai": {
+    "binding": "AI"
+  },
+  "ratelimits": [
+    {
+      "name": "VISITOR_LIMIT",
+      "namespace_id": "714301",
+      "simple": {
+        "limit": 4,
+        "period": 60
+      }
+    },
+    {
+      "name": "GLOBAL_LIMIT",
+      "namespace_id": "714302",
+      "simple": {
+        "limit": 16,
+        "period": 60
+      }
+    }
+  ],
+  "observability": {
+    "enabled": false
+  }
+}
