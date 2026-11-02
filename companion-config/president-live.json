@@ -1,4 +1,4 @@
 {
-  "workerEndpoint": "",
-  "status": "not_deployed"
+  "workerEndpoint": "https://earth-drama-president.alex-schoenherr.workers.dev",
+  "status": "active"
 }
